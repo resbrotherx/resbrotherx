@@ -53,7 +53,7 @@ class Store(models.Model):
     category = models.ManyToManyField(Category)
     tag = models.ManyToManyField(Tags)
     featured = models.BooleanField()
-     = models.BooleanField()
+    graphics = models.BooleanField()
     icon = models.IntegerField(default=0)
     
     def get_absolute_url(self):
