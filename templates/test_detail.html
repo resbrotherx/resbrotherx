@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Home | E-Shopper</title>
+	{% load static %}
+	
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+	<link href="{% static 'css/price-range.css' %}" rel="stylesheet">
+	<link href="{% static 'css/slider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+	<link href="{% static 'css/main.css' %}" rel="stylesheet">
+	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+	<![endif]-->       
+	
+
+    <link rel="shortcut icon" href="{% static 'images/ico/favicon.ico' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'images/ico/apple-touch-icon-144-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'images/ico/apple-touch-icon-114-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'images/ico/apple-touch-icon-72-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'images/ico/apple-touch-icon-57-precomposed.png' %}">
+</head><!--/head-->
+
+<body>
+	<section id="slider">
+		<!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1><span>E</span>-SHOPPER</h1>
+									<h2>Free E-Commerce Template</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								
+								<div class="col-sm-6">
+									<img src="{% static 'images/home/girl1.jpg' %}" class="girl img-responsive" alt="" />
+									<img src="{% static 'images/home/pricing.png' %}"  class="pricing" alt="" />
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>E</span>-SHOPPER</h1>
+									<h2>100% Responsive Design</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="{% static 'images/home/girl2.jpg' %}" class="girl img-responsive" alt="" />
+									
+									<img src="{% static 'images/home/pricing.png' %}"  class="pricing" alt="" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>E</span>-SHOPPER</h1>
+									<h2>Free Ecommerce Template</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="{% static 'images/home/girl3.jpg' %}" class="girl img-responsive" alt="" />
+									<img src="{% static 'images/home/pricing.png' %}" class="pricing" alt="" />
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						
+					
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Clothing</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Bags</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Shoes</a></h4>
+								</div>
+							</div>
+						</div><!--/category-products-->
+						
+						<div class="price-range"><!--price-range-->
+							<h2>Price Range</h2>
+							<div class="well text-center">
+								<input type="text" class="span2" value="" data-slider-min="{{min}}" data-slider-max="{{max}}" data-slider-step="1" data-slider-value="[{{min}},{{max}}]" data-slider-orientation="horizontal" 	data-slider-selection="after"data-slider-tooltip="show" id="price-slider" >
+								<!-- <input id="price-slider" /> -->
+								<b class="pull-left" id="pull-left">{{min}}</b> <b class="pull-right" id="pull-right">{{max}}</b> 
+							</div>
+						</div><!--/price-range-->
+						
+					
+					</div>
+				</div>
+
+				<div class="col-sm-9 padding-right">
+					<div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
+								<li><a href="#blazers" data-toggle="tab">Blazers</a></li>
+								<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
+								<li><a href="#kids" data-toggle="tab">Kids</a></li>
+								<li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
+							</ul>
+						</div>
+					<div class="col-sm-9 padding-right">
+					<div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
+								<li><a href="#blazers" data-toggle="tab">Blazers</a></li>
+								<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
+								<li><a href="#kids" data-toggle="tab">Kids</a></li>
+								<li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="tshirt" >
+								{% for p in post_all %}
+								<div class="col-sm-3" uuid="{encrypt(p.id)}">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="{{p.image.url}}" alt="" />
+												<h2 id='price'>${{p.price}}</h2>
+												<p id >{{p.title}}</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>buy</a>
+											</div>
+											
+										</div>
+
+										
+										
+									</div>
+
+
+								</div>
+								{% endfor %}
+							</div>
+
+						</div>
+					</div><!--/category-tab-->
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer">
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+	<script src="{% static 'js/price-range.js' %}"></script>
+	<script src="{% static 'js/bootstrap-slider.js' %}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/request.js' %}"></script>
+	<script src="https://js.paystack.co/v1/inline.js"></script>
+</body>
+</html>
+<script>
+	let donwloadList = [];
+	let secretKey = "EsHoppeR";
+	let paystackSecretKey = "sk_test_8f98d60218f31cff548db6406ea3511a71e362fa";
+	let paystackKey = "pk_test_7e61081e3bc827d4dec381ea0cd672c23cd2827b";
+
+	function encrypt(text) {
+		// return CryptoJS.AES.encrypt(text, secretKey);
+		// const result = crypto.subtle.encrypt(crypto.subtule., key, data);
+		// console.log("result". )
+		return text
+	}
+
+	function decrypt(encryptedText) {
+		// return CryptoJS.AES.decrypt(encryptedText, secretKey).toString(CryptoJS.enc.Utf8);;
+		return encryptedText;
+	}
+
+	// function renderItem(itemId, itemTitle, itemPrice, itemImage ) {
+	// 	itemImage = itemImage.substring(1);
+	// 	let elem =  (
+	// 	`
+	// 		<div class="col-sm-3" uuid="${encrypt(itemId)}">
+	// 			<div class="product-image-wrapper">
+	// 				<div class="single-products">
+	// 					<div class="productinfo text-center">
+	// 						<img src="/static/${itemImage}" alt="" />
+	// 						<h2>$${itemPrice}</h2>
+	// 						<p>${itemTitle}</p>
+	// 					</div>
+						
+	// 				</div>
+	// 			</div>
+	// 		</div>
+	// 	`);
+
+	// 	return elem;
+	// }
+
+
+	function renderItem( ) {
+		
+
+		return elem;
+	}
+
+	function createListenerButton(uuid){
+		console.log("createListenerButton", uuid);
+		/***
+		 * 
+		 * <a href="#" class="btn btn-default add-to-cart" uuid="${itemId}"><i class="fa fa-shopping-cart"></i>BUY</a>
+		*/
+		let a = document.createElement("a");
+		let i = document.createElement("i");
+		let span = document.createElement("span");
+		
+		a.setAttribute("class", "btn btn-default  add-to-cart");
+		a.setAttribute("uuid", `${encrypt(uuid)}`);
+		a.setAttribute("href", `#`);
+
+		i.setAttribute("class", "fa fa-shopping-cart");
+		// a.innerText = " BUY";
+
+		span.innerText = " BUY";
+
+		a.appendChild(i);
+		a.appendChild(span);
+		a.addEventListener("click", (e) => addToCart(e, encrypt(uuid)));
+		$(`div[uuid="${encrypt(uuid)}"] div div div`).append(a);
+	}
+
+	$("#price-slider").slider().on('slide',({value}) => {
+		let res = request(
+			'api/v1/items/filter/',
+			'get',
+			{
+				min: value[0],
+				max: value[1],
+			},
+			(res) => {
+				if (res.data.length > 0) {
+					$("#tshirt").children().remove();
+					res.data.map(data => {
+						$("#tshirt").append(renderItem(data.id, data.title, data.price, data.image_path + data.image ));
+						createListenerButton(data.id);
+					});
+				}
+			},
+			(xhr,status,error) => console.log(JSON.stringify(xhr), JSON.stringify(status), JSON.stringify(error))
+		);
+		
+	})
+
+	$('document').ready(() => {
+		let res = request(
+			'api/v1/items/all/',
+			'get',
+			undefined,
+			(res) => {
+				res.data.map(data => {
+					$("#tshirt").append(renderItem(data.id, data.title, data.price, data.image_path + data.image ));
+					createListenerButton(data.id);
+				});
+			},
+			(xhr,status,error) => console.log(JSON.stringify(xhr), JSON.stringify(status), JSON.stringify(error))
+		);
+		
+		
+		res = request(
+			'api/v1/items/max-min/',
+			'get',
+			undefined,
+			(res) => {
+				$("#pull-left").text(res.data.min_price);
+				$("#pull-right").text(res.data.max_price);
+				$('#price-slider').slider();
+				/*** #FE980F */
+			},
+			(xhr,status,error) => console.log(JSON.stringify(xhr), JSON.stringify(status), JSON.stringify(error))
+		);
+		
+		
+	});
+	
+	const addToCart = (e, encryptedUUID) => {
+		
+		if (donwloadList.indexOf(encryptedUUID) == -1) {
+			// order record exsits
+			// click buy.. pay on paystack, click download
+			// on load, if alreay paid for, then download [no paystack]
+			e.preventDefault();
+			let key = encryptedUUID;
+			let userId = 1;
+			let itemId = decrypt(encryptedUUID);
+			
+
+			res = request(
+				'api/v1/orders/create/',
+				'post',
+				{
+					user_id: userId,
+					item_id: itemId,
+				},
+				(res) => {
+					console.log("order made", res, res.data.donwload_link);
+					
+					if (res.code > 0) {
+						$(`a[uuid="${encryptedUUID}"] span`).text("Download".toUpperCase());
+						let a = document.querySelector(`a[uuid="${encryptedUUID}"]`);
+						donwloadList.push(encryptedUUID);
+						a.setAttribute("href", `/static${res.data.donwload_link}`);
+						a.setAttribute("download", `${res.data.filename}`);
+						a.removeEventListener("click", addToCart);
+
+						if (res.code == 1) {
+							// send user to paystack for payment, if payment failes, delete order record
+							payWithPaystack(res.data.price, res.data.id, encryptedUUID);
+						}
+
+					}
+				},
+				(xhr,status,error) => console.log(JSON.stringify(xhr), JSON.stringify(status), JSON.stringify(error))
+			);
+		}
+	};
+
+	function deleteOrder(orderId, encryptedUUID) {
+		request(
+			'api/v1/orders/delete/',
+			'post',
+			{
+				order_id: orderId,
+			},
+			(res) => {
+				console.log("order deleted", res);
+				if (res.status) {
+					$(`a[uuid="${encryptedUUID}"] span`).text("BUY".toUpperCase());
+					donwloadList = donwloadList.filter(x => x != encryptedUUID)
+				}
+			},
+			(xhr,status,error) => console.log(JSON.stringify(xhr), JSON.stringify(status), JSON.stringify(error))
+		);
+	}
+	
+	function uuidv4() {
+		return 'xxxx_xxxx_4xxx_yxxx_xxxx'.replace(/[xy]/g, function(c) {
+			var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			return v.toString(16);
+		});
+	}
+
+	function payWithPaystack(amount, orderId, encryptedUUID){
+          const ref = uuidv4();
+          var handler = PaystackPop.setup({
+            key: paystackKey,
+            email: 'userEmail@yahoo.com',
+            amount: amount * 100,
+            currency: "NGN",
+            ref: ref,
+            metadata: {},
+            callback: function(response){
+                //alert('success. transaction ref is ' + response.reference);
+				console.log("success", response.reference, response)
+                // var resp = {event:'successful', transactionRef:response, reference: response.reference};
+                // window.ReactNativeWebView.postMessage(JSON.stringify(resp))
+
+				const reference = response.reference;
+
+				fetch(`https://api.paystack.co/transaction/verify/${response.reference}`, {
+				method: "GET",
+				headers: new Headers({
+					Authorization: "Bearer " + paystackSecretKey,
+				}),
+				})
+				.then((response) => response.json())
+				.then(async (data) => {
+					/** was verified successfully */
+					if (data.data.status == 'success') {
+						/** payment was verified post to deposit */
+						console.log("order successfull");
+						// make another request to update the db
+						request(
+							'api/v1/orders/paid/',
+							'post',
+							{
+								order_id: orderId,
+							},
+							(res) => {
+								if (res.status) {
+									console.log("order marked as paid", res);
+								}
+							},
+							(xhr,status,error) => console.log(JSON.stringify(xhr), JSON.stringify(status), JSON.stringify(error))
+						);
+					}
+					else {
+						//delete order
+						deleteOrder(orderId, encryptedUUID);
+					}
+					
+				})
+				.catch((error) => {
+					console.log("failed verified", JSON.stringify(error));
+					//delete order
+					deleteOrder(orderId, encryptedUUID)
+				});
+            },
+            onClose: function(){
+				console.log("window closed")
+                // var resp = {event:'cancelled', reference: '${this.state.ref}'};
+                // window.ReactNativeWebView.postMessage(JSON.stringify(resp))
+				
+				//delete order
+				deleteOrder(orderId, encryptedUUID);
+            }
+          });
+          handler.openIframe();
+          
+        }
+	
+</script>

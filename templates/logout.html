@@ -1,0 +1,49 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% include "scripts.html" %}
+<div class="wrapper">
+   <app-root ng-version="7.2.15">
+      <router-outlet></router-outlet>
+      <light-layout>
+        <a href="/"> <div class="header-light text-center"><img alt="ArtStation" class="header-light-logo" height="25" src="/assets/logo.svg" width="140"></div></a>
+         <div class="wrapper">
+            <router-outlet></router-outlet>
+            <signup>
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-6 col-md-offset-3">
+                        <!---->
+                        <div class="page-header">
+                           <h1>Log Out</h1>
+                           <h1><small>Join the leading showcase platform for games, film, media &amp; entertainment artists</small></h1>
+                        </div>
+                        <div class="separator"></div>
+                        <!---->
+                        <div class="text-center"><a class="btn btn-default" href="/login"><i class="far fa-sign-in fa-pad-right"></i>Log back in to Resbrotherx</a></div>
+                        <div class="separator"></div>
+                        <div class="panel panel-default">
+                           <div class="panel-heading">
+                              <h4 class="panel-title">Sign up with your email</h4>
+                           </div>
+                           <div class="panel-body">
+                              <form method="Post" class="simple_form ng-invalid ng-dirty ng-touched" novalidate="">
+                             
+                                 <!---->
+                                 <div class="alert alert-info alert-base">
+                                    <h4><i class="far fa-exclamation-circle fa-pad-right"></i><span class="text-white">Note - you have log out of your account</span></h4>
+                                    <p>you can log back in if you wish to just click the button ontop of the the not that says log back in to you accout.<br><a href="http://support.artstation.com/knowledge_base/topics/account-verification" target="_blank">More information<i class="far fa-external-link fa-pad-left"></i></a></p>
+                                 </div>
+                                 
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="separator-lg"></div>
+            </signup>
+         </div>
+      </light-layout>
+   </app-root>
+</div>
+{% include 'footer.html'%}

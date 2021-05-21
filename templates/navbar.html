@@ -1,0 +1,463 @@
+{% load static %}
+
+
+         <div id="website_navigation_container">
+            <link href="{% static 'assets/layout/signed_out_index.65bbec2c0e0193297235.css' %}" rel="stylesheet" id="layout_styles" />
+            <style type="text/css">
+   
+.is-promobar-active {
+    --main-menu-level-1-height: 50px;
+    --main-menu-height: 92px;
+}
+
+</style>
+
+            <div id="main_nav_container">
+             
+               <nav class="main-menu ng-non-bindable" id="main-nav" role="navigation">
+
+
+<!-- 
+   <li class="main-menu-logo"><a class="navigation-logo" href="/" target="_self"></a><a class="js-for-pro-members hidden pro-badge pro-badge-g pro-badge-md badge-spacing animate-badge" href="/pro/hub" target="_self">Pro</a><a class="js-for-plus-members hidden plus-badge plus-badge-g pro-badge-md badge-spacing animate-badge" href="/plus/hub" target="_self">Plus</a></li>
+
+
+ -->
+
+
+
+
+                  <ul class="menu-level menu-level-1 bs-list-unstyled">
+                     <li class="bs-d-sm-none">
+                        <button class="collapsed main-menu-hamburger" type="button" data-toggle="collapseMenu" data-target="#main-menu-nav">
+                           <div class="line"></div>
+                           <div class="line"></div>
+                           <div class="line"></div>
+                           <div class="line-fake"></div>
+                        </button>
+                     </li>
+                     <li class="main-menu-logo"><a class="" href="/" target="_self"><img src="{% static 'logo.png' %}" style="width: 122px; height: 22px;"></a></li>
+                     <li class="main-menu-search bs-flex-grow-1 bs-d-none bs-d-sm-flex">
+                        <form class="form bs-flex-grow-1 position-relative" action="/search" role="search"><i class="far fa-search main-menu-search-icon"></i><input class="main-menu-search-input" id="search-input" type="search" placeholder="Search" autocomplete="off"  name="q" /></form>
+                     </li>
+                 <!--     <li class="main-menu-bar-item bs-d-none bs-d-sm-flex"><a class="main-menu-bar-link" href="marketplace/cart.html" target="_self" data-cart-link="true"><i class="far fa-shopping-cart fa-lg"></i><span class="bs-badge badge-cart-items hidden" data-cart-counter="true">0</span></a></li>
+                     <li class="main-menu-bar-item dropdown bs-d-none bs-d-sm-flex hidden js-currency-dropdown">
+                        <button class="main-menu-bar-link dropdown-toggle" type="button" data-toggle="dropdownMenu"><span class="js-current-currency">USD, $</span><i class="far fa-fw fa-chevron-down fa-pad-left animate animate-rotate"></i></button>
+                        <div class="main-menu-dropdown">
+                           <ul class="bs-list-unstyled">
+                              <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link" data-js-set-currency="usd" type="button"><span class="far fa-dollar-sign fa-pad-right-x2"></span><span>USD</span></button></li>
+                              <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link" data-js-set-currency="cad" type="button"><span class="far fa-dollar-sign fa-pad-right-x2"></span><span>CAD</span></button></li>
+                              <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link" data-js-set-currency="eur" type="button"><span class="far fa-euro-sign fa-pad-right-x2"></span><span>EUR</span></button></li>
+                              <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link" data-js-set-currency="gbp" type="button"><span class="far fa-pound-sign fa-pad-right-x2"></span><span>GBP</span></button></li>
+                           </ul>
+                        </div>
+                     </li> -->
+                     {% if user.is_authenticated %}
+
+
+
+                      <li class="main-menu-bar-item dropdown bs-d-none bs-d-sm-flex js-for-artists js-for-pro-members js-for-plus-members hidden">
+      <a class="main-menu-bar-link dropdown-toggle" href="/community/projects/new" data-toggle="dropdownMenu" target="_blank"><i class="far fa-arrow-from-bottom fa-lg"></i><span class="bs-d-none bs-d-lg-block fa-pad-left"><span>Upload</span></span></a>
+      <ul class="main-menu-dropdown">
+         <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/community/projects/new" data-registration-href="data-registration-href" target="_self"><i class="far fa-image fa-fw fa-pad-right-x2"></i><span>New Artwork</span></a></li>
+         <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/blog_posts/new" data-registration-href="data-registration-href" target="_self"><i class="far fa-book fa-fw fa-pad-right-x2"></i><span>New Blog Post</span></a></li>
+         <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/products/new" data-registration-href="data-registration-href" target="_self"><i class="far fa-cube fa-fw fa-pad-right-x2"></i><span>New Product</span></a></li>
+         <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/printed_products/new" data-registration-href="data-registration-href" target="_self"><i class="far icomoon icon-prints fa-fw fa-pad-right-x2"></i><span>New Print</span></a></li>
+      </ul>
+   </li>
+   <li class="hidden-xs hidden-sm main-menu-bar-item js-upload-link"><a class="main-menu-bar-link" href="/community/projects/new" data-registration-href="data-registration-href" target="_self"><i class="far fa-arrow-from-bottom fa-lg"></i><span class="fa-pad-left">Upload</span></a></li>
+   <li class="js-for-completed-profile main-menu-bar-item dropdown bs-d-none bs-d-sm-flex ng-non-bindable" id="latest_notifications_popup" data-error-label="Something went wrong">
+      <a class="main-menu-bar-link dropdown-toggle" id="notification_dropdown" href="/myartstation/notifications" data-toggle="dropdownMenu" target="_self"><i class="far fa-bell fa-lg"></i><span class="bs-badge badge-notification" style="display: none;"></span></a>
+      <div class="dropdown-notifications">
+         <div class="dropdown-notifications-filters"><a class="dropdown-notifications-filter active" href="/myartstation/notifications" title="All Notifications" target="_self">All</a><button class="dropdown-notifications-filter" title="Artwork" data-type="artwork" type="button"><i class="far fa-image"></i></button><button class="dropdown-notifications-filter" title="Followers" data-type="followers" type="button"><i class="far fa-user-friends"></i></button><button class="dropdown-notifications-filter" title="Blog" data-type="blog_posts" type="button"><i class="far fa-book"></i></button><button class="dropdown-notifications-filter" title="Challenges" data-type="challenges" type="button"><i class="far fa-trophy"></i></button><button class="dropdown-notifications-filter" title="Comments" data-type="comments" type="button"><i class="far fa-comment"></i></button><button class="dropdown-notifications-filter" title="Likes" data-type="likes" type="button"><i class="far fa-thumbs-up"></i></button><button class="dropdown-notifications-filter" title="Marketplace" data-type="marketplace" type="button"><i class="far fa-cube"></i></button><button class="dropdown-notifications-filter" title="Prints" data-type="prints" type="button"><i class="far icomoon icon-prints"></i></button><a class="dropdown-notifications-filter" title="Notification Settings" href="/myartstation/settings/notifications" target="_self"><i class="far fa-cog"></i></a></div>
+         <div class="dropdown-notifications-filter-selected">All Notifications</div>
+         <div class="dropdown-notifications-list-wrap trigger-ps ps">
+            <ul class="dropdown-notifications-list">
+               <li class="notification-group">about 19 hours ago</li>
+               <li class="notification read" data-notification-id="2528377567">
+                  <a target="_self" href="https://www.artstation.com/artwork/XnvW1Y">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdna.artstation.com/p/assets/covers/images/036/208/808/micro_square/marco-plouffe-keos-masons-marco-plouffe-keos-masons-kidshow-thumb-g.jpg?1617030144')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Marco Plouffe (Keos Masons)</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published artwork <b>Just a Kids Show - Part 3</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification-group">6 days ago</li>
+               <li class="notification read" data-notification-id="2517743658">
+                  <a target="_self" href="https://www.artstation.com/artwork/8egbwQ">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdnb.artstation.com/p/assets/covers/images/036/052/011/micro_square/marco-plouffe-keos-masons-marco-plouffe-keos-masons-kidshow-thumb-r.jpg?1616602177')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Marco Plouffe (Keos Masons)</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published artwork <b>Just a Kids Show - Part 2</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification-group">8 days ago</li>
+               <li class="notification read" data-notification-id="2511405459">
+                  <a target="_self" href="https://www.artstation.com/artwork/8eVKLq">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdna.artstation.com/p/assets/covers/images/035/975/210/micro_square/marco-plouffe-keos-masons-marco-plouffe-keos-masons-kidshow-thumb-y.jpg?1616418371')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Marco Plouffe (Keos Masons)</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published artwork <b>Just a Kids Show - Part 1</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification-group">11 days ago</li>
+               <li class="notification read" data-notification-id="2506326882">
+                  <a target="_self" href="https://www.artstation.com/artwork/kD3WrK">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdnb.artstation.com/p/assets/images/images/035/897/343/20210319134603/micro_square/chris-campbell-skeeziks-babagash.jpg?1616179563')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable"><b>Chris Campbell (Skeeziks)</b> published artwork <b>Babagash, the Thumbstealer</b></div>
+                  </a>
+               </li>
+               <li class="notification read" data-notification-id="2503566696">
+                  <a target="_self" href="https://www.artstation.com/marketplace/p/VXX1B/550-old-castles-buildings-reference-pack-perfect-for-mattepainting-and-photobash">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdna.artstation.com/p/marketplace/presentation_assets/000/775/214/20210318180916/thumbnail/file.jpg?1616108948')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Mels Mneyan</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published product <b>550+ OLD Castles | Buildings Reference pack [Perfect for Mattepainting and Photobash]</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification read" data-notification-id="2503543978">
+                  <a target="_self" href="https://www.artstation.com/marketplace/p/DVVOM/500-ornament-alphas-tracery-decorations-stencils-3dcoat-zbrush">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdnb.artstation.com/p/marketplace/presentation_assets/000/775/165/20210318173106/thumbnail/file.jpg?1616106658')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Mels Mneyan</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published product <b>500+ ornament alphas | Tracery decorations | Stencils 3dcoat &amp; Zbrush</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification-group">19 days ago</li>
+               <li class="notification read" data-notification-id="2480590375">
+                  <a target="_self" href="https://www.artstation.com/mels_art/blog/OZGX/skin-details-for-characters-etc-out-in-my-store">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdna.artstation.com/p/media_assets/images/images/000/765/106/medium/Full_HD_2.jpg?1615463766')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Mels Mneyan</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published a blog post <b>SKIN DETAILS for Characters etc... OUT in My store</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification read" data-notification-id="2480480251">
+                  <a target="_self" href="https://www.artstation.com/marketplace/p/ojO3l/190-lether-skin-details-alpha-collection-demo-tutorial">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdnb.artstation.com/p/marketplace/presentation_assets/000/754/363/20210305071855/thumbnail/file.jpg?1614950327')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable">
+                        <b>Mels Mneyan</b> 
+                        <div class="pro-badge small">Pro</div>
+                        published product <b>190+ LETHER | SKIN DETAILS ALPHA COLLECTION [DEMO TUTORIAL]</b>
+                     </div>
+                  </a>
+               </li>
+               <li class="notification-group">21 days ago</li>
+               <li class="notification read" data-notification-id="2475805130">
+                  <a target="_self" href="https://www.artstation.com/artwork/5Xq3Kg">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdna.artstation.com/p/assets/covers/images/035/570/990/micro_square/chris-campbell-skeeziks-chris-campbell-skeeziks-kindred-logo-02.jpg?1615312306')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable"><b>Chris Campbell (Skeeziks)</b> published artwork <b>Legends of Runeterra, Kindred followers for Empires of the Ascended</b></div>
+                  </a>
+               </li>
+               <li class="notification-group">22 days ago</li>
+               <li class="notification read" data-notification-id="2473458866">
+                  <a target="_self" href="https://www.artstation.com/artwork/rAywx6">
+                     <div class="notification-image">
+                        <span class="img" style="background-image: url('https://cdna.artstation.com/p/assets/covers/images/035/538/992/micro_square/chris-campbell-skeeziks-chris-campbell-skeeziks-lissandra-lineup-thumb.jpg?1615232646')"></span>
+                        <div class="mature-content-label">Mature content</div>
+                     </div>
+                     <div class="notification-content ng-non-bindable"><b>Chris Campbell (Skeeziks)</b> published artwork <b>Legends of Runeterra, Lissandra followers for Empires of the Ascended</b></div>
+                  </a>
+               </li>
+            </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+               <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+            </div>
+            <div class="ps__rail-y" style="top: 0px; right: 0px;">
+               <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+            </div>
+         </div>
+         <div class="dropdown-notifications-loading text-center"><span class="spinner"></span></div>
+         <a class="view-all" href="/myartstation/notifications" target="_self" data-js-t="notifications.view_all_notifications">View All Notifications</a>
+      </div>
+   </li>
+   <li class="js-for-not-completed-profile hidden main-menu-bar-item dropdown bs-d-none bs-d-sm-flex"><a class="main-menu-bar-link" id="notification_dropdown" href="/myartstation/notifications" data-registration-href="data-registration-href" target="_self"><i class="far fa-bell fa-lg"></i><span class="bs-badge badge-notification"></span></a></li>
+   <li class="main-menu-bar-item bs-d-none bs-d-sm-flex"><a class="main-menu-bar-link" href="/messages" data-registration-href="data-registration-href" type="_self" data-messages-link="true"><i class="far fa-paper-plane fa-lg"></i><span class="bs-badge badge-messages js-messages-counter hidden" data-unread-conversations-counter="true">0</span></a></li>
+  
+   <li class="main-menu-bar-item dropdown bs-d-none bs-d-sm-flex">
+      <a class="main-menu-bar-link dropdown-toggle" data-js-href="profilePath" data-toggle="dropdownMenu" target="_self">
+         <img class="avatar img-circle" src="{{ user.profile.image.url }}" alt="{{user.username}}" data-js-img-src="mediumAvatarUrl" width="30" height="30" data-js-img-alt="fullName">
+         <span class="fa-pad-left bs-d-none bs-d-sm-none">
+            <div class="user-name js-first-name">{{user.username}}</div>
+            <div class="user-badge js-for-staff">Staff</div>
+            <div class="user-badge js-for-pro-members hidden">PRO</div>
+            <div class="user-badge js-for-plus-members hidden">PLUS</div>
+         </span>
+         <i class="far fa-fw fa-chevron-down fa-pad-left animate animate-rotate"></i>
+      </a>
+      <div class="main-menu-dropdown is-main">
+         <div class="dropdown-list" id="dropdown-general">
+            <ul class="bs-list-unstyled">
+               <li class="main-menu-dropdown-profile">
+                  <img class="profile-bg" src="{{ user.profile.image.url }}" alt="G" data-js-img-src="coverUrl" width="270" height="78" data-js-img-alt="fullName">
+                  <div class="profile-inner">
+                     <div class="profile-image"><a data-js-href="profilePath" href="/gspeed" data-registration-href="data-registration-href" target="_self"><img class="avatar img-circle" src="{{ user.profile.image.url }}" alt="{{user.username}}" data-js-img-src="mediumAvatarUrl" width="40" height="40" data-js-img-alt="fullName"></a><a class="user-badge pro-badge pro-badge-g js-for-pro-members hidden" href="/pro/hub" target="_self">PRO</a><a class="user-badge plus-badge plus-badge-g js-for-plus-members hidden" href="/plus/hub" target="_self">PLUS</a></div>
+                     <div class="profile-info">
+                        <a class="profile-name js-fullname" data-js-href="profilePath" href="/gspeed" data-registration-href="data-registration-href" target="_self">{{user.username}}</a>
+                        <div class="profile-links"><a data-js-href="profilePath" href="/gspeed" data-registration-href="data-registration-href" target="_self">View Profile</a><span class="spacer"></span><a href="/myartstation/profile/edit" data-registration-href="data-registration-href" target="_self">Edit Profile</a></div>
+                     </div>
+                  </div>
+               </li>
+               <li class="main-menu-dropdown-item js-for-non-paid-members"><a class="main-menu-dropdown-link" href="/subscribe" target="_self"><i class="far fa-arrow-circle-up fa-fw fa-pad-right-x2"></i><span>Upgrade</span></a></li>
+               <li class="main-menu-dropdown-item js-for-pro-members hidden"><a class="main-menu-dropdown-link is-submenu-toggler js-show-dropdown-submenu" id="btn-dropdown-premium" href="/pro/hub" target="_self" data-submenu="dropdown-premium"><span><span class="user-badge-spacer"><span class="user-badge">PRO</span></span><span>My Pro Account</span></span><i class="far fa-chevron-right fa-fw"></i></a></li>
+               <li class="main-menu-dropdown-item js-for-plus-members hidden"><a class="main-menu-dropdown-link is-submenu-toggler js-show-dropdown-submenu" id="btn-dropdown-premium" href="/plus/hub" target="_self" data-submenu="dropdown-premium"><span><span class="user-badge-spacer"><span class="user-badge">PLUS</span></span><span>My Plus Account</span></span><i class="far fa-chevron-right fa-fw"></i></a></li>
+               <li class="main-menu-dropdown-item js-for-studio-members hidden"><a class="main-menu-dropdown-link is-submenu-toggler js-show-dropdown-submenu" id="btn-dropdown-premium" href="/studio/hub" target="_self" data-submenu="dropdown-premium"><span><span class="user-badge-spacer"><span class="user-badge">Studio</span></span><span>My Studio Account</span></span><i class="far fa-chevron-right fa-fw"></i></a></li>
+               <li class="main-menu-dropdown-item hidden js-switch-account"><button class="main-menu-dropdown-link is-submenu-toggler cursor-pointer js-show-dropdown-submenu" id="btn-dropdown-switch-account" type="button" data-submenu="dropdown-switch-account"><span><i class="far fa-sync fa-fw fa-pad-right-x2"></i><span>Switch Account</span></span><i class="far fa-chevron-right fa-fw"></i></button></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" data-js-href="collectionsPath" data-registration-href="data-registration-href" href="/gspeed/collections" target="_self"><i class="far fa-bookmark fa-fw fa-pad-right-x2"></i><span>My Collections</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" data-js-href="connectionsPath" data-registration-href="data-registration-href" href="/gspeed/connections" target="_self"><i class="far fa-user-friends fa-fw fa-pad-right-x2"></i><span>My Connections</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/wishlist" target="_self"><i class="far fa-heart fa-fw fa-pad-right-x2"></i><span>My Wishlist</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/library" target="_self"><i class="far fa-cube fa-fw fa-pad-right-x2"></i><span>My Library</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/orders" target="_self"><i class="far fa-receipt fa-fw fa-pad-right-x2"></i><span>Order History</span></a></li>
+               <li class="main-menu-dropdown-divider"></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/projects" data-registration-href="data-registration-href" target="_self"><i class="far fa-image fa-fw fa-pad-right-x2"></i><span>Manage Portfolio</span></a></li>
+               <li class="main-menu-dropdown-item js-for-artists js-for-pro-members js-for-plus-members js-for-completed-profile"><a class="main-menu-dropdown-link" href="/blog_posts/manage" data-registration-href="data-registration-href" target="_self"><i class="far fa-book fa-fw fa-pad-right-x2"></i><span>Manage Blog</span></a></li>
+               <li class="main-menu-dropdown-item js-for-artists js-for-pro-members js-for-plus-members js-for-completed-profile"><a class="main-menu-dropdown-link is-submenu-toggler js-show-dropdown-submenu" id="btn-dropdown-website" href="/myartstation/themes" data-registration-href="data-registration-href" target="_self" data-submenu="dropdown-website"><span><i class="far fa-browser fa-fw fa-pad-right-x2"></i><span>Website Builder</span></span><i class="far fa-chevron-right fa-fw"></i></a></li>
+               <li class="main-menu-dropdown-divider"></li>
+               <li class="main-menu-dropdown-item js-for-signed-in"><a class="main-menu-dropdown-link is-submenu-toggler js-show-dropdown-submenu" id="btn-dropdown-store" href="/marketplace/manage/products" target="_self" data-submenu="dropdown-store"><span><i class="far fa-store fa-fw fa-pad-right-x2"></i><span>Seller Profile</span></span><i class="far fa-chevron-right fa-fw"></i></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/affiliate_profile/community_program" target="_self"><i class="far fa-percent fa-fw fa-pad-right-x2"></i><span>Affiliate Profile</span></a></li>
+               <li class="main-menu-dropdown-item js-for-signed-in"><a class="main-menu-dropdown-link" href="/marketplace/manage/payouts" target="_self"><i class="far fa-dollar-sign fa-fw fa-pad-right-x2"></i><span>Payouts</span></a></li>
+               <li class="main-menu-dropdown-divider js-for-recruiters hidden"></li>
+               <li class="main-menu-dropdown-item js-for-recruiters hidden"><a class="main-menu-dropdown-link" href="/recruitment/jobs" target="_self"><i class="far fa-list fa-fw fa-pad-right-x2"></i><span>Manage Jobs</span></a></li>
+               <li class="main-menu-dropdown-divider js-for-advertisers hidden"></li>
+               <li class="main-menu-dropdown-item js-for-advertisers hidden"><a class="main-menu-dropdown-link" href="/campaign-management" target="_self"><i class="far fa-bullhorn fa-fw fa-pad-right-x2"></i><span>Advertising</span></a></li>
+               <li class="main-menu-dropdown-divider"></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/settings/general" target="_self"><i class="far fa-fw fa-cog fa-pad-right-x2"></i><span>Settings</span></a></li>
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link" data-action="sign_out"><i class="far fa-sign-out fa-fw fa-pad-right-x2"></i><span>Sign out</span></button></li>
+            </ul>
+         </div>
+         <div class="dropdown-list " id="dropdown-premium">
+            <ul class="bs-list-unstyled js-for-pro-members hidden">
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link is-back-to-main js-return-to-general-menu" type="button"><i class="far fa-arrow-left fa-fw fa-pad-right-x2"></i><span class="fa-pad-right">My</span><span class="user-badge pro-badge">Pro</span><span class="fa-pad-left">Account</span></button></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/pro/hub" target="_self"><i class="far fa-rocket-launch fa-fw fa-pad-right-x2"></i><span>See all Pro Perks</span></a></li>
+               <li class="main-menu-dropdown-item js-for-artists hidden"><a class="main-menu-dropdown-link" href="/analytics" data-registration-href="data-registration-href" target="_self"><i class="far fa-chart-bar fa-fw fa-pad-right-x2"></i><span>Analytics</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/premium_perks" target="_self"><i class="far fa-box-full fa-fw fa-pad-right-x2"></i><span>Partner Perks</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/subscription" target="_self"><i class="far fa-file-invoice-dollar fa-fw fa-pad-right-x2"></i><span>Manage Subscription</span></a></li>
+            </ul>
+            <ul class="bs-list-unstyled js-for-plus-members hidden">
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link is-back-to-main js-return-to-general-menu" type="button"><i class="far fa-arrow-left fa-fw fa-pad-right-x2"></i><span class="fa-pad-right">My</span><span class="user-badge plus-badge">Plus</span><span class="fa-pad-left">Account</span></button></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/plus/hub" target="_self"><i class="far fa-rocket-launch fa-fw fa-pad-right-x2"></i><span>See all Plus Perks</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/premium_perks" target="_self"><i class="far fa-box-full fa-fw fa-pad-right-x2"></i><span>Partner Perks</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/subscription" target="_self"><i class="far fa-file-invoice-dollar fa-fw fa-pad-right-x2"></i><span>Manage Subscription</span></a></li>
+            </ul>
+            <ul class="bs-list-unstyled js-for-studio-members hidden">
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link is-back-to-main js-return-to-general-menu" type="button"><i class="far fa-arrow-left fa-fw fa-pad-right-x2"></i><span class="fa-pad-right">My</span><span class="user-badge studio-badge">Studio</span><span class="fa-pad-left">Account</span></button></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/studios/settings/team-members" target="_self"><i class="far fa-users fa-fw fa-pad-right-x2"></i><span>Manage Members</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/studios/settings/hiring" target="_self"><i class="far fa-briefcase fa-fw fa-pad-right-x2"></i><span>Edit Hiring Profile</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/studio/hub" target="_self"><i class="far fa-rocket-launch fa-fw fa-pad-right-x2"></i><span>See all Studio Perks</span></a></li>
+               <li class="main-menu-dropdown-item js-for-artists hidden"><a class="main-menu-dropdown-link" href="/analytics" data-registration-href="data-registration-href" target="_self"><i class="far fa-chart-bar fa-fw fa-pad-right-x2"></i><span>Analytics</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/premium_perks" target="_self"><i class="far fa-box-full fa-fw fa-pad-right-x2"></i><span>Partner Perks</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/subscription" target="_self"><i class="far fa-file-invoice-dollar fa-fw fa-pad-right-x2"></i><span>Manage Subscription</span></a></li>
+            </ul>
+         </div>
+         <div class="dropdown-list " id="dropdown-website">
+            <ul class="bs-list-unstyled">
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link is-back-to-main js-return-to-general-menu" type="button"><i class="far fa-arrow-left fa-fw fa-pad-right-x2"></i>Manage Website</button></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/themes" target="_self"><i class="far fa-browser fa-fw fa-pad-right-x2"></i><span>Select Theme</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/theme_customizer" target="_self"><i class="far fa-paint-brush fa-fw fa-pad-right-x2"></i><span>Edit Theme</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" data-js-href="websitePath" href="https://gspeed.artstation.com" target="_blank"><i class="far fa-external-link fa-fw fa-pad-right-x2"></i><span>View Website</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/domains" target="_self"><i class="far fa-globe fa-fw fa-pad-right-x2"></i><span>Manage Domains</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/pages" target="_self"><i class="far fa-copy fa-fw fa-pad-right-x2"></i><span>Manage Pages</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/myartstation/portfolio_settings/edit" target="_self"><i class="far fa-sliders-h fa-fw fa-pad-right-x2"></i><span>Website Settings</span></a></li>
+            </ul>
+         </div>
+         <div class="dropdown-list " id="dropdown-store">
+            <ul class="bs-list-unstyled">
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link is-back-to-main js-return-to-general-menu" type="button"><i class="far fa-arrow-left fa-fw fa-pad-right-x2"></i>Seller Profile</button></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/products" target="_self"><i class="far fa-cube fa-fw fa-pad-right-x2"></i><span>Manage Products</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/printed_products" target="_self"><i class="far fa-pallet-alt fa-fw fa-pad-right-x2"></i><span>Manage Prints</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/sales_report" target="_self"><i class="far fa-chart-line fa-fw fa-pad-right-x2"></i><span>Sales Report</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/marketing/discounts" target="_self"><i class="far fa-bullseye-arrow fa-fw fa-pad-right-x2"></i><span>Marketing Tools</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/reviews" target="_self"><i class="far fa-star fa-fw fa-pad-right-x2"></i><span>Ratings &amp; Reviews</span></a></li>
+               <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/marketplace/manage/affiliate_contracts" target="_self"><i class="far fa-handshake-alt fa-fw fa-pad-right-x2"></i><span>Affiliate Contracts</span></a></li>
+            </ul>
+         </div>
+         <div class="dropdown-list " id="dropdown-switch-account">
+            <ul class="bs-list-unstyled">
+               <li class="main-menu-dropdown-item"><button class="main-menu-dropdown-link is-back-to-main js-return-to-general-menu" type="button"><i class="far fa-arrow-left fa-fw fa-pad-right-x2"></i>Switch Account</button></li>
+            </ul>
+            <ul class="bs-list-unstyled" id="switch-account-list"></ul>
+         </div>
+      </div>
+   </li>
+ <!--   <li class="main-menu-bar-item dropdown bs-d-none bs-d-sm-flex">
+      <button class="main-menu-bar-link dropdown-toggle" type="button" data-toggle="dropdownMenu"><i class="far fa-ellipsis-v fa-lg animate animate-scale"></i></button>
+      <div class="main-menu-dropdown">
+   
+
+
+
+      </div>
+   </li> -->
+
+
+
+                     {% else %}
+                     <li class="main-menu-bar-item bs-d-none bs-d-sm-flex">
+                        <a class="main-menu-bar-link" href="/register" target="_self"><i class="far fa-pen-square fa-lg fa-pad-right"></i><span>Sign up</span></a>
+                     </li>
+                     <li class="main-menu-bar-item"><a class="main-menu-bar-link justify-content-end" href="/login" target="_self"><span class="bs-btn bs-btn-primary"><i class="far fa-sign-in text-white"></i><span class="fa-pad-left">Sign In</span></span></a>
+                     </li>
+                     {% endif %}
+                     <li class="main-menu-bar-item dropdown bs-d-none bs-d-sm-flex">
+                        <button class="main-menu-bar-link dropdown-toggle" type="button" data-toggle="dropdownMenu"><i class="far fa-ellipsis-v fa-lg animate animate-scale"></i></button>
+                        <div class="main-menu-dropdown">
+                           <ul class="bs-list-unstyled">
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/about" target="_self"><i class="fab fa-Resbrotherx fa-fw fa-pad-right"></i><span>About Resbrotherx</span></a></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/about/company" target="_self"><i class="far fa-building fa-fw fa-pad-right"></i><span>About Company</span></a></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/about/services" target="_self"><i class="far fa-star fa-fw fa-pad-right"></i><span>Marketing Services</span></a></li>
+                              <li class="main-menu-dropdown-divider"></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://help.Resbrotherx.com/" target="_blank"><i class="far fa-question fa-fw fa-pad-right"></i><span>Help</span></a></li>
+                              <li class="main-menu-dropdown-divider"></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="http://eepurl.com/JF5iP" target="_blank"><i class="far fa-envelope fa-fw fa-pad-right"></i><span>Newsletter</span></a></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://www.facebook.com/Resbrotherx" target="_blank"><i class="fab fa-facebook-f fa-fw fa-pad-right"></i><span>Facebook</span></a></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://www.instagram.com/Resbrotherx" target="_blank"><i class="fab fa-instagram fa-fw fa-pad-right"></i><span>Instagram</span></a></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://twitter.com/Resbrotherx" target="_blank"><i class="fab fa-twitter fa-fw fa-pad-right"></i><span>Twitter</span></a></li>
+                              <li class="main-menu-dropdown-divider"></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/tos" target="_self"><i class="far fa-gavel fa-fw fa-pad-right"></i><span>Terms of Service</span></a></li>
+                              <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="/privacy" target="_self"><i class="far fa-lock fa-fw fa-pad-right"></i><span>Privacy Policy</span></a></li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="menu-level-2-wrap menu-collapse" id="main-menu-nav">
+                     <div class="main-dropdown-backdrop"></div>
+                     <div class="main-menu-sm-bar bs-d-flex bs-d-sm-none"><a class="main-menu-mobile-button" href="search.html" target="_self"><i class="far fa-search fa-lg"></i></a><a class="main-menu-mobile-button" href="marketplace/cart.html" target="_self" data-cart-link="true"><i class="far fa-shopping-cart fa-lg"></i><span class="bs-badge badge-cart-items hidden" data-cart-counter="true">0</span></a><a class="main-menu-mobile-button signup text-uppercase font-weight-medium" href="/signup" target="_self"><i class="far fa-pen-square fa-lg fa-pad-right"></i><span>Sign up</span></a></div>
+                     <ul class="menu-level menu-level-2 ps-main-menu bs-list-unstyled">
+
+                     {% if user.is_authenticated %}
+
+                     {% else %}
+                        <li class="main-menu-item"><a class="main-menu-link" href="/about" target="_self" data-menu-group="about"><i class="fab fa-Resbrotherx fa-fw fa-pad-right"></i><span>About</span></a></li>
+                    
+                     {% endif %}
+                        <li class="main-menu-item"><a class="main-menu-link" href="/subscription" target="_self" data-menu-group="subscriptions"><i class="far fa-arrow-circle-up fa-fw fa-pad-right"></i><span>Subscriptions</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/learning" target="_self" data-menu-group="learning"><i class="far fa-graduation-cap fa-fw fa-pad-right"></i><span>Learning</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/marketplace" target="_self" data-menu-group="marketplace"><i class="far fa-cube fa-fw fa-pad-right"></i><span>Marketplace</span><span class="badge-new js-active-marketplace-sale hidden">Sale</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/prints/prints" target="_self" data-menu-group="prints"><i class="far icomoon icon-prints fa-fw fa-pad-right"></i><span>Prints</span><span class="badge-new js-active-prints-sale hidden">Sale</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/jobs" target="_self" data-menu-group="jobs"><i class="far fa-briefcase fa-fw fa-pad-right"></i><span>Jobs</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/blogs" target="_self" data-menu-group="blogs"><i class="far fa-book fa-fw fa-pad-right"></i><span>Blogs</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/contest" target="_self" data-menu-group="challenges"><i class="far fa-trophy fa-fw fa-pad-right"></i><span>Challenges</span></a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="/magazin"><i class="far fa-newspaper fa-fw fa-pad-right"></i><span>Magazine</span></a></li>
+                        <li class="main-menu-links-dropdown-toggle is-menu-compact">
+                           <button class="main-menu-link main-menu-links-dropdown" type="button"><span>More</span><i class="far fa-chevron-down fa-fw fa-pad-left"></i></button>
+                           <ul class="dropdown">
+                              <li class="main-menu-item"><a class="main-menu-link" href="https://www.Resbrotherxmedia.com/"><i class="far fa-books fa-fw fa-pad-right"></i><span>Books</span></a></li>
+                              <li class="main-menu-item"><a class="main-menu-link" href="/podcast" target="_self"><i class="far fa-microphone fa-fw fa-pad-right"></i><span>Podcast</span></a></li>
+                              <li class="main-menu-item"><a class="main-menu-link" href="/guides" target="_self"><i class="far fa-book-reader fa-fw fa-pad-right"></i><span>Guides</span></a></li>
+                           </ul>
+                        </li>
+                        <li class="main-menu-item is-menu-full"><a class="main-menu-link" href="https://www.Resbrotherxmedia.com/"><i class="far fa-books fa-fw fa-pad-right"></i><span>Books</span></a></li>
+                        <li class="main-menu-item is-menu-full"><a class="main-menu-link" href="/podcast" target="_self" data-menu-group="podcast"><i class="far fa-microphone fa-fw fa-pad-right"></i><span>Podcast</span></a></li>
+                        <li class="main-menu-item is-menu-full"><a class="main-menu-link" href="/guides" target="_self" data-menu-group="guides"><i class="far fa-book-reader fa-fw fa-pad-right"></i><span>Guides</span></a></li>
+                        <li class="main-menu-item bs-d-sm-none dropdown dropdown-more">
+                           <button class="main-menu-link dropdown-toggle" type="button" data-toggle="dropdownMenu"><span>More</span><i class="far fa-chevron-down fa-fw fa-pad-left text-primary animate animate-rotate"></i></button>
+                           <div class="dropdown-more-list">
+                              <ul class="bs-list-unstyled">
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="about.html" target="_self"><i class="fab fa-Resbrotherx fa-fw fa-pad-right"></i><span>About Resbrotherx</span></a></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="about/company.html" target="_self"><i class="far fa-building fa-fw fa-pad-right"></i><span>About Company</span></a></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="about/marketing-services.html" target="_self"><i class="far fa-star fa-fw fa-pad-right"></i><span>Marketing Services</span></a></li>
+                                 <li class="main-menu-dropdown-divider"></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://help.Resbrotherx.com/" target="_blank"><i class="far fa-question fa-fw fa-pad-right"></i><span>Help</span></a></li>
+                                 <li class="main-menu-dropdown-divider"></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="http://eepurl.com/JF5iP" target="_blank"><i class="far fa-envelope fa-fw fa-pad-right"></i><span>Newsletter</span></a></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://www.facebook.com/Resbrotherx" target="_blank"><i class="fab fa-facebook-f fa-fw fa-pad-right"></i><span>Facebook</span></a></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://www.instagram.com/Resbrotherx" target="_blank"><i class="fab fa-instagram fa-fw fa-pad-right"></i><span>Instagram</span></a></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="https://twitter.com/ResbrotherxHQ" target="_blank"><i class="fab fa-twitter fa-fw fa-pad-right"></i><span>Twitter</span></a></li>
+                                 <li class="main-menu-dropdown-divider"></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="tos.html" target="_self"><i class="far fa-gavel fa-fw fa-pad-right"></i><span>Terms of Service</span></a></li>
+                                 <li class="main-menu-dropdown-item"><a class="main-menu-dropdown-link" href="privacy.html" target="_self"><i class="far fa-lock fa-fw fa-pad-right"></i><span>Privacy Policy</span></a></li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="main-menu-megadrop-back"></div>
+               </nav>
+              <!--  <div class="bs-modal" id="login-modal">
+                  <div class="bs-modal-dialog" data-close="modalBackdrop">
+                     <div class="bs-modal-content">
+                        <div class="bs-modal-header">
+                           <button class="bs-close" type="button" data-close="modal"><i class="far fa-times"></i></button>
+                           <h3 class="bs-modal-title">Sign In</h3>
+                        </div>
+                        <div class="bs-modal-body">
+                           <form action="https://www.Resbrotherx.com/api/v2/authentication/session" accept-charset="UTF-8" method="post">
+                              <input type="hidden" name="form_type" value="modal" />
+                              <div class="bs-form-group"><label class="control-label" for="user_email">Your email</label><input class="bs-form-control" id="user_email" type="email" placeholder="email@example.com" autofocus="true" name="email" /></div>
+                              <div class="bs-form-group"><label class="control-label" for="user_password">Password</label><input class="bs-form-control" id="user_password" type="password" placeholder="password" autocomplete="off" name="password" /></div>
+                              <div class="bs-form-group"><button class="bs-btn bs-btn-default" type="submit"><i class="far fa-sign-in fa-pad-right"></i>Sign in</button></div>
+                              <div class="bs-row bs-row-flex">
+                                 <div class="bs-col-xs-6"><a href="users/password/new.html" target:="target:" _self="_self">Forgot password?</a></div>
+                                 <div class="bs-col-xs-6 bs-text-right"><a href="/register" target:="target:" _self="_self">Sign up</a></div>
+                              </div>
+                              <div class="bs-hr"></div>
+                              <a class="bs-btn bs-btn-default" href="users/auth/facebook/index.html" target:="target:" _self="_self"><i class="fab fa-facebook fa-pad-right"></i>Sign in with Facebook</a>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+               <div class="currency-select-modal bs-modal" id="currency-select-modal">
+                  <div class="bs-modal-dialog">
+                     <div class="bs-modal-content">
+                        <div class="bs-modal-header"></div>
+                        <div class="bs-modal-body">
+                           <div class="currency-select-modal-text js-currency js-eur">It looks like you’re using Resbrotherx from Europe.<br />Would you like to change the currency to Euros (&euro;)?</div>
+                           <div class="currency-select-modal-text js-currency js-gbp">It looks like you’re using Resbrotherx from Great Britain.<br />Would you like to change the currency to Pounds (&pound;)?</div>
+                           <div class="currency-select-modal-text js-currency js-cad">It looks like you’re using Resbrotherx from Canada.<br />Would you like to change the currency to CAD ($)?</div>
+                           <div class="bs-row bs-row-flex">
+                              <div class="bs-col-xs-12 bs-col-sm-6 mb-xs-10"><button class="bs-btn bs-btn-lg bs-btn-block bs-btn-default" data-js-set-currency="usd" type="button">Keep USD $</button></div>
+                              <div class="bs-col-xs-12 bs-col-sm-6"><button class="js-currency js-eur bs-btn bs-btn-lg bs-btn-block bs-btn-primary" data-js-set-currency="eur" type="button">Change to EUR &euro;</button><button class="js-currency js-gbp bs-btn bs-btn-lg bs-btn-block bs-btn-primary" data-js-set-currency="gbp" type="button">Change to GBP &pound;</button><button class="js-currency js-cad bs-btn bs-btn-lg bs-btn-block bs-btn-primary" data-js-set-currency="cad" type="button">Change to CAD $</button></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <script src="{% static 'assets/layout/signed_out_index.bundle.65bbec2c0e0193297235.js' %}" async></script>
+         </div>
+         {% if massages %}
+            {% for massage in massages %}
+               <div class="alart alart-{{ massage.tags }}">
+                  {{ massage }}
+               </div>
+            {% endfor %}
+         {% endif %}

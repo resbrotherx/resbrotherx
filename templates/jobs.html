@@ -1,0 +1,96 @@
+{% load static %}
+{% include "scripts.html" %}
+{% include "navbar.html" %}
+   <div class="container">
+      <div class="page-header">
+         <h1>Jobs<small style="margin-top: 10px;">Find your next gig</small></h1>
+      </div>
+      <div class="text-center"><a class="btn btn-success" href="recruitment.html">Looking for talent?<i class="far fa-arrow-right fa-pad-left"></i></a></div>
+      <div class="separator"></div>
+      <div class="separator"></div>
+      <h2 class="h3 text-center">Featured Studios</h2>
+      <div class="separator"></div>
+      <div class="featured-studios">
+         {% for stu in studio %}
+         <div class="featured-studio">
+            <div class="thumbnail">
+               <a href="{{stu.get_absolute_url}}"><img width="438" height="190" alt="Jobs at Creative Assembly" src="{{stu.banner.url}}" /></a>
+               <div class="caption">
+                  <div class="logo"><a href="{{stu.get_absolute_url}}"><img width="90" height="90" alt="Jobs at Creative Assembly" src="{{stu.logo.url}}" /></a></div>
+                  <h4><a href="{{stu.get_absolute_url}}">{{stu.title}}</a></h4>
+                  <p><i class="far fa-map-marker-alt fa-pad-right fa-fw"></i>{{stu.state}}, {{stu.country}}<br /><i class="far fa-briefcase fa-pad-right fa-fw"></i>2 Jobs Open</p>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+   <div class="separator"></div>
+   <div ng-app="app" ng-controller="SearchController">
+      <div class="search-bar">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2">
+                  <div class="form-group"><input class="form-control" ng-model="searchQuery" placeholder="Search..." type="text" /></div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="job-filters form-inline" ng-cloak="">
+                  <div class="col-md-10 col-md-offset-2 col-lg-5 form-inline-xs-flex">
+                     <div class="form-group job_type">
+                        <label>Job Type</label>
+                        <select artstation-select2="true" class="select2 form-control" data-minimum-results-for-search="-1" ng-model="searchFilter.job_type">
+                           <option value="">Any</option>
+                           <option value="permanent">Permanent</option>
+                           <option value="contract">Contract</option>
+                           <option value="freelance">Freelance</option>
+                           <option value="other"><span class="translation_missing" title="translation missing: en.jobs.job_types.other">Other</span></option>
+                        </select>
+                     </div>
+                     <div class="form-group country_list">
+                        <label>Country</label>
+                        <select artstation-select2="true" class="optional form-control country-select" name="country_code" ng-model="searchFilter.country_code">
+                           <option ng-repeat="country in countries" value=" country.code "> country.name </option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-md-10 col-md-offset-2 col-lg-4 col-lg-offset-0">
+                     <div class="form-group">
+                        <div class="checkbox"><label><input ng-model="searchFilter.work_remotely" type="checkbox" /><span class="custom"></span>&nbsp;Work Remotely</label></div>
+                        <div class="checkbox"><label><input ng-model="searchFilter.offer_relocation" type="checkbox" /><span class="custom"></span>&nbsp;Relocation Assistance</label></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="separator-lg"></div>
+      <div class="container" ng-cloak="">
+         <div class="no-jobs-found" ng-if="searchResults.length == 0">
+            <div class="row">
+               <div class="col-md-2 col-md-offset-5">No Jobs Found</div>
+            </div>
+         </div>
+         <div class="job-listings" ng-if="searchResults.length &gt; 0">
+            <div class="job-listing" ng-repeat="job in searchResults">
+               <div class="media">
+                  <div class="media-left"><a href="jobs/%7b%7b%20job.hash_id%20%7d%7d"><img class="job-thumb" ng-src=" job.thumb_url " width="60" height="60" alt="" src="#" /></a></div>
+                  <div class="media-body media-middle">
+                     <h4 class="media-heading"><a href="jobs/%7b%7b%20job.hash_id%20%7d%7d"> job.title </a></h4>
+                     <div class="text-gray-lighter"> job.company_name | unescapeHTML </div>
+                     <div><i class="far fa-map-marker-alt fa-pad-right"></i> job.location_formatted | unescapeHTML </div>
+                     <ul class="list-inline list-inline-separate">
+                        <li><span class="label label-default"> job.job_type </span></li>
+                        <li ng-if="job.offer_relocation"><span class="label label-success">Relocation assistance</span></li>
+                        <li ng-if="job.work_remotely"><span class="label label-success">Work remotely</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="separator-lg"></div>
+</div>
+</div>
+{% include 'footer.html'%}

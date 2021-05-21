@@ -1,0 +1,341 @@
+
+{% load static %}
+
+      
+{% include "scripts.html" %}
+      <div style="display:none"></div>
+   {% include "navbar.html" %}
+         
+         <div id="page_content">
+            <div class="page-container mp-page category-browse">
+               <a href="https://www.artstation.com/marketplace/game-dev/tutorials?section=sale">
+                  <div class="discountBanner discountBanner-digital_product discountBanner-mobile clickable" style="background-image: url(&#39;https://cdnb.artstation.com/p/marketplace/marketplace_discounts/banners/000/000/065/small/file.jpg&#39;)"></div>
+                  <div class="discountBanner discountBanner-digital_product discountBanner-desktop clickable" style="background-image: url(&#39;https://cdna.artstation.com/p/marketplace/marketplace_discounts/banners/000/000/064/big/file.jpg&#39;)"></div>
+               </a>
+               <div class="mp-categories-grid-wrapper">
+                  <div class="mp-categories-grid-wrapper-cell-1">
+                     <a class="mp-categories-item category-all is-active" href="/marketplace">
+                        <div class="mp-categories-title">Browse All</div>
+                     </a>
+                  </div>
+                  <div class="mp-categories-grid-wrapper-cell-12">
+                     <div class="mp-categories-grid"> {% for c in cat %}
+                        <div class="mp-categories-cell">
+                          
+                           <a class="mp-categories-item category-tutorials " href="{{ c.get_absolute_url }}">
+                              <div class="mp-categories-title">{{c}}</div>
+                              <div class="mp-categories-ribbon js-categories-ribbon" data-tag-id="1">Sale</div>
+                           </a>
+                         
+                        </div>  {% endfor %}<!-- 
+                        <div class="mp-categories-cell">
+                           <a class="mp-categories-item category-assets " href="https://www.artstation.com/marketplace/game-dev/assets">
+                              <div class="mp-categories-title">Game Assets</div>
+                              <div class="mp-categories-ribbon js-categories-ribbon hidden" data-tag-id="35">Sale</div>
+                           </a>
+                        </div>
+                        <div class="mp-categories-cell">
+                           <a class="mp-categories-item category-resources " href="https://www.artstation.com/marketplace/game-dev/resources">
+                              <div class="mp-categories-title">Resources</div>
+                              <div class="mp-categories-ribbon js-categories-ribbon hidden" data-tag-id="102">Sale</div>
+                           </a>
+                        </div>
+                        <div class="mp-categories-cell">
+                           <a class="mp-categories-item category-brushes " href="https://www.artstation.com/marketplace/game-dev/brushes">
+                              <div class="mp-categories-title">Brushes</div>
+                              <div class="mp-categories-ribbon js-categories-ribbon hidden" data-tag-id="205">Sale</div>
+                           </a>
+                        </div>
+                        <div class="mp-categories-cell">
+                           <a class="mp-categories-item category-artworks " href="https://www.artstation.com/marketplace/game-dev/artworks">
+                              <div class="mp-categories-title">Artworks</div>
+                              <div class="mp-categories-ribbon js-categories-ribbon hidden" data-tag-id="215">Sale</div>
+                           </a>
+                        </div>
+                        <div class="mp-categories-cell">
+                           <a class="mp-categories-item category-books-comics " href="https://www.artstation.com/marketplace/game-dev/books-comics">
+                              <div class="mp-categories-title">Books &amp; Comics</div>
+                              <div class="mp-categories-ribbon js-categories-ribbon hidden" data-tag-id="227">Sale</div>
+                           </a>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="mp-subcategories-grid-wrapper">
+                  <div class="mp-subcategories-cutter js-mp-tag-wrapper is-openable">
+                     <div class="mp-subcategories-grid">
+                        {% for t in tags %}
+                        <a class="mp-tag js-mp-tag" href="{{ t.get_absolute_url }}">#{{t}}</a>
+                        {% endfor %}
+                        <!-- <a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/assets/3d">3D Game Assets</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/brushes/3d">3D Brushes</a> --><!-- <a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/brushes/2d">2D Brushes</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/photoshop">Photoshop</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/resources/photography">Photography</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/digital-art">Digital Art</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/artworks/tools">Tools</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/concept-art">Concept Art</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/characters">Characters</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/assets/2d">2D Game Assets</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/zbrush">ZBrush</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/environments">Environments</a><a class="mp-tag js-mp-tag" href="https://www.artstation.com/marketplace/game-dev/resources/kitbash">KitBash</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/painting">Painting</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/illustration">Illustration</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/game-art">Game Art</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/resources/dev-tools">Dev Tools</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/modeling">Modeling</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/artworks/graphics-animation">Graphics &amp; Animation</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/art-tools">Art Tools</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/drawing">Drawing</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/texturing">Texturing</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/substance-painter">Substance Painter</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/sculpting">Sculpting</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/fantasy">Fantasy</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/blender">Blender</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/other">Other</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/speedpaint">Speedpaint</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/organic">Organic</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/hard-surface">Hard Surface</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/maya">Maya</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/other-tutorials">Other Tutorials</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/lighting">Lighting</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/rendering">Rendering</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/photoshop-cc">Photoshop CC</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/3ds-max">3ds Max</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/zbrush-imm">ZBrush IMM</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/substance-designer">Substance Designer</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/sci-fi">Sci-Fi</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/3d-coat">3D-Coat</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/film-art">Film Art</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/props">Props</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/shaders">Shaders</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/cartoon">Cartoon</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/marmoset">Marmoset</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/guides">Guides</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/unreal-engine">Unreal Engine</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/compositing">Compositing</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/traditional-art">Traditional Art</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/cinema-4d">Cinema 4D</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/marvelous-designer">Marvelous Designer</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/keyshot">Keyshot</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/procreate">Procreate</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/photoshop-cs6">Photoshop CS6+</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/comic-art">Comic Art</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/zbrushcore">ZBrushCore</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/mari">Mari</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/modo">Modo</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/mudbox">Mudbox</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/animation">Animation</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/quixel-suite">Quixel Suite</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/vfx">VFX</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/resources/rigs">Rigs</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/resources/animation-effects">Animation &amp; Effects</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/assets/animation-and-effects">Animation and Effects</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/xnormal">xNormal</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/assets/templates">Templates</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/daz-studio">DAZ Studio</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/ui-interface">UI | Interface</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/photogrammetry">Photogrammetry</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/books-comics/educational">Educational</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/arnold">Arnold</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/books-comics/artbooks">Artbooks</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/illustrator">Illustrator</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/books-comics/other">Other</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/houdini">Houdini</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/books-comics/comics">Comics</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/clip-studio-paint">Clip Studio Paint</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/unity">Unity</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/v-ray">V-Ray</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/painttool-sai">PaintTool SAI</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/krita">Krita</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/sketchbook-pro">Sketchbook Pro</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/painter">Painter</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/rigging">Rigging</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/manga-studio">Manga Studio</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/moi">MoI</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/infinite-painter">Infinite Painter</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/after-effects">After Effects</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/gimp">GIMP</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/pixel-art">Pixel Art</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/clarisse-ifx">Clarisse iFX</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/terragen">Terragen</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/assets/audio">Audio</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/affinity-designer">Affinity Designer</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/affinity-photo">Affinity Photo</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/nuke">Nuke</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/akeytsu">Akeytsu</a><a class="mp-tag js-mp-tag hidden" href="https://www.artstation.com/marketplace/game-dev/tutorials/mental-ray">Mental Ray</a> -->
+                        <div class="mp-tag mp-tag-link mp-tag-link-more js-mp-tag-link-more clickable">Show more</div>
+                        <div class="mp-tag mp-tag-link mp-tag-link-less js-mp-tag-link-less clickable">Show less</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mp-filter-container">
+                  <div class="mp-filter">
+                   
+                     <div class="mp-filter-search">
+
+                        <div class="mp-filter-search-icon far fa-search submit" type="submit"></div> <form action="/search" role="search">
+                        <input class="form-control input-lg" name="q"  placeholder="Search products, artists or subject matter" type="search" id="search" value="">
+                     </form>
+                     </div>
+                     <div class="mp-filter-section mp-filter-software-section dropdown">
+                        <div class="mp-filter-btn dropdown-toggle" data-modal-id="#software_filter_modal" data-toggle="dropdown">
+                           <div class="mp-filter-control"><span class="mp-filter-control-label">Software:</span><span class="mp-filter-control-value">All</span><span class="mp-filter-control-arrow"></span></div>
+                        </div>
+                        <div class="mp-filter-dropdown dropdown-menu dropdown-menu-right dropdown-keep-open js-perfect-scrollbar ps">
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="3d-coat"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=3d-coat">3D-Coat</a></span></label></div>
+                           </div>
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="3ds-max"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=3ds-max">3ds Max</a></span></label></div>
+                           </div>
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="affinity-designer"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=affinity-designer">Affinity Designer</a></span></label></div>
+                           </div>
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="affinity-photo"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=affinity-photo">Affinity Photo</a></span></label></div>
+                           </div>
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="after-effects"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=after-effects">After Effects</a></span></label></div>
+                           </div>
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="akeytsu"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=akeytsu">Akeytsu</a></span></label></div>
+                           </div>
+                           <div class="dropdown-menu-item p0">
+                              <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="arnold"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=arnold">Arnold</a></span></label></div>
+                           </div>
+                           <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                              <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                           </div>
+                           <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                              <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                           </div>
+                        </div>
+                        <div class="mp-filter-modal dropdown-keep-open" id="software_filter_modal">
+                           <div class="mp-filter-modal-header">
+                              <div class="mp-filter-modal-title">Software</div>
+                              <div class="mp-filter-modal-close"><button class="inline-link small clickable" onclick="filterDropdownModal.clear(&#39;softwares&#39;)" type="button">Clear</button></div>
+                           </div>
+                           <div class="mp-filter-modal-body p0">
+                              <div class="mp-filter-dropdown dropdown-menu dropdown-menu-right js-perfect-scrollbar ps">
+                                 <div class="dropdown-menu-item p0">
+                                    <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="3d-coat"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=3d-coat">3D-Coat</a></span></label></div>
+                                 </div>
+                                 <div class="dropdown-menu-item p0">
+                                    <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="3ds-max"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=3ds-max">3ds Max</a></span></label></div>
+                                 </div>
+                                 <div class="dropdown-menu-item p0">
+                                    <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="after-effects"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=after-effects">After Effects</a></span></label></div>
+                                 </div>
+                                 <div class="dropdown-menu-item p0">
+                                    <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="akeytsu"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=akeytsu">Akeytsu</a></span></label></div>
+                                 </div>
+                                 <div class="dropdown-menu-item p0">
+                                    <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="arnold"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=arnold">Arnold</a></span></label></div>
+                                 </div>
+                                 <div class="dropdown-menu-item p0">
+                                    <div class="checkbox m0"><label><input type="checkbox" name="software" id="software" value="blender"><span class="custom"></span><span><a class="dropdown-menu-link-disabled" href="https://www.artstation.com/marketplace/game-dev/brushes?section=trending&amp;softwares=blender">Blender</a></span></label></div>
+                                 </div>
+                                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                 </div>
+                                 <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mp-filter-modal-footer text-center"><button class="btn btn-lg btn-primary" onclick="filterDropdownModal.apply()" type="button">Apply Filters</button></div>
+                        </div>
+                     </div>
+                     <div class="mp-filter-section mp-filter-license-section dropdown">
+                        <div class="mp-filter-btn dropdown-toggle" data-modal-id="#license_filter_modal" data-toggle="dropdown">
+                           <div class="mp-filter-control"><span class="mp-filter-control-label">License:</span><span class="mp-filter-control-value"><span>All</span></span><span class="mp-filter-control-arrow"></span></div>
+                        </div>
+                        <div class="mp-filter-dropdown dropdown-menu dropdown-menu-right"><button class="dropdown-menu-item js-license-change" data-value="standard" type="buttton">Standard</button><button class="dropdown-menu-item js-license-change" data-value="extended" type="buttton">Extended</button><button class="dropdown-menu-item js-license-change" data-value="custom" type="buttton">Custom</button></div>
+                        <div class="mp-filter-modal dropdown-keep-open" id="license_filter_modal">
+                           <div class="mp-filter-modal-header">
+                              <div class="mp-filter-modal-title">License</div>
+                              <div class="mp-filter-modal-close"></div>
+                           </div>
+                           <div class="mp-filter-modal-body p0">
+                              <div class="mp-filter-dropdown dropdown-menu"><button class="dropdown-menu-item js-license-change" data-value="standard" type="buttton">Standard</button><button class="dropdown-menu-item js-license-change" data-value="extended" type="buttton">Extended</button><button class="dropdown-menu-item js-license-change" data-value="custom" type="buttton">Custom</button></div>
+                           </div>
+                           <div class="mp-filter-modal-footer text-center"><button class="btn btn-lg btn-primary" onclick="filterDropdownModal.apply()" type="button">Close</button></div>
+                        </div>
+                     </div>
+                     <div class="mp-filter-section mp-filter-price-section dropdown">
+                        <div class="mp-filter-btn dropdown-toggle" data-modal-id="#price_filter_modal" data-toggle="dropdown">
+                           <div class="mp-filter-control"><span class="mp-filter-control-label">Price:</span><span class="mp-filter-control-value js-price-value">All</span><span class="mp-filter-control-arrow"></span></div>
+                        </div>
+                        <div class="mp-filter-dropdown dropdown-menu dropdown-menu-right dropdown-keep-open">
+                           <div class="mp-filter-price">
+                              <div class="d-flex">
+                                 <div class="d-flex align-items-center">
+                                    <div class="fa-pad-right">$</div>
+                                    <input class="form-control form-control-sm form-control-slider js-price-input-min" type="text">
+                                 </div>
+                                 <div class="d-flex align-items-center mla">
+                                    <div class="fa-pad-right">$</div>
+                                    <input class="form-control form-control-sm form-control-slider js-price-input-max" type="text">
+                                 </div>
+                              </div>
+                              <div class="separator-xs"></div>
+                              <div class="js-nouislider noUi-target noUi-ltr noUi-horizontal" id="0">
+                                 <div class="noUi-base">
+                                    <div class="noUi-connects">
+                                       <div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div>
+                                    </div>
+                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 5;">
+                                       <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="25000.0" aria-valuenow="0.0" aria-valuetext="0.00">
+                                          <div class="noUi-touch-area"></div>
+                                       </div>
+                                    </div>
+                                    <div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;">
+                                       <div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="25000.0" aria-valuenow="25000.0" aria-valuetext="25000.00">
+                                          <div class="noUi-touch-area"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="mp-filter-modal dropdown-keep-open" id="price_filter_modal">
+                           <div class="mp-filter-modal-header">
+                              <div class="mp-filter-modal-title">Price</div>
+                              <div class="mp-filter-modal-close"><button class="inline-link small clickable" onclick="filterDropdownModal.clear(&#39;price&#39;)" type="button">Clear</button></div>
+                           </div>
+                           <div class="mp-filter-modal-body p0">
+                              <div class="mp-filter-price">
+                                 <div class="d-flex">
+                                    <div class="d-flex align-items-center">
+                                       <div class="fa-pad-right">$</div>
+                                       <input class="form-control form-control-sm form-control-slider js-price-input-min" type="text">
+                                    </div>
+                                    <div class="d-flex align-items-center mla">
+                                       <div class="fa-pad-right">$</div>
+                                       <input class="form-control form-control-sm form-control-slider js-price-input-max" type="text">
+                                    </div>
+                                 </div>
+                                 <div class="separator-xs"></div>
+                                 <div class="js-nouislider noUi-target noUi-ltr noUi-horizontal" id="1">
+                                    <div class="noUi-base">
+                                       <div class="noUi-connects">
+                                          <div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div>
+                                       </div>
+                                       <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 5;">
+                                          <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="25000.0" aria-valuenow="0.0" aria-valuetext="0.00">
+                                             <div class="noUi-touch-area"></div>
+                                          </div>
+                                       </div>
+                                       <div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;">
+                                          <div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="25000.0" aria-valuenow="25000.0" aria-valuetext="25000.00">
+                                             <div class="noUi-touch-area"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mp-filter-modal-footer text-center"><button class="btn btn-lg btn-primary" onclick="filterDropdownModal.apply()" type="button">Apply Filters</button></div>
+                        </div>
+                     </div>
+                     <div class="mp-filter-section mp-filter-clear-section">
+                        <div class="mp-filter-btn"><a class="text-primary" href="https://www.artstation.com/marketplace/game-dev?section=trending" rel="nofollow">Clear Filters</a></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="mp-page-header" id="page-info">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <h1 class="mp-page-header-title">{{ tag.name }}</h1>
+                        <span class="text-muted">results 1</span>
+                       
+                        <div class="mp-page-description"> digital products for artists and developers, created by artists from around the world. Download ready-made solutions and put your unique ideas into practice. Learn, create, sell, and grow with ArtStation.</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="separator-xs"></div>
+               <div class="mp-navbar js-mp-navbar justify-content-center justify-content-sm-between">
+                  <div class="d-flex flex-wrap mb10">
+                     <div class="mp-navbar-item"><a class="mp-navbar-link is-active" href="https://www.artstation.com/marketplace/game-dev?section=trending">Trending</a></div>
+                     <div class="mp-navbar-item"><a class="mp-navbar-link" href="https://www.artstation.com/marketplace/game-dev?section=best_selling">Best Selling</a></div>
+                     <div class="mp-navbar-item"><a class="mp-navbar-link" href="https://www.artstation.com/marketplace/game-dev?section=special_offers">Special Offers<span class="badge-new">New</span></a></div>
+                     <div class="mp-navbar-item"><a class="mp-navbar-link" href="https://www.artstation.com/marketplace/game-dev?section=top_rated">Top Rated</a></div>
+                     <div class="mp-navbar-item"><a class="mp-navbar-link" href="https://www.artstation.com/marketplace/game-dev?section=free">Free</a></div>
+                     <div class="mp-navbar-item"><a class="mp-navbar-link" href="https://www.artstation.com/marketplace/game-dev?section=latest">Latest</a></div>
+                     <div class="mp-navbar-item"><a class="mp-navbar-link" href="https://www.artstation.com/marketplace/game-dev?section=sale">Sale<span class="badge-new">Live</span></a></div>
+                  </div>
+                  <div id="paginator" class="hidden">
+                     <ul class="pagination mp-navbar-paginator">
+                        <li class="active"><a href="https://www.artstation.com/marketplace/game-dev?section=trending&amp;page=1">1</a></li>
+                        <li><a href="https://www.artstation.com/marketplace/game-dev?section=trending&amp;page=2">2</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="js-product-list">
+                  <main class="marketplace-grid" id="products-list">
+                     {% for item in post %}
+                     <div class="marketplace-grid-item">
+                        <div class=" marketplace-card-default marketplace-card-product has-discount" itemprop="isSimilarTo" itemscope="" itemtype="http://schema.org/Product">
+                           <a class="marketplace-card is-clickable" data-id="77165" data-position="0" href="{{item.get_absolute_url}}" itemprop="url">
+                              <div class="marketplace-card-thumbnail">
+                                 <img alt="{{ item.title }}" class="matureContent-blur" itemprop="image" loading="lazy" src="{{item.image.url}}">
+                                 <div class="marketplace-card-thumbnail-content btn btn-primary">View</div>
+                              </div>
+                              <div class="marketplace-card-body">
+                                 <h3 class="font-weight-normal marketplace-card-title" itemprop="name">{{ item.title }}<span class="badge-special-offer-holder">&nbsp;&nbsp;<span class="badge-special-offer"><span class="far fa-percent"></span></span></span></h3>
+                                 <meta content="{{item.title}}, USD $4.99. " itemprop="description">
+                                 <meta content="Rbmq" itemprop="sku">
+                              </div>
+                              <div class="marketplace-card-footer">
+                                 <div class="marketplace-card-author" itemprop="brand" itemscope="" itemtype="https://schema.org/Brand">
+                                    <div class="marketplace-card-author-avatar"><img alt="" height="26" itemprop="image" loading="lazy" src="{{item.profile.image.url}}" width="26"></div>
+                                    <div class="marketplace-card-author-name small"> by <span itemprop="name">{{item.user.username}}</span></div>
+                                 </div>
+                                 <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <meta content="USD" itemprop="priceCurrency">
+                                    <meta content="2.5" itemprop="price">
+                                    <meta content="http://schema.org/InStock" itemprop="availability">
+                                    <meta content="2022-01-04" itemprop="priceValidUntil">
+                                    <meta content="" itemprop="url">
+                                    <div class="marketplace-card-prices">
+                                       <small class="text-line-through">
+                                          USD $4.99+
+                                          <div class="marketplace-card-price discount-size-medium">${{item.price}}+</div>
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+
+                  </main>
+               </div>
+
+               <div class="js-loading-spinner text-center hidden">
+                  <div class="separator"></div>
+                  <div class="spinner"></div>
+                  <div class="separator"></div>
+               </div>
+            </div>
+            <button class="mp-back-to-top js-back-to-top" type="button">
+               <div class="far fa-angle-up"></div>
+            </button>
+          
+         </div>
+      </div>
+      <style>.async-hide { opacity: 0 !important} </style>
+      <div style="display: none; visibility: hidden;"></div>
+      <div style="display: none; visibility: hidden;"></div>
+      <div style="display: none; visibility: hidden;"></div>
+      <div style="display: none; visibility: hidden;"></div>
+      <div style="display: none; visibility: hidden;"></div>
+      <div style="display: none; visibility: hidden;"></div>
+   </body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+
+
+      <link href="{% static 'part/main.24d92a60ccc02b93aa7a.css' %}" rel="stylesheet">
+      <script src="{% static 'part/main.bundle.24d92a60ccc02b93aa7a.js' %}" async=""></script>
+      
+      <link href="{% static 'part/signed_in_index.428907ae11febd1a81be.css' %}" rel="stylesheet" id="layout_styles">
+
+      <script async="" src="{% static 'part/hotjar-1255372.js' %}"></script>
+{% include "script.html" %}
+
+<link rel="stylesheet" href="{% static 'part/styles.49436fcebdf055613291.css' %}">
+<script charset="utf-8" src="{% static 'part/2.629977a4ae9f6624c038.js' %}"></script>
+<script charset="utf-8" src="{% static 'part/3.17758566a9b34a5587eb.js' %}"></script>
+<script charset="utf-8" src="{% static 'part/4.030e43ba3cbba40db8e2.js' %}"></script>
+<script charset="utf-8" src="{% static 'part/common.b798a4cf41beb7baadfa.js' %}"></script>
+<script charset="utf-8" src="{% static 'part/9.54c0f8cf67d2115e2f38.js' %}"></script>
+
+
+
+
+{% include "navbar.html" %}
+<div class="wrapper">
+<app-root ng-version="7.2.15"><router-outlet></router-outlet><ng-component><div class="podcasts-page"><div class="container"><div class="row"><div class="col-lg-6 col-lg-offset-3 text-center"><img alt="Resbrotherx Podcast" class="logo" height="48" src="{% static 'part/logo-podcast.svg" width="450"><p>Join us as we discuss major topics and trends of the ever-growing art industry with your favorite artists, studios and creative professionals.</p></div><div class="col-lg-10 col-lg-offset-1"><!----><!---->
+
+
+
+{% for p in pods %}
+
+
+  <div class="podcast-item featured-podcast"><img class="podcast-image img-responsive" height="350" width="350" src="{{p.image.url}}" alt="{{p.title}}"><div class="podcast-content"><div class="podcast-meta"><span>{{p.timestamp|timesince}}</span><span class="fa-pad-left fa-pad-right">·</span><span>ago</span></div><h2 class="font-weight-medium">{{p.title}}</h2><p>{{p.discription}}
+</p><p class="text-uppercase">Listen on:</p><ul class="podcast-icons list-unstyled"><!----><!----><!----><li class="podcast-icons-item"><a class="podcast-link" target="_blank" href="{{p.youtube}}"><!----><i class="podcast-icon fab fa-youtube text-youtube"></i><!----><div class="d-none d-md-block podcast-name text-capitalize">youtube</div></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="podcast-link" target="_blank" href="{{p.spotify}}"><!----><i class="podcast-icon fab fa-spotify text-spotify"></i><!----><div class="d-none d-md-block podcast-name text-capitalize">spotify</div></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="podcast-link" target="_blank" href="{{p.apple}}"><!----><i class="podcast-icon far fa-podcast text-apple"></i><!----><div class="d-none d-md-block podcast-name text-capitalize">apple</div></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="podcast-link" target="_blank" href="{{p.soundcloud}}"><!----><i class="podcast-icon fab fa-soundcloud text-soundcloud"></i><!----><div class="d-none d-md-block podcast-name text-capitalize">soundcloud</div></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="podcast-link" target="_blank" href="{{p.google}}"><!----><!----><img class="podcast-icon" height="32" src="{% static 'part/icon-google-podcasts.svg' %}" width="32" alt="google"><div class="d-none d-md-block podcast-name text-capitalize">google</div></a></li><!----></ul></div></div><div class="podcasts-subscribe"><div><h3 class="font-weight-medium">Never miss an episode!</h3><p class="lead">Sign up to the Resbrotherx Podcast newsletter for advance announcements on upcoming guests, exclusive giveaways and&nbsp;more.</p></div><form class="form flex-shrink-0 ng-pristine ng-invalid ng-touched" novalidate=""><div class="d-sm-flex align-items-stretch"><div class="form-group flex-shrink-0"><input class="form-control ng-pristine ng-invalid ng-touched" formcontrolname="email" name="email" required="" type="email" placeholder="Enter your email"></div><button class="btn btn-primary btn-block newsletter-submit" type="submit">Subscribe</button></div><!----><!----></form></div><div class="episodes-list" infinitescroll=""><!---->
+
+{% endfor %}
+
+
+{% for p in pod %}
+
+  <div class="podcast-item"><img class="podcast-image" height="250" width="250" src="{{p.image.url}}" alt="{{p.title}}"><div class="podcast-content"><div class="podcast-meta"><span>{{p.timestamp|timesince}}</span><span class="fa-pad-left fa-pad-right">·</span><span>ago</span></div><h3 class="font-weight-medium">{{p.title}}</h3><p>{{p.discription}}
+</p><p class="text-uppercase small mb0">Listen on:</p><ul class="podcast-icons is-btns list-unstyled"><!----><!----><!----><li class="podcast-icons-item"><a class="btn btn-default d-block" target="_blank" href="{{p.youtube}}"><!----><i class="fab fa-youtube text-youtube"></i><!----><span class="fa-pad-left d-none d-md-inline text-capitalize">youtube</span></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="btn btn-default d-block" target="_blank" href="{{p.spotify}}"><!----><i class="fab fa-spotify text-spotify"></i><!----><span class="fa-pad-left d-none d-md-inline text-capitalize">spotify</span></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="btn btn-default d-block" target="_blank" href="{{p.apple}}"><!----><i class="far fa-podcast text-apple"></i><!----><span class="fa-pad-left d-none d-md-inline text-capitalize">apple</span></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="btn btn-default d-block" target="_blank" href="{{p.soundcloud}}"><!----><i class="fab fa-soundcloud text-soundcloud"></i><!----><span class="fa-pad-left d-none d-md-inline text-capitalize">soundcloud</span></a></li><!----><!----><!----><li class="podcast-icons-item"><a class="btn btn-default d-block" target="_blank" href="{{p.google}}"><!----><!----><img class="podcast-icon" height="16" src="{% static 'part/icon-google-podcasts.svg' %}" width="16" alt="google"><span class="fa-pad-left d-none d-md-inline text-capitalize">google</span></a></li><!----></ul></div></div>
+
+
+{% endfor %}
+
+</div><!----></div></div></div></div>
+
+{% include "footer.html" %}

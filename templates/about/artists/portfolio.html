@@ -1,0 +1,397 @@
+{% load static %}
+
+
+ {% include "script.html" %}
+{% include "navbar.html" %}
+         <div class="wrapper-main">
+            <div class="about-page">
+               <div class="about-intro d-flex flex-column align-items-center justify-content-center text-center portfolio">
+                  <div class="about-quote"><span class="about-quote-symbol">&ldquo;</span> ArtStation is great for targeting&nbsp;clients. <span class="about-quote-symbol">&bdquo;</span></div>
+                  <div class="about-quote-author"><span class="font-weight-medium">Lois Van Baarle</span> &mdash; Digital artist and character designer</div>
+                  <div class="about-intro-cta"><a class="btn btn-primary btn-lg" href="../../subscribe/compare.html">Get Started</a></div>
+                  <div class="about-intro-credit"><a class="about-intro-credit-link" target="_blank" href="../../pixelmasher.html">Artwork by Tim Simpson</a></div>
+               </div>
+               <div class="about-nav-wrap sticky-block">
+                  <div class="about-nav">
+                     <div class="about-nav-title">For Artists</div>
+                     <div class="sub-nav mb0">
+                        <div class="btn-group"><a class="btn btn-default" href="/about">Overview</a><a class="btn btn-default active" href="/portfolio">Portfolio</a><a class="btn btn-default" href="/website-builder">Website Builder</a><a class="btn btn-default" href="/sell-goods">Sell Goods</a><a class="btn btn-default" href="/learning">Learning</a></div>
+                     </div>
+                     <div class="about-nav-start"><a class="btn btn-primary text-uppercase scrolltoel" href="#plans">Get Started</a></div>
+                  </div>
+               </div>
+               <script>$(document).ready(function() {
+                  var sticky = new Waypoint.Sticky({
+                    element: $('.about-nav')[0],
+                    offset: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--main-menu-level-1-height'))
+                  });
+                  
+                  });
+               </script>
+               <div class="about-page-content">
+                  <div class="container">
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Images, Videos, 3D & 360°&nbsp;Panos</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="row row-flex">
+                              <div class="col-xs-6">
+                                 <div class="about-content-panorama">
+                                    <img alt="" class="img-responsive about-content-panorama-mask" src="{% static 'assets/marketing/about/portfolio/panorama-mask-df6991f443b284202e4b1b76aa38222c.svg" />
+                                    <div class="about-content-panorama-movable"></div>
+                                 </div>
+                                 <img width="50" height="50" alt="Panorama" class="about-content-panorama-icon" src="{% static 'assets/marketing/about/portfolio/icon-panorama-a64fb682620f8abc6b38e5dfba9c146a.svg" />
+                              </div>
+                              <div class="col-xs-6">
+                                 <div class="about-content-video hidden-xs hidden-sm">
+                                    <div class="about-content-video-play"><img width="62" height="62" class="img-responsive" alt="Play video" src="{% static 'assets/marketing/about/portfolio/icon-play-750162266f56fffb4ac210761c31fe65.svg" /></div>
+                                    <video class="img-responsive about-content-video-animation" loop="" muted="" playsinline="" preload="metadata">
+                                       <source src="https://cdn.artstation.com/about/alexandr_iwaac_forest_jungle.mp4" type="video/mp4" />
+                                    </video>
+                                 </div>
+                                 <div class="about-content-sketchfab">
+                                    <div class="js-tilt" data-tilt-max="25" data-tilt-perspective="300" data-tilt-speed="400"><img class="js-tilt-obj img-responsive" width="273" height="226" alt="" src="{% static 'assets/marketing/about/portfolio/3d-building-7183fb9506985b7f805282b6661e76b5.png' %}" /><img class="js-tilt-bg img-responsive" width="319" height="332" alt="" src="{% static 'assets/marketing/about/portfolio/3d-building-bg-71eb2c43c7942d2c8e14fb4f36d9b439.png' %}" /></div>
+                                    <img width="50" height="50" alt="Sketchfab" class="about-content-sketchfab-icon" src="{% static 'assets/marketing/about/portfolio/icon-sketchfab-efad3a49254292a92204881ecc19962d.svg" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="about-page-credit-block text-right">Artworks by Paul Tinker, Nikita Meduha, Alexandr Iwaac</div>
+                           <div class="separator visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>ArtStation was designed specifically for the needs of game, film, media & entertainment artists.</p>
+                           <p>While other platforms focus on a single image to show at a time, ArtStation enables you to showcase <span class='text-white'>ALL asset types</span>. Showcase multiple assets including high resolution images, videos, short clips, 3D (Marmoset & Sketchfab) and 360 Panos. Post breakdowns, process work or different angles.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Categorize your work</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img alt="" class="img-responsive" src="{% static 'assets/marketing/about/portfolio/categorize-91c8e9291b9ccf3df8fbba1660cf0eb5.png' %}" />
+                           <div class="about-categorize-images"><span class="about-categorize-images-count">3</span><img alt="" class="about-categorize-images-1 img-responsive" src="{% static 'assets/marketing/about/portfolio/categorize-1-443ababe0d72b578017d760abdd2981a.jpg' %}" /><img alt="" class="about-categorize-images-2 img-responsive" src="{% static 'assets/marketing/about/portfolio/categorize-2-c3c4d24be65d70cc0083a93cd963513c.jpg' %}" /><img alt="" class="about-categorize-images-3 img-responsive" src="{% static 'assets/marketing/about/portfolio/categorize-3-a760c316e215374bc194c1869c67a577.jpg' %}" /></div>
+                           <div class="separator"></div>
+                           <div class="about-page-credit-block">Artworks by Matt Rhodes</div>
+                           <div class="separator visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Create albums on your portfolio to categorize your work. You might have finished work and sketches. You might categorize based on projects. Your choice!</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Searchable professional profiles</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="row">
+                              <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                                 <div class="about-searchable-image"><img alt="" class="about-searchable-image-main img-responsive" src="{% static 'assets/marketing/about/portfolio/searchable-1-6947e1cf3a5756bd6d556456d3a7bf23.png' %}" /><img alt="" class="about-searchable-image-card img-responsive" src="{% static 'assets/marketing/about/portfolio/searchable-2-01fc6299fab8e622ee355f935bdc300c.png' %}" /></div>
+                              </div>
+                           </div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Enter your professional resume. Fill out your skills, software expertise, production and work experience.</p>
+                           <p>With your professional profile filled out, recruiters can easily find you. If recruiters are looking for a Concept Artist in Los Angeles who knows ZBrush, they can filter that in realtime in the industry's most powerful artist database.</p>
+                           <div class="separator"></div>
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Lois Van Baarle" src="{% static 'assets/marketing/quotes/photo-lois-b4ce05750af66f4bfac29a662298821f.png' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">ArtStation is great for targeting clients.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Lois Van Baarle <span class="dark-badge">PRO</span></div>
+                                 <div class="about-quote-block-position">Digital artist and character designer</div>
+                              </div>
+                           </div>
+                           <div class="separator"></div>
+                           <div class="separator"></div>
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Hicham Habchi" src="{% static 'assets/marketing/quotes/photo-hicham-0bab008e90c4af5e81b116cde4882eea.png' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">ArtStation is very simple and useful in promoting my artwork and helps me get contacted by many clients and recruiters in many fields. It helped me get the dream job I was looking for.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Hicham Habchi <span class="dark-badge">PRO</span></div>
+                                 <div class="about-quote-block-position">Concept Artist at Riot Games</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">
+                              <div class="smaller font-weight-bolder text-primary">New</div>
+                              Sell your stuff
+                           </h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="trigger-slider">
+                              <div><img class="img-responsive about-img-rounded about-skew-reverse" src="{% static 'assets/marketing/about/overview/sell-1-97c1650bc42b676b04f797e2abdacc74.jpg' %}" alt="Sell 1" /></div>
+                              <div><img class="img-responsive about-img-rounded about-skew-reverse" src="{% static 'assets/marketing/about/overview/sell-2-9e499fae0776c6cbce80cd5d5e49a4d1.png' %}" alt="Sell 2" /></div>
+                           </div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-donate"></i></span><span class="about-icon-text">Sell your digital goods</span></p>
+                           <p>
+                           <p>With just a few clicks, you can upload your digital products: models, brushes, tutorials, reference packs, assets and more. Your product is promoted via the ArtStation community and is also available to buy directly via your website. Keep up to 95% of revenue <a href="sell-goods.html">(more info)</a>. Money is directly wired to your bank account in over 220+ countries worldwide!</p>
+                           </p>
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-box-usd"></i></span><span class="about-icon-text">Sell your prints</span></p>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                     <div class="separator-lg"></div>
+                     <div class="text-center">
+                        <a class="btn btn-default btn-lg about-btn-more" href="sell-goods.html">Check out Selling Features<i class="far fa-arrow-right fa-pad-left position-relative"></i></a>
+                        <div class="separator visible-xs"></div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Blogs</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="trigger-slider">
+                              <div><img class="img-responsive about-skew" src="{% static 'assets/marketing/about/portfolio/blog-1-8f06240283c16a23710ba50903009e73.jpg' %}" alt="Blog 1" /></div>
+                              <div><img class="img-responsive about-skew" src="{% static 'assets/marketing/about/portfolio/blog-2-e9741092b95e9d09a649531a474d27ba.jpg' %}" alt="Blog 2" /></div>
+                           </div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Share your articles or work in progress! Your followers will get notified and can like and comment on your posts, making it a fantastic way to engage with your audience!</p>
+                           <div class="separator-sm"></div>
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Timothy Dries" src="{% static 'assets/marketing/quotes/photo-timothy-9de9682ec1acfdea2973b3cb3229bc55.png' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">The blog feature gave me the drive to be consistent with my art and a way to give back to the community.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Timothy Dries <span class="dark-badge">PRO</span></div>
+                                 <div class="about-quote-block-position">Environment/Prop Artist at Ubisoft Berlin</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Analytics</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img alt="" class="img-responsive about-skew-reverse" src="{% static 'assets/marketing/about/portfolio/analytics-6b212a22f7e9a85192c047c872a0894c.png' %}" />
+                           <div class="separator"></div>
+                           <div class="separator-lg hidden-xs hidden-sm"></div>
+                           <div class="about-page-credit-block">Artworks by Raphael Lacoste</div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>See who&#39;s checking you out. With ArtStation&#39;s community analytics, you can see the performance of your artwork and view who is checking out your profile.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Website builder</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img alt="" class="img-responsive about-skew" src="{% static 'assets/marketing/about/portfolio/website-builder-0ca48b5dbfb9555a888cb89ef4226ff5.jpg' %}" />
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>ArtStation gives you a beautiful portfolio website! And because it&#39;s integrated fully into ArtStation, you don&#39;t have to worry about keeping it updated. As you post artwork, it will automatically post to your site.</p>
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-globe"></i></span>Your own portfolio website</p>
+                           <div class="separator-sm"></div>
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-search"></i><i class="about-icon-inner-w">w</i></span>Custom domain name with HTTPS</p>
+                           <div class="separator-sm"></div>
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-paint-brush"></i></span>Beautiful themes to show off your work</p>
+                           <div class="separator-sm"></div>
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-donate"></i></span>Sell your digital goods</p>
+                           <div class="separator-sm"></div>
+                           <p class="text-light d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-box-usd"></i></span><span class="about-icon-text">Sell your prints</span></p>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                     <div class="text-center"><a class="btn btn-default btn-lg about-btn-more" href="website-builder.html">Check out Website Builder Features<i class="far fa-arrow-right fa-pad-left position-relative"></i></a></div>
+                  </div>
+                  <div class="separator-lg hidden-xs hidden-sm"></div>
+                  <div class="separator-lg hidden-xs hidden-sm" id="plans"></div>
+                  <div class="separator-lg hidden-md"></div>
+                  <div class="about-footer portfolio">
+                     <div class="container">
+                        <div class="about-choose">
+                           <div class="text-center">
+                              <h2 class="h1 text-uppercase font-weight-bolder">Choose<br>your edition</h2>
+                           </div>
+                           <div class="d-flex justify-content-center">
+                              <div class="col-lg-11">
+                                 <div class="about-choose-plans">
+                                    <div class="about-choose-plan about-choose-plan-free">
+                                       <div class="about-choose-plan-header">
+                                          <div class="about-pricing-amount">Free</div>
+                                          <div class="separator-xs"></div>
+                                          <div class="about-pricing-period font-weight-light">There will always be a free edition</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Showcase your portfolio</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Sell digital products
+                                                   <div class="small text-gray">Earn 70% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Sell ArtStation Prints</li>
+                                             <li><i class="far fa-check text-success"></i>Basic free Website</li>
+                                             <li><i class="far fa-check text-success"></i>Connect with job opportunities</li>
+                                             <li><i class="far fa-check text-success"></i>Participate in epic art challenges</li>
+                                          </ul>
+                                          <div class="about-pricing-btn"><a class="btn btn-default btn-block" href="../../registration/signup.html">Sign up</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan about-choose-plan-plus d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="plus-badge plus-badge-g pro-badge-xl">Plus</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$6.99/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Free</li>
+                                             <li><i class="far fa-check text-success"></i>Unlimited access to ArtStation&nbsp;Learning</li>
+                                             <li><i class="far fa-check text-success"></i>Your own website with customizable premium&nbsp;themes</li>
+                                             <li><i class="far fa-check text-success"></i>Blogging</li>
+                                             <li><i class="far fa-check text-success"></i>Priority support</li>
+                                             <li><i class="far fa-check text-success"></i>Custom domain support</li>
+                                             <li><i class="far fa-check text-success"></i>Redeem Partner Perks</li>
+                                             <li><i class="far fa-check text-success"></i>Larger 3D file upload limit</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-default btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinfbdf.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="pro-badge pro-badge-g pro-badge-xl">PRO</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$9.95/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Plus</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling digital products
+                                                   <div class="small text-gray">Earn between 80 and 95% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling prints
+                                                   <div class="small text-gray">Earn an additional 5% on the base price</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Pro Analytics</li>
+                                             <li><i class="far fa-check text-success"></i>Appear at the top of searches</li>
+                                             <li><i class="far fa-check text-success"></i>ArtStation Pro badge</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-success btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinc21e.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-text-smaller text-center font-weight-light"><a href="../../subscribe/compare.html">What&#39;s the difference between Free, Plus and Pro?</a></div>
+                     <div class="about-footer-credit"><a class="about-footer-credit-link" target="_blank" href="../../dechambo.html">Artwork by Martin Deschambault</a></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <a class="btt scrolltoel" target="_self" href="#top"><span class="icomoon icon-arrow-top"></span></a>
+                  </div>
+                  <script>$(document).ready(function() {
+                     var backToTop = $('.btt');
+                     
+                     waypointEl = new Waypoint({
+                       element: backToTop,
+                       offset: '-50%',
+                       handler: function(direction) {
+                         backToTop.toggleClass('stuck');
+                       }
+                     });
+                     
+                     });
+                  </script>
+               </div>
+            </div>
+            <script>$(document).ready(function() {
+               $('.trigger-slider').slick({
+                 fade: true,
+                 arrows: false,
+                 dots: true,
+                 autoplay: true,
+                 autoplaySpeed: 4000,
+                 pauseOnFocus: false,
+                 pauseOnHover: false
+               });
+               
+               $('.js-tilt').tilt();
+               
+               /*==
+               ==== Video block
+               ==*/
+               
+               $isVideoPlaying = false
+               
+               $('.about-content-video').on('click', function() {
+               
+                 var $this  = $(this),
+                     $video = $('.about-content-video-animation')[0];
+               
+                 if ($isVideoPlaying) {
+                   $isVideoPlaying = false
+                   $this.removeClass('playing')
+                   $video.pause()
+                 } else {
+                   $isVideoPlaying = true
+                   $this.addClass('playing')
+                   $video.play()
+                 }
+               
+               
+               });
+               
+               /*==
+               ==== Panorama view
+               ==*/
+               
+               var panorama = document.querySelector(".about-content-panorama");
+               var panoramaMove = document.querySelector(".about-content-panorama-movable");
+               
+               function panoramaClassToggle() {
+                 setTimeout(function() {
+                   panoramaMove.classList.add("no-more-slidey");
+                   panorama.removeEventListener("mouseenter", panoramaClassToggle());
+                 }, 250);
+               }
+               
+               panorama.addEventListener("mousemove", function(e) {
+                 panoramaMove.style.backgroundPositionX = -event.offsetX * .4 + "px";
+               })
+               
+               panorama.addEventListener("mouseenter", panoramaClassToggle());
+               
+               });
+            </script>
+            <div class="separator-lg"></div>
+         </div>
+      </div>
+
+      {% include "footer.html" %}

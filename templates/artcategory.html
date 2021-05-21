@@ -1,0 +1,16 @@
+<h1>{{ category.name }}
+    {% for c in categories %}
+        <a href="{{c.get_absolute_url}}">{{ c.tag }}</a>
+    {% endfor %}
+    </h1>{% for posts in post %}
+    <h2>
+    
+        <a href="{{posts.get_absolute_url}}">{{ posts.title }}</a>
+        <a href="{{posts.get_absolute_url}}">{{ categories }}</a>
+        <h1>
+            <a href="">{{ posts.category }}</a>
+        </h1>
+    </h2>
+    {% endfor %}
+    
+    gggg

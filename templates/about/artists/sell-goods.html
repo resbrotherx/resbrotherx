@@ -1,0 +1,335 @@
+{% load static %}
+
+
+ {% include "script.html" %}
+{% include "navbar.html" %}
+         <div class="wrapper-main">
+            <div class="about-page">
+               <div class="about-intro d-flex flex-column align-items-center justify-content-center text-center marketplace">
+                  <div class="about-quote"><span class="about-quote-symbol">&ldquo;</span> I had no idea that selling just a few characters would end up paying my&nbsp;rent! <span class="about-quote-symbol">&bdquo;</span></div>
+                  <div class="about-quote-author"><span class="font-weight-medium">Colton Orr</span> &mdash; Character Artist @ Insomniac Games</div>
+                  <div class="about-intro-cta"><a class="btn btn-primary btn-lg" href="../../subscribe/compare.html">Get Started</a></div>
+                  <div class="about-intro-credit"><a class="about-intro-credit-link" target="_blank" href="../../grivetart.html">Artwork by Bastien Grivet</a></div>
+               </div>
+               <div class="about-nav-wrap sticky-block">
+                  <div class="about-nav">
+                     <div class="about-nav-title">For Artists</div>
+                     <div class="sub-nav mb0">
+                        <div class="btn-group"><a class="btn btn-default" href="/about">Overview</a><a class="btn btn-default" href="/portfolio">Portfolio</a><a class="btn btn-default" href="/website-builder">Website Builder</a><a class="btn btn-default active" href="/sell-goods">Sell Goods</a><a class="btn btn-default" href="/learning">Learning</a></div>
+                     </div>
+                     <div class="about-nav-start"><a class="btn btn-primary text-uppercase scrolltoel" href="#plans">Get Started</a></div>
+                  </div>
+               </div>
+               <script>$(document).ready(function() {
+                  var sticky = new Waypoint.Sticky({
+                    element: $('.about-nav')[0],
+                    offset: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--main-menu-level-1-height'))
+                  });
+                  
+                  });
+               </script>
+               <div class="about-page-content">
+                  <div class="container">
+                     <div class="about-grid about-grid-reverse about-marketplace-sell">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Sell on the marketplace <span class="text-primary">and</span> your&nbsp;website</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                           <div class="sell-blocks">
+                              <div class="sell-block"><img alt="Sell on the marketplace and your website" class="img-responsive sell-1" src="{% static 'assets/marketing/about/marketplace/sell-1-bf31243c447592756d116d5324303c0c.png' %}" /></div>
+                              <div class="sell-block"><img alt="Sell on the marketplace and your website" class="img-responsive sell-2" src="{% static 'assets/marketing/about/marketplace/sell-2-25293a78d16283255df42beb080658be.png' %}" /></div>
+                           </div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                           <div class="separator visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>No other platform enables you to sell your products on both a <span class="text-white">thriving marketplace</span> AND <span class="text-white">your personal</span> website at the same time. ArtStation does!</p>
+                           <p>When you sell your products on ArtStation, it not only shows on your community profile and website, but we also promote it via the Marketplace. Your <span class="text-white">followers are notified</span> when you release new products.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Digital Goods</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img alt="Digital Goods" class="img-responsive" src="{% static 'assets/marketing/about/marketplace/goods-bd60a43197e195ce84c78027399aaa31.png' %}" />
+                           <div class="separator visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Upload your reference packs, brushes, tutorials, 3D models, assets and more. ArtStation takes care of hosting and delivering these large files securely to your customers.</p>
+                           <div class="separator"></div>
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Stéphane Wootha Richard" class="img-circle" src="{% static 'assets/marketing/quotes/photo-stephane-11b8ba8dc53278a16613b6050473b94e.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">The ArtStation Marketplace offers an opportunity to make passive income and gives me spare time that I use to study and learn new things.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Stéphane Wootha Richard <span class="dark-badge">PRO</span></div>
+                                 <div class="about-quote-block-position">Character Artist at Insomniac Games</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <div class="about-marketplace-features row d-flex flex-wrap flex-md-nowrap text-center justify-content-center">
+                        <div class="col-sm-8 col-md-3">
+                           <img alt="Simple License Agreements" class="about-feature-image" height="206" src="{% static 'assets/marketing/about/marketplace/license-4a55a629d21438f13f7f537dbe280fd5.svg" />
+                           <h3 class="lead font-weight-medium text-white mb0">Simple License Agreements</h3>
+                           <div class="separator-sm"></div>
+                           <p>When selling on ArtStation, all digital products have standard and extended license agreements so that you are legally protected AND so that companies/studios can actually BUY your products! Use variants to charge different prices for different licenses. Add your own custom license if you have&nbsp;one.</p>
+                           <div class="separator-lg d-md-none"></div>
+                        </div>
+                        <div class="col-sm-8 col-md-3">
+                           <img alt="Variants" class="about-feature-image" height="206" src="{% static 'assets/marketing/about/marketplace/variants-2570c5741875a099a43a8ef6c12a5321.png' %}" />
+                           <h3 class="lead font-weight-medium text-white mb0">Variants</h3>
+                           <div class="separator-sm"></div>
+                           <p>Sell different variants of a product for different customer needs. Sell different license types: a standard and extended license. Sell different product types: low resolution and high resolution assets. You decide!</p>
+                           <div class="separator-lg d-md-none"></div>
+                        </div>
+                        <div class="col-sm-8 col-md-3">
+                           <img alt="Releases" class="about-feature-image" height="206" src="{% static 'assets/marketing/about/marketplace/releases-89e56c13315dd9521962cf5ad2508d0b.png' %}" />
+                           <h3 class="lead font-weight-medium text-white mb0">Releases</h3>
+                           <div class="separator-sm"></div>
+                           <p>When you have updates to your products, ArtStation can manage the release for you. Create a new release, upload the files that need updating and hit Release. Existing customers will get notified of the new release!</p>
+                           <div class="separator-lg d-md-none"></div>
+                        </div>
+                        <div class="col-sm-8 col-md-3">
+                           <img alt="Coupons" class="about-feature-image" height="206" src="{% static 'assets/marketing/about/marketplace/coupons-ba409e5b98ee1d2365435c51ec179d2f.png' %}" />
+                           <h3 class="lead font-weight-medium text-white mb0">Coupons</h3>
+                           <div class="separator-sm"></div>
+                           <p>Create your own coupons. Run your own promotions and blast them out to your followers in a few easy&nbsp;clicks.</p>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <div class="row d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center">
+                        <div class="col-xs-10 col-sm-8 col-md-5 col-lg-4">
+                           <img alt="Earnings" class="about-earnings-image" width="78" height="250" src="{% static 'assets/marketing/about/marketplace/earnings-coins-1e3171535c728f6489a0b831001395db.svg" />
+                           <div class="about-earnings-bar about-earnings-bar-95">
+                              <div class="about-earnings-bar-title">Pro Sellers on their Website</div>
+                              <div class="filler">95%</div>
+                           </div>
+                           <div class="about-earnings-bar about-earnings-bar-80">
+                              <div class="about-earnings-bar-title">Pro Sellers</div>
+                              <div class="filler">80%</div>
+                           </div>
+                           <div class="about-earnings-bar about-earnings-bar-70">
+                              <div class="about-earnings-bar-title">Free sellers</div>
+                              <div class="filler">70%</div>
+                           </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-5 col-lg-4">
+                           <div class="separator d-md-none"></div>
+                           <h3 class="font-weight-normal">Earnings on Digital Marketplace</h3>
+                           <p>- Earn <span class="text-white">95%</span> of each sale via your website<br>- Earn <span class="text-white">80%</span> of each sale via the Marketplace<br>- Minimum fee of 50c.</p>
+                           <p>If your Pro account lapses or you cancel, don't worry, your products will continue to sell on both the Marketplace and your website, but your earnings reduce to 70%.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-prints-sell">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Prints</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="sell-blocks">
+                              <div class="sell-block"><img alt="Sell on the marketplace and your website" class="img-responsive sell-2" src="{% static 'assets/marketing/about/marketplace/prints-1-787f171edc505125c19bdbee3e927cf9.jpg' %}" /></div>
+                              <div class="sell-block"><img alt="Sell on the marketplace and your website" class="img-responsive sell-1" src="{% static 'assets/marketing/about/marketplace/prints-2-f14f49a8d39bdb25710b217b1c3ba41d.jpg' %}" /></div>
+                           </div>
+                           <div class="separator visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Turn your artwork into fantastic, high-quality, printed products. Upload your file, set your markup and you’re ready to start selling. We take care of everything: manufacturing, packaging and delivery to your fans&#39; doorstep.</p>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <div class="row d-flex flex-wrap flex-md-nowrap text-center justify-content-center">
+                        <div class="col-sm-8 col-md-4">
+                           <img alt="High Quality Products" class="about-feature-image mb0" height="286" src="{% static 'assets/marketing/about/marketplace/prints-high-quality-7f94b6672117d7acade720390356c573.png' %}" />
+                           <h3 class="font-weight-normal">High-Quality Products</h3>
+                           Our printed products are professionally crafted to ensure we deliver beautiful, high quality work that is ready to hang.
+                           <div class="separator-lg d-md-none"></div>
+                        </div>
+                        <div class="col-sm-8 col-md-4">
+                           <img alt="Easy Set Up" class="about-feature-image" height="256" src="{% static 'assets/marketing/about/marketplace/prints-easy-setup-c03a5ee175bcac005bbe35a2dda48258.png' %}" />
+                           <h3 class="font-weight-normal">Easy Set-up</h3>
+                           <p>All you have to do is upload your artwork, set your desired markup and you’re ready to start selling.</p>
+                           <div class="separator-lg d-md-none"></div>
+                        </div>
+                        <div class="col-sm-8 col-md-4">
+                           <img alt="Hassle Free" class="about-feature-image" height="256" src="{% static 'assets/marketing/about/marketplace/prints-hassle-free-c2f9a4195bca750685eaec4bf8137c7f.png' %}" />
+                           <h3 class="font-weight-normal">Hassle-Free</h3>
+                           <p>Once your prints are up, you can lie back and relax. We handle printing, shipping, handling, returns and support.</p>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <div class="row d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-evenly align-items-center">
+                        <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+                           <div class="about-prints-earnings d-flex justify-content-center align-items-center flex-wrap flex-sm-nowrap">
+                              <div class="d-flex align-items-center">
+                                 <div class="text-right">
+                                    <div class="text-white">Set your own<br>Markup</div>
+                                    <div class="separator"></div>
+                                    Base Price
+                                    <div class="small">
+                                       <div class="small">Includes printing, handling, payment, returns, support…</div>
+                                    </div>
+                                 </div>
+                                 <img alt="Earnings" class="about-prints-earnings-coins flex-shrink-0" width="78" height="250" src="{% static 'assets/marketing/about/marketplace/prints-earnings-d5dc489a93d74e495d7f7a6282d206d6.svg" />
+                              </div>
+                              <div class="text-muted about-prints-earnings-plus"><i class="far fa-plus"></i></div>
+                              <div class="text-center">
+                                 <img alt="Earnings" class="about-prints-earnings-coins-2" width="88" src="{% static 'assets/marketing/about/marketplace/prints-coins-1135fcb65cc6c7e4e186aa9d06067869.svg" />
+                                 <div class="separator-xs"></div>
+                                 <div class="text-white about-prints-earnings-pro d-flex align-items-center">For <span class='pro-badge pro-badge-lg pro-badge-g'>Pro</span> Members!</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+                           <div class="separator d-md-none"></div>
+                           <h3 class="font-weight-normal">Earnings on Prints</h3>
+                           <p>Every Printed Product comes with a <strong class='text-white'>Base Price</strong> that covers all the printing, hosting, marketing, supply chain, shipping/handling, payment processing fees, plus all the cases that you definitely don’t want to deal with: customer support, returns, damaged goods,&nbsp;etc.</p>
+                           <p>All <strong class='text-white'>you</strong> have to do is set your own <strong class='text-white'>Markup</strong>, which is what you will earn for each sale. Yes, it's that simple.</p>
+                           <p>Pro members receive an <strong class='text-white'>additional 5%</strong> of the Base Price in earnings on all Printed&nbsp;Products.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Payouts</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img alt="Payouts" class="img-responsive" src="{% static 'assets/marketing/about/marketplace/payouts-ff13a103866e198cf3dff171d6ad52d4.svg" />
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>ArtStation does direct to bank payouts to over 220+ countries worldwide. Select from a rolling weekly or monthly payout.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg hidden-xs hidden-sm"></div>
+                  <div class="separator-lg hidden-xs hidden-sm" id="plans"></div>
+                  <div class="separator-lg hidden-md"></div>
+                  <div class="about-footer marketplace">
+                     <div class="container">
+                        <div class="about-choose">
+                           <div class="text-center">
+                              <h2 class="h1 text-uppercase font-weight-bolder">Choose<br>your edition</h2>
+                           </div>
+                           <div class="d-flex justify-content-center">
+                              <div class="col-lg-11">
+                                 <div class="about-choose-plans">
+                                    <div class="about-choose-plan about-choose-plan-free">
+                                       <div class="about-choose-plan-header">
+                                          <div class="about-pricing-amount">Free</div>
+                                          <div class="separator-xs"></div>
+                                          <div class="about-pricing-period font-weight-light">There will always be a free edition</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Showcase your portfolio</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Sell digital products
+                                                   <div class="small text-gray">Earn 70% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Sell ArtStation Prints</li>
+                                             <li><i class="far fa-check text-success"></i>Basic free Website</li>
+                                             <li><i class="far fa-check text-success"></i>Connect with job opportunities</li>
+                                             <li><i class="far fa-check text-success"></i>Participate in epic art challenges</li>
+                                          </ul>
+                                          <div class="about-pricing-btn"><a class="btn btn-default btn-block" href="../../registration/signup.html">Sign up</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan about-choose-plan-plus d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="plus-badge plus-badge-g pro-badge-xl">Plus</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$6.99/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Free</li>
+                                             <li><i class="far fa-check text-success"></i>Unlimited access to ArtStation&nbsp;Learning</li>
+                                             <li><i class="far fa-check text-success"></i>Your own website with customizable premium&nbsp;themes</li>
+                                             <li><i class="far fa-check text-success"></i>Blogging</li>
+                                             <li><i class="far fa-check text-success"></i>Priority support</li>
+                                             <li><i class="far fa-check text-success"></i>Custom domain support</li>
+                                             <li><i class="far fa-check text-success"></i>Redeem Partner Perks</li>
+                                             <li><i class="far fa-check text-success"></i>Larger 3D file upload limit</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-default btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinfbdf.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="pro-badge pro-badge-g pro-badge-xl">PRO</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$9.95/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Plus</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling digital products
+                                                   <div class="small text-gray">Earn between 80 and 95% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling prints
+                                                   <div class="small text-gray">Earn an additional 5% on the base price</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Pro Analytics</li>
+                                             <li><i class="far fa-check text-success"></i>Appear at the top of searches</li>
+                                             <li><i class="far fa-check text-success"></i>ArtStation Pro badge</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-success btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinc21e.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-text-smaller text-center font-weight-light"><a href="../../subscribe/compare.html">What&#39;s the difference between Free, Plus and Pro?</a></div>
+                     <div class="about-footer-credit"><a class="about-footer-credit-link" target="_blank" href="../../pablocarpio.html">Artwork by Pablo Carpio</a></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <a class="btt scrolltoel" target="_self" href="#top"><span class="icomoon icon-arrow-top"></span></a>
+                  </div>
+                  <script>$(document).ready(function() {
+                     var backToTop = $('.btt');
+                     
+                     waypointEl = new Waypoint({
+                       element: backToTop,
+                       offset: '-50%',
+                       handler: function(direction) {
+                         backToTop.toggleClass('stuck');
+                       }
+                     });
+                     
+                     });
+                  </script>
+               </div>
+            </div>
+            <div class="separator-lg"></div>
+         </div>
+      </div>
+
+      {% include "footer.html"%}

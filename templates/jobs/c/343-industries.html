@@ -1,0 +1,43 @@
+{% load static %}
+{% include "script.html" %}
+{% include "navbar.html" %}
+<div class="wrapper-main"><div class="separator"></div><div class="text-center"><ol class="breadcrumb">
+<li><a href="/jobs">Job Listings</a></li>
+<li class="active">{{post.title}}</li>
+</ol>
+</div><div class="container ng-non-bindable"><div class="recruitment-company-panel"><div class="recruitment-company-masthead"><img class="recruitment-company-masthead-image" width="1370" height="320" alt="Jobs at 343 Industries" src="{{post.banner.url}}" /></div><div class="text-center"><img class="recruitment-company-logo offset" width="200" height="200" alt="Jobs at 343 Industries" src="{{post.logo.url}}" /></div><div class="recruitment-company-panel-body"><div class="page-header"><h1>{{post.title}}</h1></div><p class="text-center"><a href="{{post.website}}">Website<i class="far fa-external-link fa-pad-left"></i></a><br /><i class="far fa-map-marker-alt fa-pad-right"></i>{{post.state}}, {{post.country}}</p><div class="separator"></div><div class="row"><div class="col-md-8 col-md-offset-2"><div class="single-text"><h2>About</h2></div><div class="rich-media-content"><p><em style="">{{post.about}}.</em></p></div></div></div><div class="separator"></div><div class="separator-sm"></div><div class="row"><div class="col-md-6 col-md-offset-3"><h3 class="text-center">4 job openings</h3><div class="separator-sm"></div><div class="panel panel-default"><div class="panel-body">
+  <div class="job-listings">
+    {% for p in mypost %}
+  <div class="media">
+    <div class="media-left"><a href="{{p.get_absolute_url}}"><img class="job-thumb" width="60" height="60" alt="Technical UI Artist at 343 Industries" src="{{p.logo.url}}" /></a>
+    </div>
+    <div class="media-body media-middle">
+      <h4 class="media-heading">
+        <a href="{{p.get_absolute_url}}">{{p.title}}</a>
+      </h4>
+        <div><i class="far fa-map-marker-alt fa-pad-right"></i>{{p.state}}, {{p.country}}</div>
+        <ul class="list-inline"><li>Job Type:&nbsp;Permanent</li><li><i class="far fa-check fa-pad-right text-success"></i>Relocation assistance</li></ul>
+      </div>
+    </div>
+    {% endfor %}
+
+
+
+<script>window.flashes = {};</script><script>(function() {
+  $(function() {
+    return $.each(window.flashes, function(type, content) {
+      if (!content) {
+        return;
+      }
+      if (type === "error") {
+        return Flash.error(content);
+      } else {
+        return Flash.notice(content);
+      }
+    });
+  });
+
+}).call(this);
+</script><div class="modal fade" id="login-modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button"><i class="far fa-times"></i></button><h3 class="modal-title">Sign In</h3></div><div class="modal-body"><form class="simple_form user-login-form" id="new_user" action="https://www.artstation.com/api/v2/authentication/session" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Ex/G5USwL1GCfc2WduLDx8pdeoRGIqsITtdftzsKSaStnSggwQ5k6zLUN6263djsZj03+DVY9VuHMXbJnK/gbA==" /><input name="form_type" type="hidden" value="modal" /><div class="form-group email optional user_email"><label class="control-label email optional" for="user_email">Your email</label><input class="form-control string email optional" name="email" autofocus="autofocus" placeholder="email@example.com" type="email" id="user_email" /></div><div class="form-group password optional user_password"><label class="control-label password optional" for="user_password">Password</label><input class="form-control password optional" autocomplete="off" name="password" placeholder="password" type="password" id="user_password" /></div><div class="form-group"><button name="button" type="submit" class="btn btn-default"><i class="far fa-sign-in fa-pad-right"></i>Sign in</button></div><div class="row row-flex"><div class="col-xs-6"><a target="_self" href="../../users/password/new.html">Forgot password?</a></div><div class="col-xs-6 text-right"><a target="_self" href="../../registration/signup.html">Sign up</a></div></div><hr /><a class="btn btn-default" target="_self" href="https://www.facebook.com/v2.11/dialog/oauth?client_id=249255215230397&amp;redirect_uri=https%3A%2F%2Fwww.artstation.com%2Fusers%2Fauth%2Ffacebook%2Fcallback&amp;response_type=code&amp;scope=email%2C+public_profile%2C+manage_pages%2C+publish_pages&amp;state=97e348ced29fb7323eb85c8b044643f5c6c45d4038b666da"><i class="fab fa-facebook fa-pad-right"></i>Sign in with Facebook</a></form></div></div></div></div></body>
+<!-- Mirrored from www.artstation.com/jobs/c/343-industries by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Oct 2020 14:08:28 GMT -->
+</html>

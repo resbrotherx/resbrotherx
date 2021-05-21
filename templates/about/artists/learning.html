@@ -1,0 +1,304 @@
+{% load static %}
+
+
+ {% include "script.html" %}
+{% include "navbar.html" %}
+         <div class="wrapper-main">
+            <div class="about-page">
+               <div class="about-intro d-flex flex-column align-items-center justify-content-center text-center learning">
+                  <div class="about-quote"><span class="about-quote-symbol">&ldquo;</span> It’s a roadmap to everything you need to be a happy and successful&nbsp;artist. <span class="about-quote-symbol">&bdquo;</span></div>
+                  <div class="about-quote-author"><span class="font-weight-medium">Robbie Trevino</span> &mdash; Designer, Illustrator, Creator of Numinous</div>
+                  <div class="about-intro-cta"><a class="btn btn-primary btn-lg" href="../../subscribe/compare.html">Get Started</a></div>
+                  <div class="about-intro-credit"><a class="about-intro-credit-link" target="_blank" href="../../randallmackey.html">Artwork by Randall Mackey</a></div>
+               </div>
+               <div class="about-nav-wrap sticky-block">
+                  <div class="about-nav">
+                     <div class="about-nav-title">For Artists</div>
+                     <div class="sub-nav mb0">
+                        <div class="btn-group"><a class="btn btn-default" href="/about">Overview</a><a class="btn btn-default" href="/portfolio">Portfolio</a><a class="btn btn-default" href="/website-builder">Website Builder</a><a class="btn btn-default" href="/sell-goods">Sell Goods</a><a class="btn btn-default active" href="/learning">Learning</a></div>
+                     </div>
+                     <div class="about-nav-start"><a class="btn btn-primary text-uppercase scrolltoel" href="#plans">Get Started</a></div>
+                  </div>
+               </div>
+               <script>$(document).ready(function() {
+                  var sticky = new Waypoint.Sticky({
+                    element: $('.about-nav')[0],
+                    offset: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--main-menu-level-1-height'))
+                  });
+                  
+                  });
+               </script>
+               <div class="about-page-content">
+                  <div class="container">
+                     <div class="about-learning-features">
+                        <div class="row d-md-flex align-items-center">
+                           <div class="col-md-6 order-md-2">
+                              <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" frameborder="0" height="315" src="https://player.vimeo.com/video/355977982" width="560"></iframe></div>
+                              <div class="separator d-md-none"></div>
+                           </div>
+                           <div class="col-md-6 order-md-1">
+                              <p class="intro-text">ArtStation Learning is an exciting new streaming video service for artists. With unlimited access to an ever growing content library, artists can expand their skills in a range of art topics and learn at their own pace.</p>
+                              <p class="intro-text">ArtStation Learning comes included with all premium subscription accounts starting at only $<span class="text-white">6.99</span>/mo, making it an affordable way for artists to gain valuable training.</p>
+                           </div>
+                        </div>
+                        <div class="separator-lg"></div>
+                        <div class="separator"></div>
+                        <div class="row d-sm-flex flex-wrap justify-content-center intro-features">
+                           <div class="intro-features-block col-sm-6 col-lg-4">
+                              <h2 class="mb15 text-primary"><i class="far fa-smile"></i></h2>
+                              <h3 class="font-weight-medium text-white">Learn at your own pace</h3>
+                              <p>Watch courses in your own time whenever it fits into your busy schedule. Continue as you need to.</p>
+                              <div class="separator"></div>
+                           </div>
+                           <div class="intro-features-block col-sm-6 col-lg-4">
+                              <h2 class="mb15 text-primary"><i class="far fa-books"></i></h2>
+                              <h3 class="font-weight-medium text-white">An ever growing library</h3>
+                              <p>We’ll be continually releasing new content to ArtStation Learning. Our goal is to grow this library into the largest and most valuable resource for artists.</p>
+                              <div class="separator"></div>
+                           </div>
+                           <div class="intro-features-block col-sm-6 col-lg-4">
+                              <h2 class="mb15 text-primary"><i class="far fa-hand-holding-usd"></i></h2>
+                              <h3 class="font-weight-medium text-white">Affordable learning</h3>
+                              <p>ArtStation Learning comes will all premium subscriptions, starting at just $6.99/mo.</p>
+                              <div class="separator"></div>
+                           </div>
+                           <div class="intro-features-block col-sm-6 col-lg-4">
+                              <h2 class="mb15 text-primary"><i class="far fa-star"></i></h2>
+                              <h3 class="font-weight-medium text-white">Learn from expert instructors</h3>
+                              <p>Gain valuable knowledge and insights from experienced professionals from diverse fields.</p>
+                              <div class="separator d-lg-none"></div>
+                           </div>
+                           <div class="intro-features-block col-sm-6 col-lg-4">
+                              <h2 class="mb15 text-primary"><i class="far fa-infinity"></i></h2>
+                              <h3 class="font-weight-medium text-white">Unlimited access</h3>
+                              <p>Access courses whenever and wherever. Watch as many courses as you like.</p>
+                              <div class="separator d-sm-none"></div>
+                           </div>
+                           <div class="intro-features-block col-sm-6 col-lg-4">
+                              <h2 class="mb15 text-primary"><i class="far fa-pencil-paintbrush"></i></h2>
+                              <h3 class="font-weight-medium text-white">Expand your skill set</h3>
+                              <p>ArtStation Learning courses will cover a wide range of art topics at different skill levels. Constantly develop and level up your skills.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg"></div>
+                  <div class="about-learning-discover">
+                     <div class="d-md-flex align-items-center justify-content-center">
+                        <img class="img img-responsive" width="720" height="674" alt="ArtStation Learning" src="{% static 'assets/marketing/about/learning/learning-preview-80fd9d3564ffbf2ca4ffc05e173fb509.jpg' %}" />
+                        <div>
+                           <div class="h1">Discover the courses</div>
+                           <a class="btn btn-primary" href="../../learning.html">Go to ArtStation Learning Home</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg"></div>
+                  <div class="container subscribe-testimonials-block">
+                     <div class="subscribe-testimonials trigger-testimonials">
+                        <div class="subscribe-testimonials-item">
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Craig Elliott" class="img-circle" src="{% static 'assets/marketing/quotes/photo-craig-f3de6afa8aa99d50571f146cf9ac21ef.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">ArtStation Learning is an incredible idea and resource in the very place we all hang out anyways. When you follow artists and genres you love, you will find training in those areas while you are browsing and commenting on art. I think that is where it is at it’s best.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Craig Elliott <span class="dark-badge">Pro</span></div>
+                                 <div class="about-quote-block-position">Production Designer</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="subscribe-testimonials-item">
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Justin Gerard" class="img-circle" src="{% static 'assets/marketing/quotes/photo-justin-16116f39634a8a70b86573da4b07d0e0.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">I would have killed for access to what Artstation Learning is offering here when I was in school! (I can’t believe I have access to it now!) It’s an amazing program and it would have saved me years of fumbling around if I could have had the chance to learn directly from the professionals how they create their work.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Justin Gerard <span class="dark-badge">Pro</span></div>
+                                 <div class="about-quote-block-position">Independent Artist</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="subscribe-testimonials-item">
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Javier Perez" class="img-circle" src="{% static 'assets/marketing/quotes/photo-javier-2338df5cd2d0ec78f580b86be06dfbee.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">With all the content ArtStation Learning provides, it makes it easy for any artist to branch out and starting learning something new.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Javier Perez <span class="dark-badge">Pro</span></div>
+                                 <div class="about-quote-block-position">Senior Material Artist</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="subscribe-testimonials-item">
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Robbie Trevino" class="img-circle" src="{% static 'assets/marketing/quotes/photo-robbie-0502e43f84ba69ff630ec2a339a05bea.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">All the things that I wish I had known starting out - this is the way that you get to know those things. It’s a road map to everything you need to be a happy and successful artist.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Robbie Trevino <span class="dark-badge">Pro</span></div>
+                                 <div class="about-quote-block-position">Designer, Illustrator</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="subscribe-testimonials-item">
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Brin Lewis" class="img-circle" src="{% static 'assets/marketing/quotes/photo-brin-524c76562a9661ff5afb3f0b7ac3441b.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">I live in a really isolated small part of the country so I don’t have a lot of options in terms of professional learning so it’s really nice to have this&nbsp;online!</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Brin Lewis</div>
+                                 <div class="about-quote-block-position">Aspiring Illustrator & Concept Artist</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg hidden-xs hidden-sm"></div>
+                  <div class="separator-lg hidden-xs hidden-sm" id="plans"></div>
+                  <div class="separator-lg hidden-md"></div>
+                  <div class="about-footer marketplace">
+                     <div class="container">
+                        <div class="about-choose">
+                           <div class="text-center">
+                              <h2 class="h1 text-uppercase font-weight-bolder">Choose<br>your edition</h2>
+                           </div>
+                           <div class="d-flex justify-content-center">
+                              <div class="col-lg-11">
+                                 <div class="about-choose-plans">
+                                    <div class="about-choose-plan about-choose-plan-free">
+                                       <div class="about-choose-plan-header">
+                                          <div class="about-pricing-amount">Free</div>
+                                          <div class="separator-xs"></div>
+                                          <div class="about-pricing-period font-weight-light">There will always be a free edition</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Showcase your portfolio</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Sell digital products
+                                                   <div class="small text-gray">Earn 70% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Sell ArtStation Prints</li>
+                                             <li><i class="far fa-check text-success"></i>Basic free Website</li>
+                                             <li><i class="far fa-check text-success"></i>Connect with job opportunities</li>
+                                             <li><i class="far fa-check text-success"></i>Participate in epic art challenges</li>
+                                          </ul>
+                                          <div class="about-pricing-btn"><a class="btn btn-default btn-block" href="../../registration/signup.html">Sign up</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan about-choose-plan-plus d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="plus-badge plus-badge-g pro-badge-xl">Plus</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$6.99/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Free</li>
+                                             <li><i class="far fa-check text-success"></i>Unlimited access to ArtStation&nbsp;Learning</li>
+                                             <li><i class="far fa-check text-success"></i>Your own website with customizable premium&nbsp;themes</li>
+                                             <li><i class="far fa-check text-success"></i>Blogging</li>
+                                             <li><i class="far fa-check text-success"></i>Priority support</li>
+                                             <li><i class="far fa-check text-success"></i>Custom domain support</li>
+                                             <li><i class="far fa-check text-success"></i>Redeem Partner Perks</li>
+                                             <li><i class="far fa-check text-success"></i>Larger 3D file upload limit</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-default btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinfbdf.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="pro-badge pro-badge-g pro-badge-xl">PRO</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$9.95/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Plus</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling digital products
+                                                   <div class="small text-gray">Earn between 80 and 95% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling prints
+                                                   <div class="small text-gray">Earn an additional 5% on the base price</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Pro Analytics</li>
+                                             <li><i class="far fa-check text-success"></i>Appear at the top of searches</li>
+                                             <li><i class="far fa-check text-success"></i>ArtStation Pro badge</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-success btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinc21e.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-text-smaller text-center font-weight-light"><a href="../../subscribe/compare.html">What&#39;s the difference between Free, Plus and Pro?</a></div>
+                     <div class="about-footer-credit"><a class="about-footer-credit-link" target="_blank" href="../../pablocarpio.html">Artwork by Pablo Carpio</a></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <a class="btt scrolltoel" target="_self" href="#top"><span class="icomoon icon-arrow-top"></span></a>
+                  </div>
+                  <script>$(document).ready(function() {
+                     var backToTop = $('.btt');
+                     
+                     waypointEl = new Waypoint({
+                       element: backToTop,
+                       offset: '-50%',
+                       handler: function(direction) {
+                         backToTop.toggleClass('stuck');
+                       }
+                     });
+                     
+                     });
+                  </script>
+                  <div class="about-learning-teach text-center">
+                     <div class="separator-lg"></div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
+                              <h2 class="far fa-chalkboard-teacher text-primary"></h2>
+                              <h3 class="font-weight-medium">Teach on ArtStation</h3>
+                              <p>Want to become an instructor? We're always looking for new and diverse content to build our ever growing course library. To find out more, please <a href="mailto:support@artstation.com">contact us</a>.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="separator-lg"></div>
+                  </div>
+               </div>
+            </div>
+            <script>$(document).ready(function() {
+               $('.trigger-testimonials').slick({
+                 arrows: true,
+                 slidesToShow: 2,
+                 prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="far fa-chevron-left"></i></button>',
+                 nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="far fa-chevron-right"></i></button>',
+                 responsive: [
+                   {
+                     breakpoint: 767,
+                     settings: {
+                       slidesToShow: 1,
+                       slidesToScroll: 1
+                     }
+                   }
+                 ]
+               })
+               
+               })
+            </script>
+            <div class="separator-lg"></div>
+         </div>
+      </div>
+      {% include "footer.html" %}

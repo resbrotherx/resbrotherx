@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://www.artstation.com/bvdhorst/blog/vg78/creature-feature-vol-13-wings-update-23 -->
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <style type="text/css" class="lum-base-styles">
+         @keyframes lum-noop {
+         0% { zoom: 1; }
+         }
+         .lum-lightbox {
+         position: fixed;
+         display: none;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         }
+         .lum-lightbox.lum-open {
+         display: block;
+         }
+         .lum-lightbox.lum-opening, .lum-lightbox.lum-closing {
+         animation: lum-noop 1ms;
+         }
+         .lum-lightbox-inner {
+         position: absolute;
+         top: 0%;
+         right: 0%;
+         bottom: 0%;
+         left: 0%;
+         overflow: hidden;
+         }
+         .lum-lightbox-loader {
+         display: none;
+         }
+         .lum-lightbox-inner img {
+         max-width: 100%;
+         max-height: 100%;
+         }
+         .lum-lightbox-image-wrapper {
+         vertical-align: middle;
+         display: table-cell;
+         text-align: center;
+         }
+      </style>
+   {% load static %}
+
+
+{% include "scripts.html" %}
+{% include "navbar.html" %}
+       
+      <div class="wrapper">
+         <app-root ng-version="7.2.15">
+            <router-outlet></router-outlet>
+            <app-layout>
+               <router-outlet></router-outlet>
+               <blog-scope>
+                  <div class="page-container" infinitescroll="">
+                     <!---->
+                     <filter-bar>
+                        <nav class="navbar-default sticky-block clearfix">
+                           <ul class="nav navbar-nav navbar-nav-xs-inline navbar-nav-sm-inline">
+                              <!---->
+                              <li class="active"><a href="https://www.artstation.com/blogs">Trending</a></li>
+                              <li><a href="https://www.artstation.com/blogs/latest">Latest</a></li>
+                              <li class="hidden"><a href="https://www.artstation.com/blogs/following">Following</a></li>
+                           </ul>
+                           <ul class="nav navbar-nav navbar-right navbar-nav-xs-center navbar-nav-sm-center">
+                              <li class="dropdown">
+                                 <button class="btn navbar-button dropdown-toggle" data-toggle="dropdown" type="button">All categories <i class="far fa-chevron-down fa-pad-left"></i></button>
+                                 <ul class="dropdown-menu">
+                                    <li class="dropdown-header">Only show these posts:</li>
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox"><span class="custom"></span>All</label></div>
+                                    </li>
+                                    <!---->
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox" value="3"><span class="custom"></span>Article</label></div>
+                                    </li>
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox" value="1"><span class="custom"></span>General</label></div>
+                                    </li>
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox" value="5"><span class="custom"></span>Making Of</label></div>
+                                    </li>
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox" value="2"><span class="custom"></span>News</label></div>
+                                    </li>
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox" value="6"><span class="custom"></span>Tutorial</label></div>
+                                    </li>
+                                    <li class="dropdown-checkbox">
+                                       <div class="checkbox"><label><input type="checkbox" value="4"><span class="custom"></span>Work In Progress</label></div>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </nav>
+                        <!---->
+                     </filter-bar>
+                     <div class="blog-posts">
+                        <!----><!---->
+                        <div class="blog-grid wrap">
+                           <!---->
+                           <div class="blog-grid-item join">
+                              <div class="blog-card-join">
+                                 <div class="blog-card-join-title">Join the conversation</div>
+                                 <div class="blog-card-join-subtitle">Create or import your blog and share updates and WIPs.</div>
+                                 <div class="blog-card-join-btns"><a class="btn btn-primary btn-sm" href="https://www.artstation.com/blog_posts/new">New Post</a><a class="btn btn-primary btn-sm" href="https://www.artstation.com/blog_posts/manage">Import Blog</a></div>
+                              </div>
+                           </div>
+                           <!---->
+                            {% for post in post_all %}
+                             <post-tile class="blog-grid-item">
+                                <a class="blog-card" href="{{ post.get_absolute_url}}">
+                                   <div class="blog-card-thumbnail">
+                                      <div class="blog-card-thumbnail-holder"><img class="img" height="167" width="296" src="{{ post.image.url }}" alt="{{post.title}}"></div>
+                                      <!---->
+                                      <div class="blog-card-thumbnail-content"><span class="btn btn-primary">View</span></div>
+                                   </div>
+                                   <div class="blog-card-header">
+                                      <div class="blog-card-category">{{ post.Category }}</div>
+                                      <div class="blog-card-time">{{post.timestamp|timesince}} ago</div>
+                                   </div>
+                                   <div class="blog-card-title">{{post.title}} </div>
+                                   <div class="blog-card-author">
+                                      <img class="img-circle" height="24" width="24" src="https://cdnb.artstation.com/p/users/avatars/000/173/253/medium/e9b50704c06de8d1f1549b277187b819.jpg?1457448695" alt="{{post.user}}">
+                                      <div class="blog-card-author-name">
+                                         by&nbsp;<span>{{post.user}}</span><!----><span class="pro-badge">Pro</span><!----><!---->
+                                      </div>
+                                   </div>
+                                   <div class="blog-card-meta">
+                                      <div class="blog-card-meta-block"><i class="far fa-thumbs-up fa-pad-right"></i><span>19</span></div>
+                                      <div class="blog-card-meta-block"><i class="far fa-eye fa-pad-right"></i><span>{{ post.view_count }}</span></div>
+                                      <div class="blog-card-meta-block"><i class="far fa-comments fa-pad-right"></i><span>1</span></div>
+                                   </div>
+                                </a>
+                             </post-tile>
+                             {%endfor%}
+                         
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+               </blog-scope>
+               <layout-footer></layout-footer>
+            </app-layout>
+         </app-root>
+      </div>
+      <style>.async-hide { opacity: 0 !important} </style>
+      <script>
+         (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <script src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/saved_resource" async="" defer=""></script>
+      <script src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/f.txt" async="" defer=""></script>
+      <script type="text/javascript" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/runtime.6bc99ad3bea93890cce9.js.download"></script><script type="text/javascript" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/polyfills.046caac68a83d6770e44.js.download"></script><script type="text/javascript" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/scripts.96399c4a1f0a5f6a79ab.js.download"></script><script type="text/javascript" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/vendor.29ba38233e3c015a1d07.js.download"></script><script type="text/javascript" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/main.f44a2c8e3762b52e508a.js.download"></script>
+      <input type="file" id="" name="file" style="display: none;">
+      <div data-v-0a2a5063="" class="container_selected_area" style="cursor: url(&quot;chrome-extension://ialiedlpfknneamnbemcgmaboleiccdd/assets/images/cursor-imagen.svg&quot;) 9 9, crosshair;">
+         <div data-v-0a2a5063="" class="area"></div>
+      </div>
+      <div id="uvpn_rate_us" style="display: none;">
+         <div class="uvpn_wrap">
+            <div class="uvpn_logo-ext">
+               <div class="uvpn_logo-wrap">                        <img src="chrome-extension://jaoafpkngncfpfggjefnekilbkcpjdgp/img/128.png">                    </div>
+            </div>
+            <div class="uvpn_title">                    Don’t Forget to Rate Us                </div>
+            <div class="uvpn_desc">                    If you enjoy our product, give us 5 stars. It helps so much!                </div>
+            <div class="stars">
+               <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">
+                  <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">
+                  <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">
+                  <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">
+                  <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">
+                  <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>
+               </svg>
+            </div>
+            <a target="_blank" href="https://chrome.google.com/webstore/detail/uvpn-free-and-unlimited-v/jaoafpkngncfpfggjefnekilbkcpjdgp/reviews" id="rate_btn_rateus" class="uvpn_rate-btn uvpn_btn">                    Rate Us                </a>                
+            <div id="close_btn_rateus" class="uvpn_later-btn uvpn_btn">                    Not Now                </div>
+         </div>
+      </div>
+      <div style="display: none; visibility: hidden;">
+         <script type="text/javascript">(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].a=a[b].a||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js","ym");ym(61378894,"init",{defer:!0,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0,trackHash:!0,ecommerce:"dataLayer"});</script>
+         <noscript></noscript>
+      </div>
+      <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","839585796436518");fbq("track","PageView");</script>
+      <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=614550515641125&amp;ev=PageView&amp;noscript=1"></noscript>
+      <div style="display: none; visibility: hidden;">
+         <script src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/dtag.js.download"></script>
+      </div>
+      <div style="display: none; visibility: hidden;">
+         <script type="text/javascript">(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].a=a[b].a||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js","ym");ym(61378894,"init",{defer:!0,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0,trackHash:!0,ecommerce:"dataLayer"});</script>
+         <noscript></noscript>
+      </div>
+      <div style="display: none; visibility: hidden;">
+         <script async="null" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/f.txt"></script>
+      </div>
+      <script src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/js"></script><script type="text/javascript" id="">var params={};params=google_tag_manager["GTM-K7KHHZ8"].macro(8)?{seller:google_tag_manager["GTM-K7KHHZ8"].macro(9),buyer:google_tag_manager["GTM-K7KHHZ8"].macro(10),artist:google_tag_manager["GTM-K7KHHZ8"].macro(11),pro:google_tag_manager["GTM-K7KHHZ8"].macro(12),plus:google_tag_manager["GTM-K7KHHZ8"].macro(13),guest:!1}:{guest:!0};ym(google_tag_manager["GTM-K7KHHZ8"].macro(14),"hit",google_tag_manager["GTM-K7KHHZ8"].macro(15),google_tag_manager["GTM-K7KHHZ8"].macro(16),google_tag_manager["GTM-K7KHHZ8"].macro(17),params);</script><iframe name="__privateStripeMetricsController5780" frameborder="0" allowtransparency="true" scrolling="no" allowpaymentrequest="true" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/m-outer-0cba8a995d163797499ab006bbb6b889.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe>
+      <div id="attentive_overlay" style="position: fixed; left: 0px; bottom: 0px; width: 100vw; height: 0px; z-index: 2147483647;"><iframe referrerpolicy="origin" id="attentive_creative" title="Sign Up via Text for Offers" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/creative.html" style="width: 100%; height: 0px; position: absolute; bottom: 0px; opacity: 0; transition: opacity 500ms ease 0s; border: 0px; overflow: hidden;"></iframe></div>
+      <ng-component>
+         <!---->
+         <div class="product-view-arrow product-view-prev"><i class="far fa-angle-left"></i></div>
+         <!---->
+         <div class="product-view-arrow product-view-next"><i class="far fa-angle-right"></i></div>
+      </ng-component>
+      <div style="display: none; visibility: hidden;">
+         <script type="text/javascript">(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].a=a[b].a||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js","ym");ym(61378894,"init",{defer:!0,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0,trackHash:!0,ecommerce:"dataLayer"});</script>
+         <noscript></noscript>
+      </div>
+      <script type="text/javascript" id="">var params={};params=google_tag_manager["GTM-K7KHHZ8"].macro(19)?{seller:google_tag_manager["GTM-K7KHHZ8"].macro(20),buyer:google_tag_manager["GTM-K7KHHZ8"].macro(21),artist:google_tag_manager["GTM-K7KHHZ8"].macro(22),pro:google_tag_manager["GTM-K7KHHZ8"].macro(23),plus:google_tag_manager["GTM-K7KHHZ8"].macro(24),guest:!1}:{guest:!0};ym(google_tag_manager["GTM-K7KHHZ8"].macro(25),"hit",google_tag_manager["GTM-K7KHHZ8"].macro(26),google_tag_manager["GTM-K7KHHZ8"].macro(27),google_tag_manager["GTM-K7KHHZ8"].macro(28),params);</script>
+      <div style="display: none; visibility: hidden;">
+         <script async="null" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/f.txt"></script>
+      </div>
+      <post-view-modal>
+         <div class="modal modal-blog in" id="post-modal" style="display: block;">
+
+            <div class="modal-dialog modal-lg">
+               <!----><!---->
+              <div id="" style="overflow:scroll; height:600px;">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <a href="/blogs"><button class="close" data-dismiss="modal" type="button" aria-label="Close"><i class="far fa-times"></i></button></a>
+                     <div class="bp-avatar-name mb0">
+                        <a href="https://www.artstation.com/bvdhorst"><img class="img-circle" height="48" width="48" src="./ArtStation - Creature Feature Vol 13 -=WINGS=- Update #23_files/6c477741f72251087c067459d9b1a809.jpg" alt="{{post.user.first_name}} {{post.user.last_name}}"></a>
+                        <div class="bp-name-block">
+                           <div class="bp-name-block-name">
+                              <a href="https://www.artstation.com/bvdhorst">{{post.user.first_name}} {{post.user.last_name}}</a><!----><a class="pro-badge" href="https://www.artstation.com/subscribe">Pro</a><!----><!---->
+                           </div>
+                           <div class="bp-category-date">
+                              <!----><span><span>{{post.categories}}</span><span class="text-muted">&nbsp;/&nbsp;</span></span><span class="text-muted">{{post.timestamp|timesince}} ago</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-body bp">
+                     <div class="row">
+                        <div class="col-xs-10 col-sm-11">
+                           <h3 class="bp-title">{{post.title}}</h3>
+                        </div>
+                        <!---->
+                     </div>
+                     <div class="separator-xs"></div>
+                     <div class="bp-text">
+                        <p>{{post.discription}}.</p>
+                        <p><br></p>
+                        <div class="media-asset-container media-image fr-draggable fr-fil"><a href="https://cdna.artstation.com/p/media_assets/images/images/000/766/832/large/wings095_2.jpg?1616018589" target="_blank" class="media-asset-image-link"><img data-asset-id="766832" src="{{post.image.url}}" class="img-responsive"></a></div>
+                        <p><br>  </p>
+                        <div class="media-asset-container media-image fr-draggable fr-fil"><a href="https://cdnb.artstation.com/p/media_assets/images/images/000/766/833/large/wings096_2.jpg?1616018591" target="_blank" class="media-asset-image-link"><img data-asset-id="766833" src="{{post.image2.url}}" class="img-responsive"></a></div>
+                        <p><br>  </p>
+                        <div class="video-clip-wrapper" style="width: 858px; height: 471.9px;"><iframe data-asset-id="766835" src="{{post.video_url}}" width="1920px" height="1056px" frameborder="0" allowfullscreen="" allows="autoplay; fullscreen" style="max-width: 100%; max-height: 100%;"></iframe></div>
+                          <p><br>  </p>
+                     </div>
+                     <div class="row bp-post-footer">
+                        <div class="col-md-5 bp-actions">
+                          <form action="{%url 'items:like-video' post.id%}" method="POST" class="like-form col-md-5 bp-actions" style="padding: 0;margin: 0; width: 78px;" >
+                                 {%csrf_token%}
+                                 {%if user not in post.likes.all %}
+                           <button class="btn btn-success btn-sm like-btn" type="submit" name="video_id" value="{{post.id}}" style="background-color: rgb(0 0 0 / 50%);
+                              border-color: rgb(0 0 0 / 50%); margin-top:px;"><i class="far fa-thumbs-up fa-pad-right mr-2 like-icon inline-block"></i>Like</button>
+
+                           {%else%}
+
+                           <button class="btn btn-success btn-sm like-btn" type="submit" name="video_id" value="{{post.id}}"><i class="far fa-thumbs-up fa-pad-right mr-2 like-icon inline-block text-blue-700"></i>Liked</button>
+
+                            {%endif%}
+                            </form>
+<!-- 
+                <form action="{% url 'items:dislike-video' post.id%}" method="POST" class="dislike-form">
+                                 {%csrf_token%}
+                        {%if user not in post.dislikes.all %}
+                           <button class="btn btn-dange btn-sm dislike-btn" type="submit" name="video_id" value="{{post.id}}" style="background-color: rgb(0 0 0 / 50%);
+                            border-color: rgb(0 0 0 / 50%); ">
+                            <i class="far fa-thumbs-up fa-pad-right mr-2 dislike-icon inline-block"></i>Dislike</button>
+
+                           {%else%}
+                            <button class="btn btn-danger btn-sm dislike-btn" type="submit" name="video_id" value="{{post.id}}">
+                            <i class="far fa-thumbs-down fa-pad-right text-blue-700 mr-2 dislike-icon inline-block"></i>Dislike</button>
+
+                            {%endif%}
+                       </form> -->
+                      
+
+
+                           <a class="btn btn-primary btn-sm"><i class="far fa-comment fa-pad-right"></i>Comment</a>
+                           <share-dropdown _nghost-nga-c0="">
+                              <span _ngcontent-nga-c0="" class="bp-share">
+                                 <a _ngcontent-nga-c0="" class="btn btn-default btn-sm"><i _ngcontent-nga-c0="" class="far fa-s-square fa-pad-right"></i>Share</a>
+                                 <div _ngcontent-nga-c0="" class="bp-share-btns">
+                                    <f-a-c-e-b-o-o-k--s-h-a-r-e--b-u-t-t-o-n _ngcontent-nga-c0="">
+                                       <button class="btn btn-fc btn-sm" style="display: inline-block !important; text-overflow: ellipsis;" type="button">
+                                          <i class="fab fa-facebook"></i><!---->
+                                       </button>
+                                    </f-a-c-e-b-o-o-k--s-h-a-r-e--b-u-t-t-o-n>
+                                    <t-w-i-t-t-e-r--s-h-a-r-e--b-u-t-t-o-n _ngcontent-nga-c0="" class="btn-space">
+                                       <button class="btn btn-ti btn-sm" style="display: inline-block !important; text-overflow: ellipsis;" type="button">
+                                          <i class="fab fa-twitter"></i><!---->
+                                       </button>
+                                    </t-w-i-t-t-e-r--s-h-a-r-e--b-u-t-t-o-n>
+                                    <l-i-n-k-e-d-i-n--s-h-a-r-e--b-u-t-t-o-n _ngcontent-nga-c0="" class="btn-space">
+                                       <button class="btn btn-l btn-sm" style="display: inline-block !important; text-overflow: ellipsis;" type="button">
+                                          <i class="fab fa-linkedin"></i><!---->
+                                       </button>
+                                    </l-i-n-k-e-d-i-n--s-h-a-r-e--b-u-t-t-o-n>
+                                 </div>
+                              </span>
+                           </share-dropdown>
+                           &nbsp;
+                           <follow-button>
+                              <!----><!----><button class="btn btn-primary btn-sm" title="Follow this user" type="button"><i class="far fa-user-plus fa-pad-right"></i>Follow</button><!---->
+                           </follow-button>
+                        </div>
+                        <div class="col-md-7 bp-meta">
+                           <span>
+                              <i class="far fa-thumbs-up fa-pad-right mr-2 dislike-icon inline-block"></i>
+                              <span class="like-count" id="like-count">
+                                 <!----><!---->{{post.num_likes}} 
+                              </span> Likes
+                           </span>
+
+                        
+                             <!-- 
+                           <span>
+                              <i class="far fa-thumbs-down fa-pad-right mr-2 dislike-icon inline-block"></i>
+                              <span class="dislike-count" id="dislike-count">
+                                 <!----><!--{{post.num_dislikes}} 
+                              </span> Dislikes
+                           </span> --> 
+
+                  
+
+
+
+                           <span>
+                              <i class="far fa-eye fa-pad-right"></i>
+                              <span>
+                                 <!----><!---->{{post.view_count}} Views
+                              </span>
+                           </span>
+                           <span>
+                              <a class="comments-button cursor-pointer">
+                                 <i class="far fa-comments fa-pad-right"></i>
+                                 <span>
+                                    <!---->{{post.get_comments.count}} Comment<!---->
+                                 </span>
+                                 <i class="caret"></i>
+                              </a>
+                           </span>
+                        </div>
+                     </div>
+                     <!---->
+                     <comment-list>
+                        <!----><!---->
+                        <div class="bp-comments">
+                           <!---->
+                           <div class="hr"></div>
+                           <!---->
+                           {% for comment in post.get_comments %}
+                              <comment class="bp-comment">
+                                 <div class="bp-comment-block">
+                                    <div class="bp-comment-avatar">
+                                      <a href="https://www.artstation.com/bvdhorst">
+                                        {% if comment.user.author %}
+                                      <img alt="" class="img-circle" height="35" width="35" src="{{ comment.user.author.profile_picture.url }} {{ comment.user.profile.image.url }}">
+                                      {% else %}
+                                      <img alt="" class="img-circle" height="35" width="35" src="{{comment.user.author.profile_picture.url}}">
+                                      {% endif %}
+                                    </a>
+                                  </div>
+                                    <!---->
+                                    <div class="bp-comment-body">
+                                       <div class="bp-comment-text">
+                                          <strong><a href="https://www.artstation.com/bvdhorst">{{comment.user.username}}</a></strong>
+                                          <div>
+                                             <p>{{comment.comment}}</p>
+                                          </div>
+                                       </div>
+                                       <div class="bp-comment-actions">
+                                        <span><a class="cursor-pointer"><i class="far fa-check fa-pad-right hide"></i>Like</a>&nbsp; · &nbsp;</span>
+
+                                        <span><a class="cursor-pointer">Reply</a>&nbsp; · &nbsp;</span><span><i class="far fa-thumbs-up fa-pad-right"></i>{{comment.num_likes}}
+                                          &nbsp; · &nbsp;</span><span class="bp-comment-date">{{comment.timestamp|timesince}} ago</span>
+                                       </div>
+                                    </div>
+                                    <!---->
+                                    <div class="bp-comment-drop dropdown text-right">
+                                       <!----><!----><!---->
+                                    </div>
+                                 </div>
+                                 <!----><!---->
+                              </comment>
+                              <!---->
+                              {% endfor %}
+                           <div class="separator-sm"></div>
+                           <!----><!---->
+
+                           <comment-form class="bp-comment">
+   <form method="post" action="." novalidate="" submitbykey="" class="ng-pristine ng-invalid ng-touched">
+      <div class="bp-comment-block">
+         <!---->
+         <div class="bp-comment-avatar">
+          <img alt="" class="img-circle" height="35" width="35" src="{{user.profile.image.url}}"></div>
+         <div class="bp-comment-body">
+          {% csrf_token %}
+          {{ form }}
+          <!-- 
+            <textarea class="form-control ng-pristine ng-invalid ng-touched" name="commentText" required="" rows="1" placeholder="Your comment..."></textarea> -->
+            <div class="help-block" style="display: none;">
+               <!----><span>Comment can't be blank</span>
+            </div>
+            <!---->
+            <div class="separator-sm"></div>
+            <button class="btn btn-primary btn-sm" type="submit"><i class="far fa-comment fa-pad-right"></i>Post Comment</button><!---->
+         </div>
+      </div>
+   </form>
+</comment-form>
+                        </div>
+                     </comment-list>
+                  </div>
+               </div> 
+            </div>
+            </div>
+         </div>
+      </post-view-modal>
+      <div class="modal-backdrop in"></div>
+      <div id="fb-root" class=" fb_reset">
+         <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+            <div></div>
+         </div>
+      </div>
+      <script src="{%static 'js/ajax.js'%}"></script>
+   </body>
+</html>

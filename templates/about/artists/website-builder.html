@@ -1,0 +1,305 @@
+{% load static %}
+
+      
+{% include "script.html" %}
+      <div style="display:none"></div>
+   {% include "navbar.html" %}
+         <div class="wrapper-main">
+            <div class="about-page">
+               <div class="about-intro d-flex flex-column align-items-center justify-content-center text-center website">
+                  <div class="about-quote"><span class="about-quote-symbol">&ldquo;</span> I love the website builder feature!<br>There are themes to fit every artist’s&nbsp;needs. <span class="about-quote-symbol">&bdquo;</span></div>
+                  <div class="about-quote-author"><span class="font-weight-medium">Grady Frederick</span> &mdash; Concept Artist and Illustrator</div>
+                  <div class="about-intro-cta"><a class="btn btn-primary btn-lg" href="../../subscribe/compare.html">Get Started</a></div>
+                  <div class="about-intro-credit"><a class="about-intro-credit-link" target="_blank" href="../../mattrhodes.html">Artwork by Matt Rhodes</a></div>
+               </div>
+               <div class="about-nav-wrap sticky-block">
+                  <div class="about-nav">
+                     <div class="about-nav-title">For Artists</div>
+                     <div class="sub-nav mb0">
+                        <div class="btn-group"><a class="btn btn-default" href="/about">Overview</a><a class="btn btn-default" href="/portfolio">Portfolio</a><a class="btn btn-default active" href="/website-builder">Website Builder</a><a class="btn btn-default" href="/sell-goods">Sell Goods</a><a class="btn btn-default" href="/learning">Learning</a></div>
+                     </div>
+                     <div class="about-nav-start"><a class="btn btn-primary text-uppercase scrolltoel" href="#plans">Get Started</a></div>
+                  </div>
+               </div>
+               <script>$(document).ready(function() {
+                  var sticky = new Waypoint.Sticky({
+                    element: $('.about-nav')[0],
+                    offset: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--main-menu-level-1-height'))
+                  });
+                  
+                  });
+               </script>
+               <div class="about-page-content">
+                  <div class="container">
+                     <div class="about-themes about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Beautiful Themes</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="trigger-themes slick-flex">
+                              <div class="position-relative"><img class="img-responsive about-img-rounded-theme about-skew-reverse" alt="Basic" src="{% static 'assets/marketing/about/website/theme-1-basic-85a0c1a4f019e81b7178fef288c22a16.jpg' %}" /><img class="img-responsive about-skew about-themes-mobile" alt="Basic" src="{% static 'assets/marketing/about/website/theme-1-basic-mobile-1261331f87dd3e0840681d84488c7e3a.png' %}" /></div>
+                              <img class="img-responsive about-img-rounded-theme about-skew-reverse" alt="Bombastic" src="{% static 'assets/marketing/about/website/theme-2-bombastic-0105995f63311e2255baea6d37afd2a7.jpg' %}" /><img class="img-responsive about-skew-reverse" alt="Sidewinder" src="{% static 'assets/marketing/about/website/theme-3-sidewinder-c2fa53024b18d6cdb7c981229fcf1371.jpg' %}" /><img class="img-responsive about-skew-reverse" alt="Horizon" src="{% static 'assets/marketing/about/website/theme-4-horizon-c4b5622a91d3c2bb45c2a81817bd3aee.jpg' %}" />
+                              <div class="position-relative"><img class="img-responsive about-skew-reverse" alt="Vertical" src="{% static 'assets/marketing/about/website/theme-5-vertical-9636ed24f4866b61ae0ecdd3bb3f9b87.jpg' %}" /><img class="img-responsive about-skew about-themes-mobile" alt="Basic" src="{% static 'assets/marketing/about/website/theme-5-vertical-mobile-e2fc0b1613006b3b87b5bf95eb49211a.png' %}" /></div>
+                              <img class="img-responsive about-img-rounded-theme about-skew-reverse" alt="Mosaic" src="{% static 'assets/marketing/about/website/theme-6-mosaic-14538b3976e23298d1a1c9e4ed4a40c0.jpg' %}" /><img class="img-responsive about-skew-reverse" alt="Insta" src="{% static 'assets/marketing/about/website/theme-7-insta-6a20316aa0396160450c23841bf891f2.jpg' %}" />
+                              <div class="position-relative"><img class="img-responsive about-skew-reverse" alt="Lava" src="{% static 'assets/marketing/about/website/theme-8-lava-c18cb5328eebab02d6209a208cf19d79.jpg' %}" /><img class="img-responsive about-skew about-themes-mobile" alt="Basic" src="{% static 'assets/marketing/about/website/theme-8-lava-mobile-5e9c71e3906fe751960855ce8e409c54.png' %}" /></div>
+                           </div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>We designed a selection of themes specifically crafted for the wide range of Artist coming to ArtStation. ArtStation portfolio website themes are sleek, customizable and take only minutes to set up.</p>
+                           <div class="separator"></div>
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Gavin Goulden" class="img-circle" src="{% static 'assets/marketing/quotes/photo-gavin-ba5430909b1fd1467e95e4156f8a2446.jpg' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-2">Use ArtStation to host your portfolio. It’s inexpensive, standardized, widely common in the industry, searchable, clean, and easy to use.</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Gavin Goulden <span class="dark-badge">PRO</span></div>
+                                 <div class="about-quote-block-position">Lead Character Artist at Insomniac Games</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Simple Customization</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img class="img-responsive" src="{% static 'assets/marketing/about/website/customization-a31c067d3050c7c10f945eb8ff86b2ac.png' %}" alt="Customization" />
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>
+                           <p>Nothing is scarier than a blank canvas. That's why ArtStation themes come with presets that make your portfolio look AMAZING. Just select a preset, see how it looks in our preview, customize it to your liking and publish!</p>
+                           <p>With the time saved, you can work on your art instead!</p>
+                           </p>
+                           <div class="separator"></div>
+                           <div class="about-quote-block-wrap d-flex align-items-center align-items-sm-start flex-wrap">
+                              <div class="about-quote-block-avatar order-2 order-sm-1"><img width="62" height="62" alt="Soufiane Idrassi" src="{% static 'assets/marketing/quotes/photo-soufiane-2efa1a33076a29699b1a7f36254626cd.png' %}" /></div>
+                              <div class="about-quote-block flex-shrink-1 flex-grow-0 order-1 order-sm-">It was the easiest to manage, it looks good, and all my stuff from my ArtStation portfolio is there already. That was a big win for me!</div>
+                              <div class="about-quote-block-meta order-2 order-sm-3 flex-sm-grow-1">
+                                 <div class="about-quote-block-author">Soufiane Idrassi <span class="dark-badge">PRO</span></div>
+                                 <div class="about-quote-block-position">Concept Designer at Ubisoft Abu Dhabi</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Your domain</h2>
+                        </div>
+                        <div class="about-grid-media"><img alt="" class="img-responsive" src="{% static 'assets/marketing/about/website/domain-cec1917960262adb314e12ce02979434.png' %}" /></div>
+                        <div class="about-grid-body">
+                           <p>Either bring your own domain or register a new one with ArtStation from $20/year, complete with SSL, domain privacy and DNS editor. Bringing your own domain? No problem! Enjoy free SSL protection on 3rd party domains pointing to ArtStation.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Sell digital &amp; printed products on your website</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <div class="trigger-slider">
+                              <div><img class="img-responsive about-img-rounded about-skew-reverse" src="{% static 'assets/marketing/about/website/sell-1-8e098268ebebdfd62fde86d83929f5ea.jpg' %}" alt="Sell 1" /></div>
+                              <div><img class="img-responsive about-img-rounded about-skew-reverse" src="{% static 'assets/marketing/about/website/sell-2-a2720ac24dd4ec52c695e7d8f637cca8.jpg' %}" alt="Sell 2" /></div>
+                           </div>
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p class="text-white d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-donate"></i></span><span class="about-icon-text">Sell Digital Goods</span></p>
+                           <p>With just a few clicks, upload your digital products like brushes, tutorials, reference packs, models and more. Your products are promoted via the ArtStation community and are available to buy directly via your website. Keep unto 95% of the revenue <a href="sell-goods.html">(more&nbsp;info)</a>.</p>
+                           <p class="text-white d-flex align-items-center"><span class="about-icon flex-shrink-0"><i class="far fa-box-usd"></i></span><span class="about-icon-text">Sell Prints</span></p>
+                           <p>Turn your art into beautiful, high quality printed products that your followers will love. All you have to do is upload your artwork and we handle the rest -printing, shipping, handling, support and returns.<br>For all sales, earnings are directly wired to your bank account in over 220+ countries&nbsp;worldwide!</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Blogs</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img class="img-responsive about-skew" src="{% static 'assets/marketing/about/website/blog-01c9da6354bf7a0b54e6d6867659e5bf.png' %}" alt="Blog" />
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Share your articles or work in progress! Your followers will get notified and can like and comment on your posts, making it a fantastic way to engage with your audience!</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Pages</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img class="img-responsive about-img-rounded about-skew-reverse" src="{% static 'assets/marketing/about/website/pages-2fff2195bfd4c2ea96a06ff3fa0c774b.png' %}" alt="Pages" />
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Need some custom pages to show some other work or info? No problem! Upload texts, images, videos and 3D (Marmoset and Sketchfab) on pages. Password protect access to the pages to only share the page with certain people.</p>
+                        </div>
+                     </div>
+                     <div class="about-page-separate"></div>
+                     <div class="about-grid about-grid-reverse">
+                        <div class="about-grid-head">
+                           <h2 class="h1">Contact form</h2>
+                        </div>
+                        <div class="about-grid-media">
+                           <img class="img-responsive about-img-rounded about-skew" src="{% static 'assets/marketing/about/website/contact-d82a4b54e36918cbe7eddbb2f3155a5c.png' %}" alt="Contact" />
+                           <div class="separator-lg visible-xs visible-sm"></div>
+                        </div>
+                        <div class="about-grid-body">
+                           <p>Make it easy for potential clients to get in touch with you by enabling a clean and practical Contact Form. It looks great and simplifies the process!</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg hidden-xs hidden-sm"></div>
+                  <div class="separator-lg hidden-xs hidden-sm" id="plans"></div>
+                  <div class="separator-lg hidden-md"></div>
+                  <div class="about-footer website">
+                     <div class="container">
+                        <div class="about-choose">
+                           <div class="text-center">
+                              <h2 class="h1 text-uppercase font-weight-bolder">Choose<br>your edition</h2>
+                           </div>
+                           <div class="d-flex justify-content-center">
+                              <div class="col-lg-11">
+                                 <div class="about-choose-plans">
+                                    <div class="about-choose-plan about-choose-plan-free">
+                                       <div class="about-choose-plan-header">
+                                          <div class="about-pricing-amount">Free</div>
+                                          <div class="separator-xs"></div>
+                                          <div class="about-pricing-period font-weight-light">There will always be a free edition</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Showcase your portfolio</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Sell digital products
+                                                   <div class="small text-gray">Earn 70% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Sell ArtStation Prints</li>
+                                             <li><i class="far fa-check text-success"></i>Basic free Website</li>
+                                             <li><i class="far fa-check text-success"></i>Connect with job opportunities</li>
+                                             <li><i class="far fa-check text-success"></i>Participate in epic art challenges</li>
+                                          </ul>
+                                          <div class="about-pricing-btn"><a class="btn btn-default btn-block" href="../../registration/signup.html">Sign up</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan about-choose-plan-plus d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="plus-badge plus-badge-g pro-badge-xl">Plus</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$6.99/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Free</li>
+                                             <li><i class="far fa-check text-success"></i>Unlimited access to ArtStation&nbsp;Learning</li>
+                                             <li><i class="far fa-check text-success"></i>Your own website with customizable premium&nbsp;themes</li>
+                                             <li><i class="far fa-check text-success"></i>Blogging</li>
+                                             <li><i class="far fa-check text-success"></i>Priority support</li>
+                                             <li><i class="far fa-check text-success"></i>Custom domain support</li>
+                                             <li><i class="far fa-check text-success"></i>Redeem Partner Perks</li>
+                                             <li><i class="far fa-check text-success"></i>Larger 3D file upload limit</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-default btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinfbdf.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="about-choose-plan d-flex flex-column">
+                                       <div class="about-choose-plan-header">
+                                          <div class="pro-badge pro-badge-g pro-badge-xl">PRO</div>
+                                          <div class="separator-xs"></div>
+                                          <div>Starting at&nbsp;$9.95/mo</div>
+                                       </div>
+                                       <div class="about-choose-plan-body d-flex flex-column flex-grow-1">
+                                          <ul class="list-unstyled mb0 flex-grow-1">
+                                             <li><i class="far fa-check text-success"></i>Everything in Plus</li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling digital products
+                                                   <div class="small text-gray">Earn between 80 and 95% of each sale</div>
+                                                </span>
+                                             </li>
+                                             <li class="d-flex">
+                                                <i class="far fa-check text-success"></i>
+                                                <span>
+                                                   Earn more selling prints
+                                                   <div class="small text-gray">Earn an additional 5% on the base price</div>
+                                                </span>
+                                             </li>
+                                             <li><i class="far fa-check text-success"></i>Pro Analytics</li>
+                                             <li><i class="far fa-check text-success"></i>Appear at the top of searches</li>
+                                             <li><i class="far fa-check text-success"></i>ArtStation Pro badge</li>
+                                          </ul>
+                                          <div class="about-pricing-btn">
+                                             <a class="btn btn-success btn-premium-plan btn-lg btn-block text-uppercase" href="../../registration/signinc21e.html?type=annual">Sign up</a>
+                                             <div class="about-text-smaller text-light text-center">15-day money back guarantee</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-text-smaller text-center font-weight-light"><a href="../../subscribe/compare.html">What&#39;s the difference between Free, Plus and Pro?</a></div>
+                     <div class="about-footer-credit"><a class="about-footer-credit-link" target="_blank" href="../../pablocarpio.html">Artwork by Pablo Carpio</a></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator-lg"></div>
+                     <div class="separator"></div>
+                     <a class="btt scrolltoel" target="_self" href="#top"><span class="icomoon icon-arrow-top"></span></a>
+                  </div>
+                  <script>$(document).ready(function() {
+                     var backToTop = $('.btt');
+                     
+                     waypointEl = new Waypoint({
+                       element: backToTop,
+                       offset: '-50%',
+                       handler: function(direction) {
+                         backToTop.toggleClass('stuck');
+                       }
+                     });
+                     
+                     });
+                  </script>
+               </div>
+            </div>
+            <script>$(document).ready(function() {
+               $('.trigger-slider').slick({
+                 fade: true,
+                 arrows: false,
+                 dots: true,
+                 autoplay: true,
+                 autoplaySpeed: 4000,
+                 pauseOnFocus: false,
+                 pauseOnHover: false
+               });
+               
+               $('.trigger-themes').slick({
+                 fade: true,
+                 arrows: false,
+                 dots: true,
+                 autoplay: true,
+                 autoplaySpeed: 4000,
+                 pauseOnFocus: false,
+                 pauseOnHover: false,
+                 customPaging: function(slider, i) {
+                   var themeName = $(slider.$slides[i]).find('.img-responsive').attr('alt');
+                   return themeName;
+                 },
+                 dotsClass: 'slick-dots-name list-unstyled'
+               })
+               
+               });
+            </script>
+            <div class="separator-lg"></div>
+         </div>
+      </div>
+      {% include "footer.html" %}

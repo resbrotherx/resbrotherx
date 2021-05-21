@@ -1,0 +1,81 @@
+{% load static %}
+{% include "scripts.html" %}
+{% include "navbar.html" %}
+<div class="page-container" infinitescroll="">
+   <!---->
+   <filter-bar>
+      <nav class="navbar-default sticky-block clearfix">
+         <ul class="nav navbar-nav navbar-nav-xs-inline navbar-nav-sm-inline">
+            <!---->
+            <li class="active"><a href="/blogs">Browse All</a></li>
+            <li><a href="/latest">Latest</a></li>
+            <li class="hidden"><a href="/blogs/following">Following</a></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right navbar-nav-xs-center navbar-nav-sm-center">
+            <li class="dropdown">
+               <button class="btn navbar-button dropdown-toggle" data-toggle="dropdown" type="button">All categories <i class="far fa-chevron-down fa-pad-left"></i></button>
+               <ul class="dropdown-menu">
+                  <li class="dropdown-header">Only show these posts:</li>
+                  <li class="dropdown-checkbox">
+                     <div class="checkbox"><label><input type="checkbox"><span class="custom"></span>All</label></div>
+                  </li>
+                  <!---->
+                  {% for c in cat %}
+                  <li class="dropdown-checkbox">
+                     <div class="checkbox"><label><input type="checkbox" value="3"><span class="custom"></span>{{c}}</label></div>
+                  </li>
+                  {% endfor %}
+               </ul>
+            </li>
+         </ul>
+      </nav>
+      <!---->
+   </filter-bar>
+   <div class="blog-posts">
+      <!----><!---->
+      <div class="blog-grid wrap">
+         <!---->
+         <div class="blog-grid-item join">
+            <div class="blog-card-join">
+               <div class="blog-card-join-title">Join the conversation</div>
+               <div class="blog-card-join-subtitle">Create or import your blog and share updates and WIPs.</div>
+               <div class="blog-card-join-btns"><a class="btn btn-primary btn-sm" href="/create/new">New Post</a><a class="btn btn-primary btn-sm" href="/blog_posts/manage">Import Blog</a></div>
+            </div>
+         </div>
+         <!---->
+         {% for post in post_all %}
+         <post-tile class="blog-grid-item">
+            <a class="blog-card" href="{{ post.get_absolute_url}}">
+               <div class="blog-card-thumbnail">
+                  <div class="blog-card-thumbnail-holder"><img class="img" height="100%" width="100%" src="{{ post.image.url }}" alt="{{post.title}}"></div>
+                  <!---->
+                  <div class="blog-card-thumbnail-content"><span class="btn btn-primary">View</span></div>
+               </div>
+               <div class="blog-card-header">
+                  {% for cat in Post.objects.all%}
+                  <div class="blog-card-category">{{ cat.categories }}</div>
+                  {%endfor%}
+                  <div class="blog-card-time">{{post.timestamp|timesince}} ago</div>
+               </div>
+               <div class="blog-card-title">{{post.title}} </div>
+               <div class="blog-card-author">
+                  <img class="img-circle" height="24" width="24" src="{{ user.profile.image.url }}" alt="{{post.user}}">
+                  <div class="blog-card-author-name">
+                     by&nbsp;<span>{{post.user}}</span><!----><span class="pro-badge">Pro</span><!----><!---->
+                  </div>
+               </div>
+               <div class="blog-card-meta">
+                  <div class="blog-card-meta-block"><i class="far fa-thumbs-up fa-pad-right"></i><span>{{post.num_likes}}</span></div>
+
+                  <!-- <div class="blog-card-meta-block"><i class="far fa-thumbs-down fa-pad-right"></i><span>{{post.num_dislikes}}</span></div> -->
+                  <div class="blog-card-meta-block"><i class="far fa-eye fa-pad-right"></i><span>{{ post.view_count }}</span></div>
+                  <div class="blog-card-meta-block"><i class="far fa-comments fa-pad-right"></i><span>{{post.get_comments.count}}</span></div>
+               </div>
+            </a>
+         </post-tile>
+         {%endfor%}
+      </div>
+   </div>
+   <!---->
+</div>
+{% include 'footer.html'%}

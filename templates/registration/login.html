@@ -1,0 +1,99 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% include "script.html" %}
+{% include "navbar.html" %}
+<style type="text/css">
+   
+   .wrapper {
+    min-height: calc(0vh - 2px - 0px);
+    min-height: calc(0vh - var(--main-menu-height) - 0px);
+}
+</style>
+               <div class="header-loggedin-bar"></div>
+               <div class="bs-modal in">
+                  <div class="bs-modal-dialog" data-close="modalBackdrop">
+                     <div class="bs-modal-content">
+                        <div class="bs-modal-header">
+                           
+                           <button class="bs-close" type="button" data-close="modal"><a href="/"><i class="far fa-times"></i></a></button>
+                           <h3 class="bs-modal-title">Sign In</h3>
+                        </div>
+                        <div class="bs-modal-body">
+                           <form accept-charset="UTF-8" method="post">
+                            <div class="bs-form-group"> <input type="hidden" name="form_type" value="modal">
+                                {% csrf_token %}
+                                       <!---->{{form|crispy}}
+                                    </div>
+
+                                       <div class="bs-form-group"><button class="bs-btn bs-btn-default" type="submit"><i class="far fa-sign-in fa-pad-right"></i>Sign in</button></div>
+
+
+                                 <div class="bs-row bs-row-flex">
+                                    <div class="bs-col-xs-6"><a href="" target:="target:" _self="_self">Forgot password?</a></div>
+                                    <div class="bs-col-xs-6 bs-text-right"><a href="/register" target:="target:" _self="_self">Sign up</a></div>
+                                 </div>
+                                 <div class="bs-hr"></div>
+                                 <a class="bs-btn bs-btn-default" href="{% url 'social:begin' 'facebook' %}" target:="target:" _self="_self"><i class="fab fa-facebook fa-pad-right"></i>Sign in with Facebook</a>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="wrapper-main">
+            <div class="about-page about-bg-company">
+               <div class="container text-center">
+                  <div class="separator-lg"></div>
+                  <div class="separator-lg"></div>
+                  <div class="page-header">
+                     <h1>Empowering Artists to Thrive</h1>
+                     <p class="lead">Since 2014, ArtStation has provided artists with an amazing platform to showcase their portfolio, find work and connect with opportunities.</p>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="sub-nav">
+                     <div class="btn-group"><a class="btn btn-default active" href="https://www.artstation.com/about/company">Company</a><a class="btn btn-default" href="https://www.artstation.com/about/careers">Careers</a><a class="btn btn-default" href="https://www.artstation.com/about/logo">Brand Resources</a></div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6 col-lg-offset-3">
+                        <div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="true" class="embed-responsive-item" frameborder="0" height="281" mozallowfullscreen="true" src="./login_files/151825486.html" webkitallowfullscreen="true" width="500"></iframe></div>
+                     </div>
+                  </div>
+                  <div class="separator-lg"></div>
+                  <div class="separator"></div>
+                  <div class="about-independent">
+                     <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                           <div class="about-independent-icon"><i class="far fa-hands about-independent-icon-hand"></i><i class="far fa-heart about-independent-icon-heart"></i></div>
+                           <div class="separator"></div>
+                           <h2>Proudly independent, organic and free range!</h2>
+                           <p>ArtStation is proud to be independently run. With no external investment, we grew our business from humble beginnings to one of the largest websites on the Internet. Being independent keeps us close and accountable to the community that we serve.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg"></div>
+                  <div class="separator"></div>
+                  <div class="about-join">
+                     <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                           <h2>Join the ArtStation&nbsp;Crew!</h2>
+                           <p>Since 2014, ArtStation has been dedicated to providing artists with all the tools they need to be successful and independent. Our dynamic team works collaboratively to provide innovative solutions that transform the art and design industry.</p>
+                           <div class="separator"></div>
+                           <p><a class="btn btn-primary" href="https://www.artstation.com/about/careers">See our listings</a></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator-lg"></div>
+                  <div class="separator-lg"></div>
+                  <div class="about-contact">
+                     <h2>Contact</h2>
+                     <p>Need help with something?<br>Make sure to check our <a href="https://support.artstation.com/">support site</a> or contact us via our helpdesk.</p>
+                     <p><a class="btn btn-default" href="mailto:support@artstation.com"><span class="far fa-envelope fa-pad-right"></span>Contact support</a></p>
+                  </div>
+                  <div class="separator-lg"></div>
+               </div>
+            </div>
+            <div class="separator-lg"></div>
+         </div>
+      </div>
+    {% include 'footer.html' %}

@@ -1,0 +1,560 @@
+{% load static %}
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+      <link href="{% static 'part/main.24d92a60ccc02b93aa7a.css' %}" rel="stylesheet">
+      <script src="{% static 'part/main.bundle.24d92a60ccc02b93aa7a.js' %}" async=""></script>
+      
+      <link href="{% static 'part/signed_in_index.428907ae11febd1a81be.css' %}" rel="stylesheet" id="layout_styles">
+
+
+      <script async="" src="{% static 'part/hotjar-1255372.js' %}"></script>
+   {% include "navbar.html" %}
+      <div class="wrapper">
+         <div id="page_content">
+            <div class="productPage-wrapper">
+               <div class="separator"></div>
+               <div class="productPage-container container">
+                  <div>
+                     <div class="productPage-breadcrumbs">
+                        <ul class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                           <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                              <a href="https://www.artstation.com/marketplace/game-dev" itemprop="item">
+                                 <span itemprop="name">Marketplace</span>
+                                 <meta content="1" itemprop="position">
+                              </a>
+                           </li>
+                           <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                              <a href="https://www.artstation.com/marketplace/game-dev/tutorials" itemprop="item">
+                                 <span itemprop="name">Tutorials</span>
+                                 <meta content="2" itemprop="position">
+                              </a>
+                           </li>
+                           <li class="active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                              <link href="https://www.artstation.com/marketplace/p/MggXA/hard-surface-zbrush-tutorial-modeling-a-uh-60-rotor" itemprop="item">
+                              <meta content="3" itemprop="position">
+                              <span itemprop="name">{{post.title}}</span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div itemscope="" itemtype="http://schema.org/Product">
+                     <meta content="https://www.artstation.com/marketplace/p/MggXA/hard-surface-zbrush-tutorial-modeling-a-uh-60-rotor" itemprop="url">
+                     <meta content="MggXA" itemprop="sku">
+                     <div class="productPage-group">
+                        <div class="productPage-header">
+                           <h1 class="productPage-title" itemprop="name">{{post.title}}</h1>
+                           <div class="productPage-header-info">
+                              <div class="productPage-header-author" itemprop="brand" itemscope="" itemtype="https://schema.org/Brand"><img class="img-circle avatar" src="detail_page/3d31e59ffa9f00617789a90f0f9a8a75.jpg"><span>by <a href="https://www.artstation.com/3dviper/store" itemprop="url"><span itemprop="name">{{post.user.first_name}} {{post.user.last_name}}</span></a> in <a href="{{post.get_absolute_url}}">{{post.category.name}}</a></span></div>
+                              <div class="js-product-review-stats">
+                                 <div class="productPage-header-rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                                    <span class="badge badge-lg badge-rating" itemprop="ratingValue">5.0</span>
+                                    <span class="fa-pad-right fa-pad-left">
+                                       based on 28 ratings,
+                                       <meta content="28" itemprop="ratingCount">
+                                    </span>
+                                    <span class="inline-link clickable js-scroll-to-reviews">
+                                       15 reviews
+                                       <meta content="15" itemprop="reviewCount">
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row row-flex flex-wrap">
+                        <div class="productPage-gallery-col col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                           <div class="productPage-group">
+                              <div class="image-gallery image-gallery-layout-digital js-product-slide-wrapper">
+                                 <div class="image-gallery-lg ratio-16by9 js-zoom-box">
+                                    <div class="image-gallery-arrow next js-product-slide-next">
+                                       <div class="far fa-chevron-circle-right"></div>
+                                    </div>
+                                    <div class="image-gallery-arrow prev js-product-slide-prev hidden">
+                                       <div class="far fa-chevron-circle-left"></div>
+                                    </div>
+                                    <div class="zoom-area clickable js-zoom-area" onclick="imageZoom.toggleZoom(event)" style="background-image: url({{post.image.url}})"></div>
+                                    <div class="image-gallery-lg-holder"><img alt="product image 0" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image active" data-index="0" itemprop="image" loading="lazy" src="{{post.image.url}}"><img alt="product image 1" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="1" itemprop="image" loading="lazy" src=""><img alt="product image 2" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="2" itemprop="image" loading="lazy" src="detail_page/file(2).jpg"><img alt="product image 3" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="3" itemprop="image" loading="lazy" src="detail_page/file(3).jpg"><img alt="product image 4" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="4" itemprop="image" loading="lazy" src="detail_page/file(4).jpg"><img alt="product image 5" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="5" itemprop="image" loading="lazy" src="detail_page/file(5).jpg"><img alt="product image 6" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="6" itemprop="image" loading="lazy" src="detail_page/file(6).jpg"><img alt="product image 7" class="img-responsive matureContent-hide js-product-carousel-viewport-img js-zoom-image" data-index="7" itemprop="image" loading="lazy" src="detail_page/file(7).jpg"></div>
+                                 </div>
+                                 <div class="image-gallery-thumbnails ratio-16by9">
+                                    <div class="perfect-scrollbar js-perfect-scrollbar js-product-carousel ps ps--active-x" data-config="{&quot;wheelPropagation&quot;: &quot;true&quot;, &quot;suppressScrollY&quot;: &quot;true&quot;, &quot;scrollingThreshold&quot;: &quot;100&quot;}">
+                                       <button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item active" data-elem="thumbnail" data-index="0" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/314/large/file.jpg?1615346408&#39;);" type="button"><img alt="product thumbnail 0" class="img-responsive" data-src="{{post.image.url}}" height="330" loading="lazy" src="{{post.image.url}}" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="1" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/315/large/file.jpg?1615346430&#39;);" type="button"><img alt="product thumbnail 1" class="img-responsive" data-src="https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/315/large/file.jpg?1615346430" height="330" loading="lazy" src="detail_page/file(9).jpg" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="2" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/316/large/file.jpg?1615346448&#39;);" type="button"><img alt="product thumbnail 2" class="img-responsive" data-src="https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/316/large/file.jpg?1615346448" height="330" loading="lazy" src="detail_page/file(10).jpg" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="3" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/317/large/file.jpg?1615346493&#39;);" type="button"><img alt="product thumbnail 3" class="img-responsive" data-src="https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/317/large/file.jpg?1615346493" height="330" loading="lazy" src="detail_page/file(11).jpg" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="4" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/318/large/file.jpg?1615346520&#39;);" type="button"><img alt="product thumbnail 4" class="img-responsive" data-src="https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/318/large/file.jpg?1615346520" height="330" loading="lazy" src="detail_page/file(12).jpg" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="5" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/319/large/file.jpg?1615346543&#39;);" type="button"><img alt="product thumbnail 5" class="img-responsive" data-src="https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/319/large/file.jpg?1615346543" height="330" loading="lazy" src="detail_page/file(13).jpg" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="6" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/320/large/file.jpg?1615346558&#39;);" type="button"><img alt="product thumbnail 6" class="img-responsive" data-src="https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/320/large/file.jpg?1615346558" height="330" loading="lazy" src="detail_page/file(14).jpg" width="330"></button><button class="btn-blank image-gallery-thumbnail ratio-16by9 js-product-carousel-item" data-elem="thumbnail" data-index="7" onclick="imageZoom.resetZoom();imageZoom.setBg(&#39;https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/321/large/file.jpg?1615346590&#39;);" type="button"><img alt="product thumbnail 7" class="img-responsive" data-src="https://cdnb.artstation.com/p/marketplace/presentation_assets/000/762/321/large/file.jpg?1615346590" height="330" loading="lazy" src="detail_page/file(15).jpg" width="330"></button>
+                                       <div class="ps__rail-x" style="width: 750px; left: 0px; bottom: 0px;">
+                                          <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 415px;"></div>
+                                       </div>
+                                       <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                          <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="productPage-group">
+                              <div class="product-description" itemprop="description">
+                                 <p><iframe width="640" height="360" src="detail_page/ucnMuXSuBdg.html"></iframe><br></p>
+                                 <p>Over the years, I've done a lot of hard surface modeling in Zbrush and found myself learning many different techniques and workflows. I thought it might be useful to someone out there if I recorded it all on video and talked through the process with you. If you're interested in learning more about that, this tutorial will include:</p>
+                                 <ul>
+                                    <li>
+                                       70+ Videos with 9+ hours of footage covering ZBrush Hard Surface Techniques such as:
+                                       <ul>
+                                          <li>Zmodeler</li>
+                                          <li>Zremesher (for hard surface)</li>
+                                          <li>Sculptris Pro</li>
+                                          <li>Booleans&nbsp;</li>
+                                          <li>Gizmo Deformers</li>
+                                          <li>Array Mesh</li>
+                                          <li>Clip and Slice Brushes</li>
+                                          <li>Retopology Techniques</li>
+                                          <li>and more . . .</li>
+                                       </ul>
+                                    </li>
+                                    <li>No time-lapse demo, modeling a UH-60 Main Rotor for a practical example of the above techniques</li>
+                                    <li>Audio commentary in English to accompany the videos</li>
+                                    <li>Orthographic screenshots of individual parts from the UH-60 Rotor if you're interested in modeling this piece together with me<br><br><em>Note: This tutorial is intended for people with intermediate to advanced experience in ZBrush. I won't be covering beginner ZBrush processes such as user interface since there are plenty of resources out there for these. I will mainly be covering workflows and techniques.</em></li>
+                                 </ul>
+                                 <p><em>----</em></p>
+                                 <p>I've had a few of you asking me for this so, here's a Dropbox link to my <strong><a href="https://www.dropbox.com/s/3w6ilo3sgmevmm8/CustomUserInterface2021.cfg?dl=0" target="_blank" rel="nofollow noopener noreferrer">Custom UI Download</a>.&nbsp;</strong>There might be missing items because of plugins and custom macros. Downloading the plugins listed in the intro video will help fill in the gaps.</p>
+                                 <p><br></p>
+                              </div>
+                              <div class="productPage-group">
+                                 <div class="productPage-tags"><a class="productPage-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials">Tutorials</a><a class="productPage-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/hard-surface">Hard Surface</a><a class="productPage-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/modeling">Modeling</a><a class="productPage-tag" href="https://www.artstation.com/marketplace/game-dev/tutorials/props">Props</a><a class="productPage-tag" href="https://www.artstation.com/marketplace/game-dev?softwares=zbrush">ZBrush</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="productPage-description-col col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                           <div class="product-variants-component">
+                              <div class="product-variant-component" data-id="102618">
+                                 <div class="productPage-group">
+                                    <div class="product-variant" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                       <div class="product-variant-header">
+                                          <div class="product-variant-title" itemprop="name">Standard Use License</div>
+                                          <meta content="USD" itemprop="priceCurrency">
+                                          <meta content="10.0" itemprop="price">
+                                          <meta content="http://schema.org/InStock" itemprop="availability">
+                                          <meta content="2022-04-04" itemprop="priceValidUntil">
+                                          <meta content="https://www.artstation.com/marketplace/p/MggXA/hard-surface-zbrush-tutorial-modeling-a-uh-60-rotor" itemprop="url">
+                                          <div class="product-variant-price">USD ${{post.price}}</div>
+                                       </div>
+                                       <div class="product-variant-info">
+                                          <div class="is-purchased hidden">
+                                             <div class="alert alert-warning added-to-cart-alert mb10 mt5">
+                                                <div>You already purchased this product.</div>
+                                                <a href="https://www.artstation.com/marketplace/library/MggXA/102618/hard-surface-zbrush-tutorial-modeling-a-uh-60-rotor">View it in your Library</a>
+                                             </div>
+                                          </div>
+                                          <div class="variant-not-purchased">
+                                             <div class="product-variant-item first">
+                                                <span class="product-variant-label">License: </span>Standard License
+                                                <span class="popover-holder fa-pad-left">
+                                                   <span class="far fa-fw fa-question-circle"></span>
+                                                   <div class="popover">
+                                                      <div class="popover-body popover-text-muted">
+                                                         <u>Stock Assets</u>
+                                                         <p>For personal use and one commercial project (up to 2,000 sales or 20,000 views).</p>
+                                                         <u>Tutorials</u>
+                                                         <p>One copy to be used by a single user.</p>
+                                                         <u>Installable Tools</u>
+                                                         <p>One installation by a single user.</p>
+                                                         <a href="https://www.artstation.com/marketplace-product-eula" target="_blank">Learn More</a>
+                                                      </div>
+                                                      <div class="popover-arrow"></div>
+                                                   </div>
+                                                </span>
+                                                <div class="product-variant-description">
+                                                   <div class="readMore js-readMore"><span class="readMore-text js-readMore-text"></span> <a class="clickable readMore-link js-readMore-link"><span class="readMore-link-more">Read More</span><span class="readMore-link-less">Read Less</span></a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="product-variant-item product-files js-product-files">
+                                             <span class="clickable js-product-files-toggle"><span class="product-variant-label">Files </span><span class="text-muted">(8)</span><span class="product-files-toggle fa-pad-left"><span class="far fa-angle-down"></span><span class="far fa-angle-up"></span></span></span>
+                                             <div class="product-files-list">
+                                                <div class="perfect-scrollbar ps-dark js-perfect-scrollbar ps">
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_01.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 3.9 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_02.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 3.9 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_03.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 2.2 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_04.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 2.9 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_05.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 3.1 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_06.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 3.9 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Part_07.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 3 GB</div>
+                                                   </div>
+                                                   <div class="product-variant-file js-product-file">
+                                                      <div class="product-variant-file-icon">
+                                                         <div class="far fa-fw js-product-file-icon fa-file-archive"></div>
+                                                      </div>
+                                                      <div class="product-variant-file-name js-product-file-name" data-ext="zip">3DDS_UH60MainRotorTutorial_Blueprints.zip</div>
+                                                      <div class="product-variant-file-meta text-muted small">zip / 8.2 MB</div>
+                                                   </div>
+                                                   <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                                      <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                                   </div>
+                                                   <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                                      <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="product-variant-item">
+                                             <div class="is-buttons-visible">
+                                                <div class="is-not-product-owner">
+                                                   <div class="is-not-purchased">
+                                                      <div class="is-not-variant-in-cart">
+                                                         <div class="product-variant-item"><span class="product-variant-label">Quantity: </span><input class="form-control product-variant-quantity-input" type="number" value="1"></div>
+                                                         <div class="text-center product-variant-item">
+                                                            <div class="d-flex row-wrap row-gutter-8">
+                                                               <div class="col flex-grow-1 mb5">
+                                                                  <a download="{{post.image_path}}" href="{{post.image_path}}"  ><button class="btn btn-success btn-block btn-lg js-add-to-cart"><i class="far fa-lg fa-cart-plus fa-pad-right"></i>Download</button></a>
+                                                                  <p class="money-back"><span class="far fa-badge-check"></span><span>100% money back guarantee</span></p>
+                                                               </div>
+                                                               <div class="can-add-to-wishlist col"><button class="btn btn-block btn-default btn-lg js-add-to-wishlist" type="button"><i class="far fa-heart text-white"></i></button></div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                      <div class="is-variant-in-cart hidden product-variant-item">
+                                                         <div class="row row-flex row-gutter-8">
+                                                            <div class="col flex-grow-1">
+                                                               <a class="text-center btn-default btn-block btn-lg disabled" href="https://www.artstation.com/marketplace/cart"><i class="far fa-check fa-pad-right"></i>Added to Cart</a>
+                                                               <p class="money-back"><span class="far fa-badge-check"></span><span>100% money back guarantee</span></p>
+                                                            </div>
+                                                            <div class="can-add-to-wishlist col"><button class="btn btn-block btn-default btn-lg js-add-to-wishlist" type="button"><i class="far fa-heart text-white"></i></button></div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="productPage-sb">
+                                 <div class="s-grid">
+                                    <div class="s-grid-item col-xs-3"><button class="btn btn-fc btn-sm btn-block" data-href="https://artstn.co/m/MggXA" data-sharer="facebookLegacy" type="button"><i class="fab fa-facebook fa-pad-right"></i><span class="s-text">Share</span></button></div>
+                                    <div class="s-grid-item col-xs-3"><button class="btn btn-p btn-sm btn-block" data-href="https://artstn.co/m/MggXA" data-media="https://cdna.artstation.com/p/marketplace/presentation_assets/000/762/314/medium/file.jpg?1615346408" data-sharer="pinterest" data-title="" type="button"><i class="fab fa-pinterest fa-pad-right"></i><span class="s-text">Pin</span></button></div>
+                                    <div class="s-grid-item col-xs-3"><button class="btn btn-ti btn-sm btn-block" data-href="https://artstn.co/m/MggXA" data-sharer="twitter" data-title="" type="button"><i class="fab fa-twitter fa-pad-right"></i><span class="s-text">Tweet</span></button></div>
+                                    <div class="s-grid-item col-xs-3"><button class="btn btn-l btn-sm btn-block" data-href="https://artstn.co/m/MggXA" data-sharer="linkedin" data-title="" type="button"><i class="fab fa-linkedin fa-pad-right"></i><span class="s-text">Share</span></button></div>
+                                 </div>
+                                 <div class="s-grid">
+                                    <div class="s-grid-item col-xs-12">
+                                       <div class="short-url-clipboard" data-clipboard-text="https://artstn.co/m/MggXA" id="short_url">
+                                          <div class="short-url-clipboard-url">https://artstn.co/m/MggXA</div>
+                                          <div class="short-url-clipboard-copied">Copied</div>
+                                          <div class="short-url-clipboard-icon far fa-link"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="product-variant">
+                                 <div class="product-variant-header">
+                                    <div class="product-variant-title">Share and Earn</div>
+                                 </div>
+                                 <div class="product-variant-info">
+                                    <div class="mb10">
+                                       <div class="text-muted small">your can preview the product to see how good it look if it suits you needs <a href="https://www.artstation.com/marketplace/game-dev/affiliate-programs">here</a></div>
+                                    </div>
+                                    <!-- <button class="btn btn-block btn-lg btn-default" data-clipboard-text="https://www.artstation.com/a/4446364" id="js-copy-affiliate-link" type="button"><span class="far fa-link fa-pad-right"></span><span class="js-toggle-btn-text">Copy Link</span></button> -->
+                                    <a href=""><button class="btn btn-block btn-lg btn-default" data-clipboard-text="https://www.artstation.com/a/4446364" id="js-copy-affiliate-link" type="submit"><span class="far fa-link fa-pad-right"></span><span class="js-toggle-btn-text">Preview site</span></button></a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="productPage-group">
+                              <div class="product-actions">
+                                 <div class="row-flex row-gutter-20">
+                                    <div class="col-xs-6">
+                                       <div><button class="btn-blank product-action-link clickable abuse-report-action" rel="nofollow" type="button"><span class="far fa-flag fa-pad-right"></span><small>Report this product</small></button></div>
+                                    </div>
+                                    <div class="col-xs-6"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="productPage-reviews">
+                        <div class="row-flex flex-wrap">
+                           <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                              <div class="d-flex flex-wrap justify-content-between">
+                                 <div class="d-flex flex-wrap">
+                                    <h4 class="mr10">Ratings &amp; Reviews</h4>
+                                 </div>
+                                 <div class="text-muted js-sort">
+                                    <div class="d-flex"><span class="mr10">Sort by:</span><span class="clickable mr10 js-review-sort-by-likes" data-sort="votes"><span>Likes</span><span class="far fa-sort fa-pad-left"></span></span><span class="clickable text-primary js-review-sort-by-date" data-sort="latest"><span>Date</span><span class="far fa-caret-down fa-pad-left"></span></span></div>
+                                 </div>
+                              </div>
+                              <div class="mb10"><strong class="text-white js-reviews-count">Reviews (15)</strong></div>
+                              <div class="js-reviews-list">
+                                 <div class="review js-review" data-review-id="16110" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from David Arguedas" itemprop="name">
+                                    <meta content="2021-04-02T23:29:10+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/david_arguedas"><img class="img-circle avatar" src="detail_page/4a4f86a3a14abedd6467938c73fe20f5.jpg"><small class="text-muted" itemprop="author">David Arguedas</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="16110"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="16110"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>1 day ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">Amazing tutorial, witch craft!!</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="15987" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Wesley Mendes" itemprop="name">
+                                    <meta content="2021-03-31T22:35:59+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/wesleymendes"><img class="img-circle avatar" src="detail_page/a3f3ecc5189b065d94a07cd56a33ca70.jpg"><small class="text-muted" itemprop="author">Wesley Mendes</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="15987"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="15987"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>4 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">amazing</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="15822" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Randy Sharp" itemprop="name">
+                                    <meta content="2021-03-29T19:42:55+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/vfxfisher"><img class="img-circle avatar" src="detail_page/962df1195c01715959a96096d34814fa.jpg"><small class="text-muted" itemprop="author">Randy Sharp</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="15822"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">3</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="15822"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>6 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">This is a must have if you would like to learn hard surface asset development within ZBrush.
+                                       While many people produce tutorials/courses that show what buttons to push to get an end result, many of them ignore the purpose and theory as to why they choose their path to create. Henry dives into the theory and the tool. It is my opinion that this makes this course a *must have* if you are serious about using ZBrush for hard surface asset development.
+                                       If you are new (or new-ish) to Zbrush I would get this course, but wait until you have some experience before working through it. This is not a course that covers the basics. If you do not have the foundation you may get frustrated. This is the beauty of this course. Armed with experience Henry takes the user to "the next level" - after completing this you should be able to take the knowledge that you learned an adopt it to make most hard surface assets. Do yourself a favor. Get this course.
+                                    </div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="15151" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from François Childeric" itemprop="name">
+                                    <meta content="2021-03-19T16:12:53+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/djimbo"><img class="img-circle avatar" src="detail_page/ebf5009321310a8e32bde0facd708af5.jpg"><small class="text-muted" itemprop="author">François Childeric</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="15151"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="15151"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>16 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">So mutch to learn in this tutorial, i love it!</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="15022" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Alan Vitale" itemprop="name">
+                                    <meta content="2021-03-18T01:12:09+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/alanvitale"><img class="img-circle avatar" src="detail_page/a7b413f89a89cf757c00f6b11fbae6bc.jpg"><small class="text-muted" itemprop="author">Alan Vitale</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="15022"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="15022"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>18 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">impecable la explicación</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="14894" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Keith Le Clezio" itemprop="name">
+                                    <meta content="2021-03-16T19:56:52+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/temporal_drift"><img class="img-circle avatar" src="detail_page/f133c30222f86880837581576384ab7b.jpg"><small class="text-muted" itemprop="author">Keith Le Clezio</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="14894"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="14894"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>19 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">As primarily a sub division modeller with some knowledge that I've picked since Zbrush's first release. I really wanted to make a push to bolster my understanding of hard surface techniques in zbrush. This series that Henry has put together is top notch and I would recommend it to anyone who wants to push their hard surface techniques to the next level. Thanks for putting this tutorial together Henry! It's much appreciated</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="14867" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Hue Luminast" itemprop="name">
+                                    <meta content="2021-03-16T15:44:00+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/hueluminast"><img class="img-circle avatar" src="detail_page/4862fc097af12bcefbf9efce03ae155b.jpg"><small class="text-muted" itemprop="author">Hue Luminast</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="14867"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="14867"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>19 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">Could not recommend this tutorial more. I've been using ZBrush for years, but I learned numerous things after just the first few videos that I had no idea about. SO. GOOD.</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="14864" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Karol Lasia" itemprop="name">
+                                    <meta content="2021-03-16T15:04:25+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/khomatech"><img class="img-circle avatar" src="detail_page/a4d453ae643c200c567e02b20289aefc.jpg"><small class="text-muted" itemprop="author">Karol Lasia</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="14864"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="14864"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>19 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">Thought I knew close to everything there is to know in Zbrush. Humbling experience!</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="14736" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Carlos Garcia" itemprop="name">
+                                    <meta content="2021-03-16T01:52:53+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/cgarciar"><img class="img-circle avatar" src="detail_page/CraToad_Thumb.jpg"><small class="text-muted" itemprop="author">Carlos Garcia</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="14736"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="14736"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>20 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">This is such an amazing tutorial for Hard-Surfaces in Zbrush. Every part of the Rotor is nicely explained in detail. Highly recommended!</div>
+                                 </div>
+                                 <div class="review js-review" data-review-id="14716" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                                    <meta content="Review for ArtStation product Hard Surface ZBrush Tutorial // Modeling A UH-60 Rotor from Mario Cortez" itemprop="name">
+                                    <meta content="2021-03-15T19:15:21+00:00" itemprop="datePublished">
+                                    <div class="review-header">
+                                       <div>
+                                          <div class="review-author"><a href="https://www.artstation.com/marioec93"><img class="img-circle avatar" src="detail_page/87153e630e3245c94020ef944d3ac427.jpg"><small class="text-muted" itemprop="author">Mario Cortez</small></a></div>
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                          <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                             <meta content="1" itemprop="worstRating">
+                                             <meta content="5" itemprop="bestRating">
+                                             <meta content="5" itemprop="ratingValue">
+                                          </span>
+                                       </div>
+                                       <div class="review-header-info"><span class="fa-pad-right js-upvote clickable" data-review-id="14716"><span><span class="far fa-thumbs-up"></span><small class="fa-pad-left text-muted js-upvote-count">1</small></span></span><span class="fa-pad-left fa-pad-right js-downvote clickable" data-review-id="14716"><span><span class="far fa-thumbs-down"></span><small class="fa-pad-left text-muted js-downvote-count">0</small></span></span><small class="text-muted">| <em>Release v.1.0</em> | <em>Standard Use License</em> | <em>20 days ago</em> </small></div>
+                                    </div>
+                                    <div class="review-body" itemprop="description">HIGHLY RECCOMEND!!! Great tutorial for anyone looking to improve their hardsurface game.</div>
+                                 </div>
+                              </div>
+                              <div class="js-reviews-load-more"><a href="https://www.artstation.com/marketplace/p/MggXA/hard-surface-zbrush-tutorial-modeling-a-uh-60-rotor/?reviews_per_page=10&amp;reviews_page=2"><button class="inline-link clickable" type="button">Load more reviews</button></a></div>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                              <div class="panel panel-default mb10">
+                                 <div class="panel-body">
+                                    <h4>Filter by Rating</h4>
+                                    <div class="d-flex mb5 align-items-center js-reviews-by-stars" data-rating="5">
+                                       <div class="mr5 hidden">
+                                          <div class="checkbox m0"><label><input name="name" type="checkbox"><span class="custom"></span></label></div>
+                                       </div>
+                                       <div class="mr10 clickable">
+                                          <div class="rating-stars is-static"><span class="icomoon icon-star active"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span><span class="icomoon icon-star"></span></div>
+                                       </div>
+                                       <div><button class="inline-link clickable" type="button">15 Reviews</button></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="productPage-product-list">
+                        <div class="productPage-product-list-title">More by Henry Chervenka</div>
+                        <div class="row row-flex row-wrap row-gutter-20 align-items-stretch">
+                           <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-3 mb20">
+                              <div class="marketplace-card-wrapper marketplace-card-default marketplace-card-product" itemprop="isSimilarTo" itemscope="" itemtype="http://schema.org/Product">
+                                 <a class="marketplace-card is-clickable" data-id="91344" data-position="" href="https://www.artstation.com/marketplace/p/ojY2O/fastener-zbrush-imm-pack-300-screws-bolts-nuts-more" itemprop="url">
+                                    <div class="marketplace-card-thumbnail">
+                                       <img alt="Fastener ZBrush IMM Pack // 300 Screws, Bolts, Nuts &amp; More" class="matureContent-blur" itemprop="image" loading="lazy" src="detail_page/file(16).jpg">
+                                       <div class="marketplace-card-thumbnail-content btn btn-primary">View</div>
+                                    </div>
+                                    <div class="marketplace-card-body">
+                                       <h3 class="font-weight-normal marketplace-card-title" itemprop="name">Fastener ZBrush IMM Pack // 300 Screws, Bolts, Nuts &amp; More</h3>
+                                       <meta content="Fastener ZBrush IMM Pack // 300 Screws, Bolts, Nuts &amp; More, USD $6.00. " itemprop="description">
+                                       <meta content="ojY2O" itemprop="sku">
+                                    </div>
+                                    <div class="marketplace-card-footer">
+                                       <div class="marketplace-card-author" itemprop="brand" itemscope="" itemtype="https://schema.org/Brand">
+                                          <div class="marketplace-card-author-avatar"><img alt="Henry Chervenka" height="26" itemprop="image" loading="lazy" src="detail_page/3d31e59ffa9f00617789a90f0f9a8a75.jpg" width="26"></div>
+                                          <div class="marketplace-card-author-name small"> by <span itemprop="name">Henry Chervenka</span></div>
+                                       </div>
+                                       <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                          <meta content="USD" itemprop="priceCurrency">
+                                          <meta content="6.0" itemprop="price">
+                                          <meta content="http://schema.org/InStock" itemprop="availability">
+                                          <meta content="2022-04-04" itemprop="priceValidUntil">
+                                          <meta content="" itemprop="url">
+                                          <div class="marketplace-card-price">USD $6.00</div>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+  
+   </body>
+</html>
