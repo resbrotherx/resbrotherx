@@ -25,7 +25,7 @@ SECRET_KEY = 'roon716c-4g_c=^+7vm!+!j$(+mmhtnh_ze2ei^h=n$iwbscfa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['209.97.149.161']
 
 
 # Application definition
