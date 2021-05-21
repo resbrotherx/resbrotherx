@@ -166,19 +166,21 @@ USE_TZ = True
 
 
 
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+#     # os.path.join(BASE_DIR, 'staticfiles'),
+# )
 
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    # os.path.join(BASE_DIR, 'staticfiles'),
-)
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 TINYMCE_DEFAULT_CONFIG = {
     'height':360,
